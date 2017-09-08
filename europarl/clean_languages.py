@@ -2,6 +2,9 @@
 import sys
 from langdetect import *
 
+# for reproducible results
+DetectorFactory.seed = 0
+
 cs_in = open(sys.argv[1], "r")
 de_in = open(sys.argv[2], "r")
 
@@ -32,8 +35,13 @@ for c, d in zip(cs_in, de_in):
 			print(i, detect_langs(c), "\n", c, d)
 			print(i, detect_langs(c), "\n", c, d, file=log)
 		else:
-			print(c, file=cs_out, end="")
-			print(d, file=de_out, end="")
+			det = detect_langs(c)[0]
+			if det.prob > 0.9 and det.lang in ["en", "es", "fr", "pl"]:
+				print(i, detect_langs(c), "\n", c, d)
+				print(i, detect_langs(c), "\n", c, d, file=log)
+			else:
+				print(c, file=cs_out, end="")
+				print(d, file=de_out, end="")
 	except lang_detect_exception.LangDetectException:
 		print(i, c, d)
 		print(i, c, d, file=log)
