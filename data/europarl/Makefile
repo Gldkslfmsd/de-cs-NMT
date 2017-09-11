@@ -26,7 +26,7 @@ preproces europarl.raw.cs europarl.raw.de: europarl_cs_de.tmx
 	grep '<tuv xml:lang="de">' europarl_cs_de.tmx | sed -r 's/^ *<tuv xml:lang="de"><seg>//;s#</seg></tuv>$$##;s/[0-9]+\. ?//' > europarl.raw.de
 	grep '<tuv xml:lang="cs">' europarl_cs_de.tmx | sed 's/^ *<tuv xml:lang="cs"><seg>//;s#</seg></tuv>$$##;s/[0-9]+\. ?//' > europarl.raw.cs
 
-clean_langs: $(P3) clean_languages.py europarl.raw.cs europarl.raw.de
+clean_langs europarl.cs europarl.de: $(P3) clean_languages.py europarl.raw.cs europarl.raw.de
 	$(P3) clean_languages.py europarl.raw.cs europarl.raw.de europarl.cs europarl.de
 	
 

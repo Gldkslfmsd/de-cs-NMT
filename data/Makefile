@@ -23,7 +23,7 @@ data $(DATA):
 
 
 MOSES=moses/scripts/tokenizer
-preprocess: preprocess.sh $(DATA) moses
+preprocess: $(DATA) moses
 	for d in $(DATA); do \
 		echo $$d ; \
 		cat $$d | \
