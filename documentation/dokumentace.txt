@@ -22,11 +22,11 @@ Preprocessing
 		- automatické dělení na morfémy, např.
 			Gesetzbuch -> Gesetz@@ buch
 			hlavní město Latinské -> hlav@@ ní měst@@ o Latin@@ ské
+		- použita pythonovská knihovna polyglot s předtrénovanými jazykovými modely pro morfessor
 		- TODO: vyzkoušet chytřejší language-specific morfemizaci
 		Gesetzbuch -> gesetz ++ buch (pro němčinu)
 		hlavní město -> hlav@@ @@ní měst@@ @@o (pro češtinu, "ní" jako sufix
 		je něco jiného než samostatné slovo "ní")
-		- použit polyglot s předtrénovanými jazykovými modely jako morfessor
 	- TODO: změnit slovosled německých sloves:
 		Ich will in dem besten Staat, der in Europa **liegt**, **wohnen**. 
 			-> 
@@ -37,7 +37,7 @@ ani lowercasing (přišli bychom o informace o podstatných jménech)
 
 Postprocessing po překladu
 ==========================
-- pouze sed 's/@@ //g'
+- pouze sed 's/@@ //g' (pospojování morfémů do slov)
 
 
 Analýza OOV-rate
@@ -57,11 +57,12 @@ data |  OOV 1-grams tokens | Training set unique 1-grams
 #1-de|  6.9 %              | 191741 (100 %)
 #2-de|  0.4 %              |  18008 (9.4 %)
 
-Závěr: OOV rate u #2 je přijatelně nízká i takto bez truecasingu/lowercasingu
+Zjištění: 
+- OOV rate u #2 je přijatelně nízká i takto bez truecasingu/lowercasingu
 
 
-Překlad
-=======
+Trénování modelu
+================
 - použito OpenNMT-py na jedné GPU na clusteru v Saarbrückenu
 - pro začátek defaultní hyperparametry
 
