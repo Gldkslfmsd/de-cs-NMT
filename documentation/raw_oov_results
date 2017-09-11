@@ -1,0 +1,44 @@
+perl moses/scripts/tokenizer/../analysis/oov.pl dev.cs.prep.tok < train.cs.prep.tok
+Test set sents	3003
+Test set running 1-grams	65428
+Test set unique 1-grams needed	17960
+Test set unique 1-grams	17960
+..................................................(500000).....Done.
+Training set sents	554898
+Training set running 1-grams	13199728
+Training set unique 1-grams	183227
+OOV 1-grams types	3581	19.9 %
+OOV 1-grams tokens	4734	7.2 %
+perl moses/scripts/tokenizer/../analysis/oov.pl dev.de.prep.tok < train.de.prep.tok
+Test set sents	3003
+Test set running 1-grams	72660
+Test set unique 1-grams needed	15009
+Test set unique 1-grams	15009
+..................................................(500000).....Done.
+Training set sents	554898
+Training set running 1-grams	14760309
+Training set unique 1-grams	191741
+OOV 1-grams types	3806	25.4 %
+OOV 1-grams tokens	5023	6.9 %
+perl moses/scripts/tokenizer/../analysis/oov.pl dev.cs.prep.tok.mor < train.cs.prep.tok.mor
+Test set sents	3003
+Test set running 1-grams	112926
+Test set unique 1-grams needed	8427
+Test set unique 1-grams	8427
+..................................................(500000).....Done.
+Training set sents	554898
+Training set running 1-grams	22448427
+Training set unique 1-grams	16477
+OOV 1-grams types	200	2.4 %
+OOV 1-grams tokens	368	0.3 %
+perl moses/scripts/tokenizer/../analysis/oov.pl dev.de.prep.tok.mor < train.de.prep.tok.mor
+Test set sents	3003
+Test set running 1-grams	119993
+Test set unique 1-grams needed	8930
+Test set unique 1-grams	8930
+..................................................(500000).....Done.
+Training set sents	554898
+Training set running 1-grams	23784362
+Training set unique 1-grams	18008
+OOV 1-grams types	261	2.9 %
+OOV 1-grams tokens	421	0.4 %

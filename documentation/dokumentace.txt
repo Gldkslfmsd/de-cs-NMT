@@ -1,0 +1,87 @@
+
+Data
+====
+- training: pročištěný europarl, 55k vět
+- dev: news11, 3k vět
+- test: news13, 3k vět
+
+- testovací data nejsou podmnožinou trénovacích
+
+Preprocessing
+=============
+- europarl pročištěn od vět označených jako cs, které ale byly v jiných
+  jazycích
+	- s použitím langdetect a pravidel, která byla odpozorována z korpusu
+- preprocessing 
+	- moses skripty:
+		remove-non-printing-char.perl | 
+		replace-unicode-punctuation.perl |
+		normalize-punctuation.perl
+	- tokenizace
+	- morfemizace
+		- automatické dělení na morfémy, např.
+			Gesetzbuch -> Gesetz@@ buch
+			hlavní město Latinské -> hlav@@ ní měst@@ o Latin@@ ské
+		- TODO: vyzkoušet chytřejší language-specific morfemizaci
+		Gesetzbuch -> gesetz ++ buch (pro němčinu)
+		hlavní město -> hlav@@ @@ní měst@@ @@o (pro češtinu, "ní" jako sufix
+		je něco jiného než samostatné slovo "ní")
+		- použit polyglot s předtrénovanými jazykovými modely jako morfessor
+	- TODO: změnit slovosled německých sloves:
+		Ich will in dem besten Staat, der in Europa **liegt**, **wohnen**. 
+			-> 
+		Ich will **wohnen** in dem besten Staat, der **liegt** in Europa.
+
+- dosud žádný truecasing (byl by potřeba velký jazykový korpus na natrénování)
+ani lowercasing (přišli bychom o informace o podstatných jménech)
+
+Postprocessing po překladu
+==========================
+- pouze sed 's/@@ //g'
+
+
+Analýza OOV-rate
+================
+- europarl jako trénovací korpus vs dev
+
+data:
+#1 preprocessed, tokenized
+#2 preprocessed, tokenized, morfesized
+#3 + truecasing/lowercasing (TODO)
+
+data |  OOV 1-grams tokens | Training set unique 1-grams
+========================================================
+#1-cs|  7.2 %              | 183227 (100 %)
+#2-cs|  0.3 %              |  16477 (8.9 %)
+--------------------------------------------------------
+#1-de|  6.9 %              | 191741 (100 %)
+#2-de|  0.4 %              |  18008 (9.4 %)
+
+Závěr: OOV rate u #2 je přijatelně nízká i takto bez truecasingu/lowercasingu
+
+
+Překlad
+=======
+- použito OpenNMT-py na jedné GPU na clusteru v Saarbrückenu
+- pro začátek defaultní hyperparametry
+
+Evaluace
+========
+- používám skript multi-bleu z OpenNMT
+- #B: baseline je frázový překlad Dana Zemana
+	- kvůli porovnání jsem stáhnul jeho referenční překlad z WMT14, preprocesoval,
+	  tokenizoval a evaluoval stejným způsobem jako data v mém systému
+- #1: model-01/model_acc_50.69_ppl_20.13_e13.pt.cs.pred
+	- model z 13. epochy prvního překladu 
+	- doba trénování: asi 8 hodin
+
+
+model | score
+=================================================================================================
+#B    | BLEU = 13.99, 47.4/19.8/9.7/4.9 (BP=0.965, ratio=0.966, hyp_len=55093, ref_len=57048)
+#1    | BLEU = 4.63, 23.6/6.6/2.7/1.1 (BP=1.000, ratio=1.263, hyp_len=72079, ref_len=57048)
+
+
+
+
+
