@@ -3,12 +3,12 @@
 
 all: news11.cs news11.de
 
-download:
+download newstest2011-src.cs.sgm newstest2011-src.de.sgm:
 	wget http://www.statmt.org/wmt11/test.tgz -O test.tgz
 	gzip -d test.tgz
 	tar -xvf test.tar
 
-preprocess news11.cs news11.de:
+preprocess news11.cs news11.de: newstest2011-src.cs.sgm newstest2011-src.de.sgm
 	sed  's/<[^>]*> *//g' newstest2011-src.cs.sgm | grep . > news11.cs
 	sed  's/<[^>]*> *//g' newstest2011-src.de.sgm | grep . > news11.de
 
