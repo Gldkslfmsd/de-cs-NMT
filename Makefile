@@ -54,8 +54,33 @@ install_morfessor p3:
 	p3/bin/pip install morfessor polyglot pyicu six pycld2 numpy
 	p3/bin/python3 -c 'from polyglot.downloader import downloader; downloader.download("morph2.cs"); downloader.download("morph2.de")'
 
-morf_train:
-	p3/bin/morfessor-train 
+morfesize: morphesize.py
+	for d in $(DATA_CS); do	\
+		echo $$d"".prep.tok ; \
+		p3/bin/python3 morphesize.py cs < $$d"".prep.tok > $$d"".prep.tok.mor & \
+	done
+	wait
+	for d in $(DATA_DE); do	\
+		echo $$d"".prep.tok ; \
+		p3/bin/python3 morphesize.py de < $$d"".prep.tok > $$d"".prep.tok.mor & \
+	done
+	wait
+
+# I skip training my own morfessor model, the polyglot one seems to be OK
+#morf_train:
+#	p3/bin/morfessor-train 
+
+oov_analysis:
+	perl $(MOSES)/../analysis/oov.pl dev.cs.prep.tok < train.cs.prep.tok
+	perl $(MOSES)/../analysis/oov.pl dev.de.prep.tok < train.de.prep.tok
+	perl $(MOSES)/../analysis/oov.pl dev.cs.prep.tok.mor < train.cs.prep.tok.mor
+	perl $(MOSES)/../analysis/oov.pl dev.de.prep.tok.mor < train.de.prep.tok.mor
+
+check_overlap:
+	python3 check_overlap.py train.cs.prep.tok test.cs.prep.tok	
+	python3 check_overlap.py train.de.prep.tok test.de.prep.tok
+	python3 check_overlap.py train.cs.prep.tok dev.cs.prep.tok	
+	python3 check_overlap.py train.de.prep.tok dev.de.prep.tok
 
 clean_data:
 	rm -rf dev* train* test*
