@@ -1,3 +1,4 @@
+all: europarl.cs europarl.de
 
 #opensub_cs:
 #	wget http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2016%2Fmono%2FOpenSubtitles2016.cs.gz \
