@@ -1,0 +1,87 @@
+BLEU score evaluated on all epochs of model-04, sorted decreasingly
+===================================================================
+
+
+dominikm@jones-3:/local/dominikm/de-cs-NMT$ for m in `ls -t model-04/*.pt`; do ./translate-eval.sh $m; done
+
+# epoch 21 (last one)
+model-04/model_acc_50.84_ppl_20.24_e21.pt
+model-04/model_acc_50.84_ppl_20.24_e21.pt.cs.pred
+
+BLEU = 4.68, 23.9/6.7/2.7/1.1 (BP=1.000, ratio=1.259, hyp_len=71829, ref_len=57048)
+
+# epoch 20
+model-04/model_acc_50.85_ppl_20.24_e20.pt
+model-04/model_acc_50.85_ppl_20.24_e20.pt.cs.pred
+BLEU = 4.68, 23.9/6.7/2.7/1.1 (BP=1.000, ratio=1.259, hyp_len=71814, ref_len=57048)
+
+# other epochs...
+model-04/model_acc_50.84_ppl_20.24_e19.pt
+model-04/model_acc_50.84_ppl_20.24_e19.pt.cs.pred
+BLEU = 4.67, 23.9/6.7/2.7/1.1 (BP=1.000, ratio=1.256, hyp_len=71665, ref_len=57048)
+model-04/model_acc_50.84_ppl_20.25_e18.pt
+model-04/model_acc_50.84_ppl_20.25_e18.pt.cs.pred
+BLEU = 4.67, 23.9/6.7/2.7/1.1 (BP=1.000, ratio=1.260, hyp_len=71866, ref_len=57048)
+model-04/model_acc_50.84_ppl_20.24_e17.pt
+model-04/model_acc_50.84_ppl_20.24_e17.pt.cs.pred
+BLEU = 4.71, 23.8/6.7/2.7/1.1 (BP=1.000, ratio=1.260, hyp_len=71873, ref_len=57048)
+model-04/model_acc_50.83_ppl_20.23_e16.pt
+model-04/model_acc_50.83_ppl_20.23_e16.pt.cs.pred
+BLEU = 4.73, 23.8/6.8/2.7/1.1 (BP=1.000, ratio=1.262, hyp_len=72013, ref_len=57048)
+model-04/model_acc_50.85_ppl_20.23_e15.pt
+model-04/model_acc_50.85_ppl_20.23_e15.pt.cs.pred
+BLEU = 4.66, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.267, hyp_len=72307, ref_len=57048)
+model-04/model_acc_50.83_ppl_20.23_e14.pt
+model-04/model_acc_50.83_ppl_20.23_e14.pt.cs.pred
+BLEU = 4.68, 23.8/6.7/2.7/1.1 (BP=1.000, ratio=1.259, hyp_len=71849, ref_len=57048)
+model-04/model_acc_50.83_ppl_20.28_e13.pt
+model-04/model_acc_50.83_ppl_20.28_e13.pt.cs.pred
+BLEU = 4.74, 23.9/6.8/2.8/1.1 (BP=1.000, ratio=1.257, hyp_len=71714, ref_len=57048)
+model-04/model_acc_50.75_ppl_20.26_e12.pt
+model-04/model_acc_50.75_ppl_20.26_e12.pt.cs.pred
+BLEU = 4.40, 23.1/6.4/2.5/1.0 (BP=1.000, ratio=1.282, hyp_len=73138, ref_len=57048)
+model-04/model_acc_50.45_ppl_20.43_e11.pt
+model-04/model_acc_50.45_ppl_20.43_e11.pt.cs.pred
+Use of uninitialized value $length_reference in numeric eq (==) at ../OpenNMT-py/tools/multi-bleu.perl line 148.
+BLEU = 0, 0/0/0/0 (BP=0, ratio=0, hyp_len=0, ref_len=0)
+model-04/model_acc_50.17_ppl_20.69_e10.pt
+model-04/model_acc_50.17_ppl_20.69_e10.pt.cs.pred
+BLEU = 3.92, 21.7/5.6/2.2/0.9 (BP=1.000, ratio=1.306, hyp_len=74477, ref_len=57048)
+model-04/model_acc_49.39_ppl_21.62_e9.pt
+model-04/model_acc_49.39_ppl_21.62_e9.pt.cs.pred
+BLEU = 3.38, 19.5/4.9/1.9/0.7 (BP=1.000, ratio=1.458, hyp_len=83156, ref_len=57048)
+model-04/model_acc_47.58_ppl_24.35_e8.pt
+model-04/model_acc_47.58_ppl_24.35_e8.pt.cs.pred
+BLEU = 2.80, 19.6/4.1/1.5/0.5 (BP=1.000, ratio=1.166, hyp_len=66501, ref_len=57048)
+
+
+# 7th epoch: the best score so far
+
+model-04/model_acc_47.23_ppl_24.94_e7.pt
+model-04/model_acc_47.23_ppl_24.94_e7.pt.cs.pred
+
+BLEU = 6.12, 27.3/10.1/4.1/1.2 (BP=1.000, ratio=1.228, hyp_len=651, ref_len=530)
+       ====
+
+
+model-04/model_acc_46.63_ppl_26.41_e6.pt
+model-04/model_acc_46.63_ppl_26.41_e6.pt.cs.pred
+BLEU = 3.21, 20.4/4.7/1.8/0.6 (BP=1.000, ratio=1.169, hyp_len=66702, ref_len=57048)
+model-04/model_acc_45.63_ppl_28.10_e5.pt
+model-04/model_acc_45.63_ppl_28.10_e5.pt.cs.pred
+BLEU = 2.93, 19.4/4.3/1.5/0.6 (BP=1.000, ratio=1.321, hyp_len=75380, ref_len=57048)
+model-04/model_acc_44.42_ppl_30.81_e4.pt
+model-04/model_acc_44.42_ppl_30.81_e4.pt.cs.pred
+BLEU = 2.60, 19.1/4.0/1.4/0.4 (BP=1.000, ratio=1.263, hyp_len=72025, ref_len=57048)
+model-04/model_acc_43.77_ppl_33.86_e3.pt
+model-04/model_acc_43.77_ppl_33.86_e3.pt.cs.pred
+BLEU = 2.78, 19.6/4.3/1.5/0.5 (BP=1.000, ratio=1.163, hyp_len=66333, ref_len=57048)
+model-04/model_acc_40.88_ppl_42.70_e2.pt
+model-04/model_acc_40.88_ppl_42.70_e2.pt.cs.pred
+BLEU = 2.62, 23.7/4.9/1.7/0.6 (BP=0.786, ratio=0.806, hyp_len=42740, ref_len=53047)
+model-04/model_acc_35.30_ppl_70.08_e1.pt
+model-04/model_acc_35.30_ppl_70.08_e1.pt.cs.pred
+BLEU = 1.46, 20.2/2.9/0.7/0.2 (BP=0.903, ratio=0.907, hyp_len=51770, ref_len=57048)
+model-04/model_acc_35.22_ppl_72.02_e1.pt
+model-04/model_acc_35.22_ppl_72.02_e1.pt.cs.pred
+BLEU = 1.72, 22.5/3.7/1.0/0.2 (BP=0.802, ratio=0.819, hyp_len=46739, ref_len=57048)
