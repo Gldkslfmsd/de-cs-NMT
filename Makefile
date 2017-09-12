@@ -32,4 +32,15 @@ train-4:
 
 
 translate:
-	python ../OpenNMT-py/translate.py -model model-01/model_acc_40.83_ppl_42.55_e2.pt -src test.de -output test-pred.cs -replace_unk -verbose -_gpu2
+	python ../OpenNMT-py/translate.py -model model-01/model_acc_40.83_ppl_42.55_e2.pt -src test.de -output test-pred.cs -replace_unk -verbose -gpu 2
+
+MOSES=data/moses/scripts/tokenizer
+baseline: data/moses
+	curl http://matrix.statmt.org/data/20130503220932_U-31_S-1894_T-1715_sysout.cs.normalized.sgml?1367615372 | sed 's/<[^>]*>//g' | grep . | \
+		perl $(MOSES)/remove-non-printing-char.perl | \
+		perl $(MOSES)/replace-unicode-punctuation.perl | \
+		perl $(MOSES)/normalize-punctuation.perl | \
+		perl $(MOSES)/tokenizer.perl -no-escape -threads `nproc` -l cs | \
+		perl multi-bleu.perl data/test.cs.prep.tok
+
+
