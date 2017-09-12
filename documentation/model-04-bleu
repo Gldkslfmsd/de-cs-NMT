@@ -10,12 +10,10 @@ model-04/model_acc_50.84_ppl_20.24_e21.pt.cs.pred
 
 BLEU = 4.68, 23.9/6.7/2.7/1.1 (BP=1.000, ratio=1.259, hyp_len=71829, ref_len=57048)
 
-# epoch 20
+# other epochs...
 model-04/model_acc_50.85_ppl_20.24_e20.pt
 model-04/model_acc_50.85_ppl_20.24_e20.pt.cs.pred
 BLEU = 4.68, 23.9/6.7/2.7/1.1 (BP=1.000, ratio=1.259, hyp_len=71814, ref_len=57048)
-
-# other epochs...
 model-04/model_acc_50.84_ppl_20.24_e19.pt
 model-04/model_acc_50.84_ppl_20.24_e19.pt.cs.pred
 BLEU = 4.67, 23.9/6.7/2.7/1.1 (BP=1.000, ratio=1.256, hyp_len=71665, ref_len=57048)
@@ -34,9 +32,14 @@ BLEU = 4.66, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.267, hyp_len=72307, ref_len=570
 model-04/model_acc_50.83_ppl_20.23_e14.pt
 model-04/model_acc_50.83_ppl_20.23_e14.pt.cs.pred
 BLEU = 4.68, 23.8/6.7/2.7/1.1 (BP=1.000, ratio=1.259, hyp_len=71849, ref_len=57048)
+
+# current maximum
+
 model-04/model_acc_50.83_ppl_20.28_e13.pt
 model-04/model_acc_50.83_ppl_20.28_e13.pt.cs.pred
 BLEU = 4.74, 23.9/6.8/2.8/1.1 (BP=1.000, ratio=1.257, hyp_len=71714, ref_len=57048)
+
+
 model-04/model_acc_50.75_ppl_20.26_e12.pt
 model-04/model_acc_50.75_ppl_20.26_e12.pt.cs.pred
 BLEU = 4.40, 23.1/6.4/2.5/1.0 (BP=1.000, ratio=1.282, hyp_len=73138, ref_len=57048)
@@ -53,17 +56,9 @@ BLEU = 3.38, 19.5/4.9/1.9/0.7 (BP=1.000, ratio=1.458, hyp_len=83156, ref_len=570
 model-04/model_acc_47.58_ppl_24.35_e8.pt
 model-04/model_acc_47.58_ppl_24.35_e8.pt.cs.pred
 BLEU = 2.80, 19.6/4.1/1.5/0.5 (BP=1.000, ratio=1.166, hyp_len=66501, ref_len=57048)
-
-
-# 7th epoch: the best score so far
-
 model-04/model_acc_47.23_ppl_24.94_e7.pt
 model-04/model_acc_47.23_ppl_24.94_e7.pt.cs.pred
-
-BLEU = 6.12, 27.3/10.1/4.1/1.2 (BP=1.000, ratio=1.228, hyp_len=651, ref_len=530)
-       ====
-
-
+BLEU = 2.89, 19.4/4.5/1.5/0.5 (BP=1.000, ratio=1.427, hyp_len=81414, ref_len=57048)
 model-04/model_acc_46.63_ppl_26.41_e6.pt
 model-04/model_acc_46.63_ppl_26.41_e6.pt.cs.pred
 BLEU = 3.21, 20.4/4.7/1.8/0.6 (BP=1.000, ratio=1.169, hyp_len=66702, ref_len=57048)
