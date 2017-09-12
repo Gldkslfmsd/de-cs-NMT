@@ -1,7 +1,7 @@
 
 Data
 ====
-- training: pročištěný europarl, 55k vět
+- training: pročištěný europarl, 555k vět
 - dev: news11, 3k vět
 - test: news13, 3k vět
 
@@ -75,14 +75,23 @@ Evaluace
 - #1: model-01/model_acc_50.69_ppl_20.13_e13.pt.cs.pred
 	- model z 13. epochy prvního překladu 
 	- doba trénování: asi 8 hodin
-
+	#1.1 model-03/model_acc_50.74_ppl_20.12_e34.pt
+	- to samé jsem nechal dojít do 34. epochy, trénování zřejmě stagnuje,
+	  výsledek je stále stejný
+- #2: model-04/model_acc_47.23_ppl_24.94_e7.pt
+	- defaultní model pouze s -layers 2
+	- v 7. epoše je bleu prudce vyšší než v ostatních
+	#2.1 model-04/model_acc_50.84_ppl_20.24_e21.pt
+	- ukončeno v 21. epoše, výsledek stagnuje kolem 4.68
 
 model | score
 =================================================================================================
 #B    | BLEU = 13.99, 47.4/19.8/9.7/4.9 (BP=0.965, ratio=0.966, hyp_len=55093, ref_len=57048)
 #1    | BLEU = 4.63, 23.6/6.6/2.7/1.1 (BP=1.000, ratio=1.263, hyp_len=72079, ref_len=57048)
+#2    | BLEU = 6.12, 27.3/10.1/4.1/1.2 (BP=1.000, ratio=1.228, hyp_len=651, ref_len=530)
+
+#1.1  | BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72100, ref_len=57048)
+#2.1  | BLEU = 4.68, 23.9/6.7/2.7/1.1 (BP=1.000, ratio=1.259, hyp_len=71829, ref_len=57048)
 
 
-
-
-
+Dosud nejlepší skóre je #2, 6.12
