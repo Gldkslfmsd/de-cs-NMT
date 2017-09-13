@@ -22,18 +22,23 @@ Preprocessing
 		- automatické dělení na morfémy, např.
 			Gesetzbuch -> Gesetz@@ buch
 			hlavní město Latinské -> hlav@@ ní měst@@ o Latin@@ ské
+OB: technicka poznamka: '@@ ' neni stastna volba, bude se tlouct s BPE v neuronovych prekladacich
 		- použita pythonovská knihovna polyglot s předtrénovanými jazykovými modely pro morfessor
 		- TODO: vyzkoušet chytřejší language-specific morfemizaci
+OB: a naopak take jednodussi, plne unsupervised BPE. Kolegove rikaji, ze pro nemcinu pouzivaji BPE i pro frazovy preklad a ze to dopadne lepe nez compound splitting, protoze ho to rovnou zahrnuje.
 		Gesetzbuch -> gesetz ++ buch (pro němčinu)
 		hlavní město -> hlav@@ @@ní měst@@ @@o (pro češtinu, "ní" jako sufix
 		je něco jiného než samostatné slovo "ní")
+OB: tohle by bylo zajimave promerit, ale pokusy, ktere pro mne zkousel Matiss Rikters s Neural Monkey nejak spis ukazovaly, ze to k nicemu nevede (ale mozna tam mel i bug, oznacovani pomoci @@ na druhe strane nez normalne vedlo k podstatne horsimu skore, coz je blbost)
 	- TODO: změnit slovosled německých sloves:
 		Ich will in dem besten Staat, der in Europa **liegt**, **wohnen**. 
 			-> 
 		Ich will **wohnen** in dem besten Staat, der **liegt** in Europa.
+OB: toto rozhodne neni treba, seq2seq modely na poradi vstupu kaslou. t2t modely (Attention is All You Need) poradi zakodovavaji do vstupu, ale i velke vzdalenosti jsou pro ne velmi levne.
 
 - dosud žádný truecasing (byl by potřeba velký jazykový korpus na natrénování)
 ani lowercasing (přišli bychom o informace o podstatných jménech)
+OB: lidi casto s NMT vubec casing neresi, ono se to vicemene nauci samo
 
 Postprocessing po překladu
 ==========================
@@ -59,7 +64,7 @@ data |  OOV 1-grams tokens | Training set unique 1-grams
 
 Zjištění: 
 - OOV rate u #2 je přijatelně nízká i takto bez truecasingu/lowercasingu
-
+OB: vysledek #2 je velmi pekny. Jeste prosim porovnat s BPE: https://github.com/rsennrich/subword-nmt
 
 Trénování modelu
 ================
@@ -75,6 +80,9 @@ Evaluace
 - #1: model-01/model_acc_50.69_ppl_20.13_e13.pt.cs.pred
 	- model z 13. epochy prvního překladu 
 	- doba trénování: asi 8 hodin
+
+OB: pocitejte, ze to chce trenovat aspon par dni, spis tyden (ty rychlejsi implementace jako Marian, t2t; nevim, jake je OpenNMT)
+
 	#1.1 model-03/model_acc_50.74_ppl_20.12_e34.pt
 	- to samé jsem nechal dojít do 34. epochy, trénování zřejmě stagnuje,
 	  výsledek je stále stejný
@@ -83,7 +91,8 @@ Evaluace
 	- toto je maximum
 	#2.1 model-04/model_acc_50.84_ppl_20.24_e21.pt
 	- ukončeno v 21. epoše, výsledek stagnuje kolem 4.68
-
+  
+  
 model | score
 =================================================================================================
 #B    | BLEU = 13.99, 47.4/19.8/9.7/4.9 (BP=0.965, ratio=0.966, hyp_len=55093, ref_len=57048)
