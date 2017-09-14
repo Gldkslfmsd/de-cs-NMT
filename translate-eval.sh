@@ -2,10 +2,15 @@
 
 echo $1
 echo $1.cs.pred
-if [ ! -f $1.cs.pred ]; then
+MODEL=`realpath $1`
+WD=$(pwd)
+if [ ! -f $WD/$1.cs.pred ]; then
 	echo translating
-	time ../p2-onmt-py/bin/python ../OpenNMT-py/translate.py -model $1 -src test.de -output $1.cs.pred -replace_unk -verbose -gpu 2 
+	cd /home/obo-machacek/OpenNMT
+	echo $WD
+	time th translate.lua -model $MODEL -src $WD/test.de -output $WD/$1.cs.pred -replace_unk -gpuid 1 2 3 4
 fi
+cd $WD
 if [ ! -f $1.cs.pred.post ]; then
 	./postprocess.sh < $1.cs.pred > $1.cs.pred.post
 fi
@@ -14,5 +19,5 @@ if [ ! -f test.cs.post ]; then
 	./postprocess.sh < test.cs > test.cs.post
 fi
 
-perl ../OpenNMT-py/tools/multi-bleu.perl test.cs.post < $1.cs.pred.post
+perl multi-bleu.perl test.cs.post < $1.cs.pred.post
 

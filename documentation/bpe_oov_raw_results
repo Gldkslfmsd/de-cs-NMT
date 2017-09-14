@@ -1,0 +1,298 @@
+for s in 100 1000 2500 5000 7500 10000 15000 18000 20000 50000 100000 1000000; do \
+	echo; echo cs $s; echo; \
+	cat pbe$s.cs.oov ; done
+
+cs 100
+
+Test set sents	3003
+Test set running 1-grams	232194
+Test set unique 1-grams needed	291
+Test set unique 1-grams	291
+Training set sents	98460
+Training set running 1-grams	8251673
+Training set unique 1-grams	358
+OOV 1-grams types	5	1.7 %
+OOV 1-grams tokens	24	0.0 %
+
+cs 1000
+
+Test set sents	3003
+Test set running 1-grams	160411
+Test set unique 1-grams needed	1169
+Test set unique 1-grams	1169
+Training set sents	98460
+Training set running 1-grams	4968845
+Training set unique 1-grams	1256
+OOV 1-grams types	5	0.4 %
+OOV 1-grams tokens	24	0.0 %
+
+cs 2500
+
+Test set sents	3003
+Test set running 1-grams	136570
+Test set unique 1-grams needed	2552
+Test set unique 1-grams	2552
+Training set sents	98460
+Training set running 1-grams	3927994
+Training set unique 1-grams	2750
+OOV 1-grams types	5	0.2 %
+OOV 1-grams tokens	24	0.0 %
+
+cs 5000
+
+Test set sents	3003
+Test set running 1-grams	120202
+Test set unique 1-grams needed	4594
+Test set unique 1-grams	4594
+Training set sents	98460
+Training set running 1-grams	3327022
+Training set unique 1-grams	5236
+OOV 1-grams types	6	0.1 %
+OOV 1-grams tokens	25	0.0 %
+
+cs 7500
+
+Test set sents	3003
+Test set running 1-grams	111570
+Test set unique 1-grams needed	6328
+Test set unique 1-grams	6328
+Training set sents	98460
+Training set running 1-grams	3052616
+Training set unique 1-grams	7706
+OOV 1-grams types	9	0.1 %
+OOV 1-grams tokens	30	0.0 %
+
+cs 10000
+
+Test set sents	3003
+Test set running 1-grams	105977
+Test set unique 1-grams needed	7761
+Test set unique 1-grams	7761
+Training set sents	98460
+Training set running 1-grams	2894680
+Training set unique 1-grams	10174
+OOV 1-grams types	12	0.2 %
+OOV 1-grams tokens	33	0.0 %
+
+cs 15000
+
+Test set sents	3003
+Test set running 1-grams	99441
+Test set unique 1-grams needed	9879
+Test set unique 1-grams	9879
+Training set sents	98460
+Training set running 1-grams	2715551
+Training set unique 1-grams	15092
+OOV 1-grams types	12	0.1 %
+OOV 1-grams tokens	33	0.0 %
+
+cs 18000
+
+Test set sents	3003
+Test set running 1-grams	96705
+Test set unique 1-grams needed	10826
+Test set unique 1-grams	10826
+Training set sents	98460
+Training set running 1-grams	2649167
+Training set unique 1-grams	18021
+OOV 1-grams types	13	0.1 %
+OOV 1-grams tokens	34	0.0 %
+
+cs 20000
+
+Test set sents	3003
+Test set running 1-grams	95150
+Test set unique 1-grams needed	11423
+Test set unique 1-grams	11423
+Training set sents	98460
+Training set running 1-grams	2614544
+Training set unique 1-grams	19972
+OOV 1-grams types	16	0.1 %
+OOV 1-grams tokens	37	0.0 %
+
+cs 50000
+
+Test set sents	3003
+Test set running 1-grams	84098
+Test set unique 1-grams needed	15651
+Test set unique 1-grams	15651
+Training set sents	98460
+Training set running 1-grams	2411852
+Training set unique 1-grams	48307
+OOV 1-grams types	122	0.8 %
+OOV 1-grams tokens	217	0.3 %
+
+cs 100000
+
+Test set sents	3003
+Test set running 1-grams	84427
+Test set unique 1-grams needed	15533
+Test set unique 1-grams	15533
+Training set sents	98460
+Training set running 1-grams	2418122
+Training set unique 1-grams	46343
+OOV 1-grams types	117	0.8 %
+OOV 1-grams tokens	205	0.2 %
+
+cs 1000000
+
+Test set sents	0
+Test set running 1-grams	0
+Test set unique 1-grams needed	0
+Test set unique 1-grams	0
+Training set sents	0
+Training set running 1-grams	0
+Training set unique 1-grams	0
+echo
+
+echo =======================
+=======================
+echo
+
+for s in 100 1000 2500 5000 7500 10000 15000 18000 20000 50000 100000 1000000; do \
+	echo ; echo de $s; echo; \
+	cat pbe$s.de.oov ; done
+
+de 100
+
+Test set sents	3003
+Test set running 1-grams	250502
+Test set unique 1-grams needed	291
+Test set unique 1-grams	291
+Training set sents	554898
+Training set running 1-grams	50438128
+Training set unique 1-grams	493
+OOV 1-grams types	5	1.7 %
+OOV 1-grams tokens	36	0.0 %
+
+de 1000
+
+Test set sents	3003
+Test set running 1-grams	169786
+Test set unique 1-grams needed	1176
+Test set unique 1-grams	1176
+Training set sents	554898
+Training set running 1-grams	29890299
+Training set unique 1-grams	1392
+OOV 1-grams types	5	0.4 %
+OOV 1-grams tokens	36	0.0 %
+
+de 2500
+
+Test set sents	3003
+Test set running 1-grams	143754
+Test set unique 1-grams needed	2571
+Test set unique 1-grams	2571
+Training set sents	554898
+Training set running 1-grams	23784825
+Training set unique 1-grams	2892
+OOV 1-grams types	5	0.2 %
+OOV 1-grams tokens	36	0.0 %
+
+de 5000
+
+Test set sents	3003
+Test set running 1-grams	126703
+Test set unique 1-grams needed	4561
+Test set unique 1-grams	4561
+Training set sents	554898
+Training set running 1-grams	20290861
+Training set unique 1-grams	5386
+OOV 1-grams types	6	0.1 %
+OOV 1-grams tokens	37	0.0 %
+
+de 7500
+
+Test set sents	3003
+Test set running 1-grams	118147
+Test set unique 1-grams needed	6173
+Test set unique 1-grams	6173
+Training set sents	554898
+Training set running 1-grams	18719834
+Training set unique 1-grams	7873
+OOV 1-grams types	6	0.1 %
+OOV 1-grams tokens	37	0.0 %
+
+de 10000
+
+Test set sents	3003
+Test set running 1-grams	112163
+Test set unique 1-grams needed	7497
+Test set unique 1-grams	7497
+Training set sents	554898
+Training set running 1-grams	17822478
+Training set unique 1-grams	10358
+OOV 1-grams types	6	0.1 %
+OOV 1-grams tokens	37	0.0 %
+
+de 15000
+
+Test set sents	3003
+Test set running 1-grams	104882
+Test set unique 1-grams needed	9469
+Test set unique 1-grams	9469
+Training set sents	554898
+Training set running 1-grams	16837143
+Training set unique 1-grams	15303
+OOV 1-grams types	7	0.1 %
+OOV 1-grams tokens	38	0.0 %
+
+de 18000
+
+Test set sents	3003
+Test set running 1-grams	102035
+Test set unique 1-grams needed	10307
+Test set unique 1-grams	10307
+Training set sents	554898
+Training set running 1-grams	16486404
+Training set unique 1-grams	18261
+OOV 1-grams types	7	0.1 %
+OOV 1-grams tokens	38	0.0 %
+
+de 20000
+
+Test set sents	3003
+Test set running 1-grams	100548
+Test set unique 1-grams needed	10796
+Test set unique 1-grams	10796
+Training set sents	554898
+Training set running 1-grams	16307170
+Training set unique 1-grams	20232
+OOV 1-grams types	8	0.1 %
+OOV 1-grams tokens	61	0.1 %
+
+de 50000
+
+Test set sents	3003
+Test set running 1-grams	89576
+Test set unique 1-grams needed	14426
+Test set unique 1-grams	14426
+Training set sents	554898
+Training set running 1-grams	15311814
+Training set unique 1-grams	49252
+OOV 1-grams types	28	0.2 %
+OOV 1-grams tokens	113	0.1 %
+
+de 100000
+
+Test set sents	3003
+Test set running 1-grams	99500
+Test set unique 1-grams needed	11140
+Test set unique 1-grams	11140
+Training set sents	554898
+Training set running 1-grams	16190766
+Training set unique 1-grams	21747
+OOV 1-grams types	8	0.1 %
+OOV 1-grams tokens	61	0.1 %
+
+de 1000000
+
+Test set sents	3003
+Test set running 1-grams	100743
+Test set unique 1-grams needed	10730
+Test set unique 1-grams	10730
+Training set sents	554898
+Training set running 1-grams	16327732
+Training set unique 1-grams	19983
+OOV 1-grams types	8	0.1 %
+OOV 1-grams tokens	61	0.1 %

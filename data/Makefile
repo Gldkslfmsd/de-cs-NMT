@@ -9,6 +9,7 @@ DATA_CS=train.cs test.cs dev.cs
 DATA_DE=train.de test.de dev.de
 DATA=$(DATA_CS) $(DATA_DE)
 
+DATA.prep=train.cs.prep test.cs.prep dev.cs.prep train.de.prep test.de.prep dev.de.prep
 data $(DATA):
 	make -C europarl
 	cp europarl/europarl.cs train.cs 
@@ -23,7 +24,7 @@ data $(DATA):
 
 
 MOSES=moses/scripts/tokenizer
-preprocess: $(DATA) moses
+preprocess $(DATA.prep): $(DATA) moses
 	for d in $(DATA); do \
 		echo $$d ; \
 		cat $$d | \
@@ -34,7 +35,7 @@ preprocess: $(DATA) moses
 
 TOKENIZED=dev.cs.prep.tok dev.de.prep.tok train.cs.prep.tok test.cs.prep.tok train.de.prep.tok test.de.prep.tok	
 TOK_CMD=perl $(MOSES)/tokenizer.perl -no-escape -threads `nproc`
-tokenize $(TOKENIZED): preprocess moses $(DATA)
+tokenize $(TOKENIZED): moses $(DATA.prep) $(DATA)
 	for d in $(DATA_CS); do	\
 		echo $$d"".prep ; \
 		$(TOK_CMD) -l cs < $$d"".prep > $$d"".prep.tok; \
@@ -67,9 +68,43 @@ morfesize: morphesize.py $(TOKENIZED)
 	done
 	wait
 
-# I skip training my own morfessor model, the polyglot one seems to be OK
-#morf_train:
-#	p3/bin/morfessor-train 
+subword:
+	git clone https://github.com/rsennrich/subword-nmt.git subword
+
+PARAM=100 1000 2500 5000 7500 10000 15000 18000 20000 50000 100000 1000000
+analyze_bpe: $(TOKENIZED) subword
+	for s in $(PARAM); do \
+		{ \
+			echo $$s ; \
+			[ ! -f model_bpe$$s.cs ] && subword/learn_bpe.py -s $$s < train.cs.prep.tok > model_bpe$$s.cs & \
+			[ ! -f model_bpe$$s.de ] && subword/learn_bpe.py -s $$s < train.de.prep.tok > model_bpe$$s.de & \
+			wait ; echo learned ; \
+			[ ! -f train.cs.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.cs < train.cs.prep.tok > train.cs.prep.tok.bpe$$s & \
+			[ ! -f train.de.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.de < train.de.prep.tok > train.de.prep.tok.bpe$$s & \
+			[ ! -f dev.de.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.de < dev.de.prep.tok > dev.de.prep.tok.bpe$$s & \
+			[ ! -f dev.cs.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.cs < dev.cs.prep.tok > dev.cs.prep.tok.bpe$$s & \
+			wait ; echo applied; \
+			echo; echo; echo de $$s; echo; \
+			[ ! -f pbe$$s.de.oov ] && perl $(MOSES)/../analysis/oov.pl dev.de.prep.tok.bpe$$s < train.de.prep.tok.bpe$$s > pbe$$s.de.oov & \
+			echo; echo; echo cs $$s; echo; \
+			[ ! -f pbe$$s.cs.oov ] && perl $(MOSES)/../analysis/oov.pl dev.cs.prep.tok.bpe$$s < train.cs.prep.tok.bpe$$s > pbe$$s.cs.oov & \
+		} & \
+	done ; 	wait
+		
+
+print_bpe_oov:
+	for s in $(PARAM); do \
+		echo; echo cs $$s; echo; \
+		cat pbe$$s.cs.oov ; done
+	echo
+	echo =======================
+	echo
+	for s in $(PARAM); do \
+		echo ; echo de $$s; echo; \
+		cat pbe$$s.de.oov ; done
+
+	
+	
 
 oov_analysis: $(TOKENIZED)
 	perl $(MOSES)/../analysis/oov.pl dev.cs.prep.tok < train.cs.prep.tok
@@ -82,6 +117,8 @@ check_overlap: $(TOKENIZED)
 	python3 check_overlap.py train.de.prep.tok test.de.prep.tok
 	python3 check_overlap.py train.cs.prep.tok dev.cs.prep.tok	
 	python3 check_overlap.py train.de.prep.tok dev.de.prep.tok
+	python3 check_overlap.py test.de.prep.tok dev.de.prep.tok
+	python3 check_overlap.py test.cs.prep.tok dev.cs.prep.tok
 
 clean_data:
 	rm -rf dev* train* test*

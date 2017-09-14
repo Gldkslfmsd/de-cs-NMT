@@ -43,4 +43,53 @@ baseline: data/moses
 		perl $(MOSES)/tokenizer.perl -no-escape -threads `nproc` -l cs | \
 		perl multi-bleu.perl data/test.cs.prep.tok
 
+ONMT=/home/obo-machacek/OpenNMT
+D=/home/obo-machacek/de-cs-NMT
+.ONESHELL:
+preprocess-a:
+	cd $(ONMT)
+	th preprocess.lua \
+        -train_src $D/train.de.prep.tok.mor \
+        -train_tgt $D/train.cs.prep.tok.mor \
+        -valid_src $D/dev.de.prep.tok.mor \
+        -valid_tgt $D/dev.cs.prep.tok.mor \
+        -save_data $D/data
+#       -seed 123 \
+#       -epochs 100
 
+C=4
+.ONESHELL:
+train4:
+	cd $(ONMT)
+#       source /home/obo-machacek/.bashrc
+	nohup th train.lua -data $D/data-train.t7 \
+        -save_config conf$C \
+        -gpuid 1 2 3 4 \
+        -end_epoch 0 \
+        -async_parallel true \
+        -max_batch_size 512 \
+        -seed 123 \
+        -log_file /home/obo-machacek/train$C.log \
+        -report_every 1000 \
+        -save_every 1000 \
+        -save_model $D/model$C > /home/obo-machacek/train$C.out &
+	echo $$! > /home/obo-machacek/train4.pid
+
+C=5
+.ONESHELL:
+train5:
+	cd $(ONMT)
+#       source /home/obo-machacek/.bashrc
+	nohup th train.lua -data $D/data-train.t7 \
+        -save_config conf$C \
+        -gpuid 1 2 3 4 \
+        -end_epoch 0 \
+        -async_parallel true \
+        -max_batch_size 512 \
+        -seed 123 \
+        -log_file /home/obo-machacek/train$C.log \
+        -report_every 500 \
+        -save_every 50 \
+	-validation_metric bleu \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+	echo $$! > /home/obo-machacek/train4.pid
