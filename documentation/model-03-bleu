@@ -1,0 +1,64 @@
+(p2-onmt-py) dominikm@jones-3:/local/dominikm/de-cs-NMT$ for m in `ls -t model-03/*.pt`; do ./translate-eval.sh $m; done
+model-03/model_acc_50.74_ppl_20.12_e34.pt
+model-03/model_acc_50.74_ppl_20.12_e34.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72100, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e33.pt
+model-03/model_acc_50.74_ppl_20.12_e33.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72096, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e32.pt
+model-03/model_acc_50.74_ppl_20.12_e32.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72096, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e31.pt
+model-03/model_acc_50.74_ppl_20.12_e31.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72096, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e30.pt
+model-03/model_acc_50.74_ppl_20.12_e30.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72096, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e29.pt
+model-03/model_acc_50.74_ppl_20.12_e29.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72096, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e28.pt
+model-03/model_acc_50.74_ppl_20.12_e28.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72100, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e27.pt
+model-03/model_acc_50.74_ppl_20.12_e27.pt.cs.pred
+BLEU = 4.73, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72093, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e26.pt
+model-03/model_acc_50.74_ppl_20.12_e26.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72090, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e25.pt
+model-03/model_acc_50.74_ppl_20.12_e25.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.263, hyp_len=72064, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e24.pt
+model-03/model_acc_50.74_ppl_20.12_e24.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.263, hyp_len=72048, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e23.pt
+model-03/model_acc_50.74_ppl_20.12_e23.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.263, hyp_len=72048, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e22.pt
+model-03/model_acc_50.74_ppl_20.12_e22.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72112, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e21.pt
+model-03/model_acc_50.74_ppl_20.12_e21.pt.cs.pred
+BLEU = 4.71, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.265, hyp_len=72175, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e20.pt
+model-03/model_acc_50.74_ppl_20.12_e20.pt.cs.pred
+BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.265, hyp_len=72155, ref_len=57048)
+model-03/model_acc_50.74_ppl_20.12_e19.pt
+model-03/model_acc_50.74_ppl_20.12_e19.pt.cs.pred
+BLEU = 4.76, 23.7/6.8/2.8/1.2 (BP=1.000, ratio=1.262, hyp_len=72021, ref_len=57048)
+model-03/model_acc_50.72_ppl_20.12_e18.pt
+model-03/model_acc_50.72_ppl_20.12_e18.pt.cs.pred
+BLEU = 4.73, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72107, ref_len=57048)
+model-03/model_acc_50.72_ppl_20.13_e17.pt
+model-03/model_acc_50.72_ppl_20.13_e17.pt.cs.pred
+BLEU = 4.74, 23.7/6.8/2.7/1.1 (BP=1.000, ratio=1.263, hyp_len=72069, ref_len=57048)
+model-03/model_acc_50.72_ppl_20.12_e16.pt
+model-03/model_acc_50.72_ppl_20.12_e16.pt.cs.pred
+BLEU = 4.74, 23.8/6.8/2.7/1.1 (BP=1.000, ratio=1.266, hyp_len=72208, ref_len=57048)
+model-03/model_acc_50.71_ppl_20.11_e15.pt
+model-03/model_acc_50.71_ppl_20.11_e15.pt.cs.pred
+BLEU = 4.71, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.263, hyp_len=72053, ref_len=57048)
+model-03/model_acc_50.70_ppl_20.14_e14.pt
+model-03/model_acc_50.70_ppl_20.14_e14.pt.cs.pred
+BLEU = 4.68, 23.3/6.6/2.7/1.2 (BP=1.000, ratio=1.285, hyp_len=73294, ref_len=57048)
