@@ -113,6 +113,7 @@ OB: pocitejte, ze to chce trenovat aspon par dni, spis tyden (ty rychlejsi imple
 	- toto je maximum
 	#2.1 model-04/model_acc_50.84_ppl_20.24_e21.pt
 	- ukončeno v 21. epoše, výsledek stagnuje kolem 4.68
+
   
   
 model | score
@@ -124,3 +125,24 @@ model | score
 #1.1  | BLEU = 4.72, 23.7/6.7/2.7/1.1 (BP=1.000, ratio=1.264, hyp_len=72100, ref_len=57048)
 #2.1  | BLEU = 4.68, 23.9/6.7/2.7/1.1 (BP=1.000, ratio=1.259, hyp_len=71829, ref_len=57048)
 
+
+
+Další pokusy s jinými hyperparametry 
+------------------------------------
+- trénováno na bpe7500
+
+modelbpe1_epoch7_33.76.t7.cs.pred.post
+BLEU = 2.68, 23.9/4.4/1.3/0.4 (BP=1.000, ratio=1.033, hyp_len=58953, ref_len=57048)
+
+modelbpe2_epoch37_7.36.t7.cs.pred.post
+-layer 1 -rnn_type GRU
+BLEU = 0.00, 0.9/0.1/0.0/0.0 (BP=1.000, ratio=11.361, hyp_len=648124, ref_len=57048)
+
+modelbpe4_epoch17_3.39.t7.cs.pred.post
+BLEU = 3.14, 28.1/5.6/1.6/0.6 (BP=0.906, ratio=0.910, hyp_len=51920, ref_len=57048)
+
+modelbpe4_epoch21_3.38.t7.cs.pred.post
+BLEU = 3.03, 27.8/5.6/1.5/0.5 (BP=0.932, ratio=0.935, hyp_len=53312, ref_len=57048)
+
+modelbpe3_epoch24_26.25.t7.cs.pred
+BLEU = 2.93, 24.0/4.8/1.4/0.4 (BP=1.000, ratio=1.143, hyp_len=65200, ref_len=57048)
