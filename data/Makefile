@@ -71,23 +71,24 @@ morfesize: morphesize.py $(TOKENIZED)
 subword:
 	git clone https://github.com/rsennrich/subword-nmt.git subword
 
+rewrite=! # ! if not rewrite, nothing if yes
 PARAM=100 1000 2500 5000 7500 10000 15000 18000 20000 50000 100000 1000000
 analyze_bpe: $(TOKENIZED) subword
 	for s in $(PARAM); do \
 		{ \
 			echo $$s ; \
-			[ ! -f model_bpe$$s.cs ] && subword/learn_bpe.py -s $$s < train.cs.prep.tok > model_bpe$$s.cs & \
-			[ ! -f model_bpe$$s.de ] && subword/learn_bpe.py -s $$s < train.de.prep.tok > model_bpe$$s.de & \
+			[ $(rewrite) -f model_bpe$$s.cs ] && subword/learn_bpe.py -s $$s < train.cs.prep.tok > model_bpe$$s.cs & \
+			[ $(rewrite) -f model_bpe$$s.de ] && subword/learn_bpe.py -s $$s < train.de.prep.tok > model_bpe$$s.de & \
 			wait ; echo learned ; \
-			[ ! -f train.cs.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.cs < train.cs.prep.tok > train.cs.prep.tok.bpe$$s & \
-			[ ! -f train.de.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.de < train.de.prep.tok > train.de.prep.tok.bpe$$s & \
-			[ ! -f dev.de.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.de < dev.de.prep.tok > dev.de.prep.tok.bpe$$s & \
-			[ ! -f dev.cs.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.cs < dev.cs.prep.tok > dev.cs.prep.tok.bpe$$s & \
+			[ $(rewrite) -f train.cs.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.cs < train.cs.prep.tok > train.cs.prep.tok.bpe$$s & \
+			[ $(rewrite) -f train.de.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.de < train.de.prep.tok > train.de.prep.tok.bpe$$s & \
+			[ $(rewrite) -f dev.de.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.de < dev.de.prep.tok > dev.de.prep.tok.bpe$$s & \
+			[ $(rewrite) -f dev.cs.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.cs < dev.cs.prep.tok > dev.cs.prep.tok.bpe$$s & \
 			wait ; echo applied; \
 			echo; echo; echo de $$s; echo; \
-			[ ! -f pbe$$s.de.oov ] && perl $(MOSES)/../analysis/oov.pl dev.de.prep.tok.bpe$$s < train.de.prep.tok.bpe$$s > pbe$$s.de.oov & \
+			[ $(rewrite) -f pbe$$s.de.oov ] && perl $(MOSES)/../analysis/oov.pl dev.de.prep.tok.bpe$$s < train.de.prep.tok.bpe$$s > pbe$$s.de.oov & \
 			echo; echo; echo cs $$s; echo; \
-			[ ! -f pbe$$s.cs.oov ] && perl $(MOSES)/../analysis/oov.pl dev.cs.prep.tok.bpe$$s < train.cs.prep.tok.bpe$$s > pbe$$s.cs.oov & \
+			[ $(rewrite) -f pbe$$s.cs.oov ] && perl $(MOSES)/../analysis/oov.pl dev.cs.prep.tok.bpe$$s < train.cs.prep.tok.bpe$$s > pbe$$s.cs.oov & \
 		} & \
 	done ; 	wait
 		

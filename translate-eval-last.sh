@@ -1,3 +1,7 @@
 #!/bin/bash
 
-./translate-eval.sh `ls $1/model*.pt -t | head -n 1`
+m=`ls /mnt/obo-machacek/modelbpe*_epoch*.t7 -t | head -n 1`
+cp $m .
+echo $m
+./translate-eval.sh `basename $m`
+rm `basename $m`

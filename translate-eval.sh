@@ -8,7 +8,7 @@ if [ ! -f $WD/$1.cs.pred ]; then
 	echo translating
 	cd /home/obo-machacek/OpenNMT
 	echo $WD
-	time th translate.lua -model $MODEL -src $WD/test.de -output $WD/$1.cs.pred -replace_unk -gpuid 1 2 3 4
+	time th translate.lua -model $MODEL -src $WD/test.de -output $WD/$1.cs.pred -replace_unk -gpuid 3
 fi
 cd $WD
 if [ ! -f $1.cs.pred.post ]; then

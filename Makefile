@@ -93,3 +93,92 @@ train5:
 	-validation_metric bleu \
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
 	echo $$! > /home/obo-machacek/train4.pid
+
+train.de.bpe: data/train.de.prep.tok.bpe7500
+	cp data/train.de.prep.tok.bpe7500 train.de.bpe
+train.cs.bpe: data/train.cs.prep.tok.bpe7500
+	cp data/train.cs.prep.tok.bpe7500 train.cs.bpe
+dev.cs.bpe:
+	cp data/dev.cs.prep.tok.bpe7500 dev.cs.bpe
+dev.de.bpe:
+	cp data/dev.de.prep.tok.bpe7500 dev.de.bpe
+
+
+.ONESHELL:
+preprocess-bpe: dev.de.bpe dev.cs.bpe train.cs.bpe train.de.bpe
+	cd $(ONMT)
+	th preprocess.lua \
+        -train_src $D/train.de.bpe \
+        -train_tgt $D/train.cs.bpe \
+        -valid_src $D/dev.de.bpe \
+        -valid_tgt $D/dev.cs.bpe \
+        -save_data $D/data-bpe
+
+C=bpe1
+.ONESHELL:
+train-bpe1:
+	cd $(ONMT)
+	nohup th train.lua -data $D/data-bpe-train.t7 \
+        -save_config conf$C \
+        -gpuid 1 2 3 4 \
+        -end_epoch 0 \
+        -async_parallel true \
+        -max_batch_size 64 \
+        -seed 123 \
+        -log_file /home/obo-machacek/train$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric perplexity \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+
+C=bpe2
+.ONESHELL:
+train-bpe2:
+	cd $(ONMT)
+	nohup th train.lua -data $D/data-bpe-train.t7 \
+        -save_config conf$C \
+        -gpuid 1  \
+        -end_epoch 0 \
+	-layers 1 \
+        -max_batch_size 64 \
+	-rnn_type GRU \
+        -seed 123 \
+        -log_file /home/obo-machacek/train$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric loss \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+
+#C=bpe3
+.ONESHELL:
+train-bpe3:
+	cd $(ONMT)
+	nohup th train.lua -data $D/data-bpe-train.t7 \
+        -save_config conf$C \
+        -gpuid  3 4 \
+        -end_epoch 0 \
+        -async_parallel true \
+        -max_batch_size 64 \
+        -seed 123 \
+        -log_file /home/obo-machacek/train$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric perplexity \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+
+C=bpe4
+.ONESHELL:
+train-bpe4:
+	cd $(ONMT)
+	nohup th train.lua -data $D/data-bpe-train.t7 \
+        -save_config conf$C \
+        -gpuid 2  \
+        -end_epoch 0 \
+	-layers 3 \
+        -max_batch_size 64 \
+        -seed 123 \
+        -log_file /home/obo-machacek/train$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric loss \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
