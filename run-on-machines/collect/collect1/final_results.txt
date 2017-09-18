@@ -1,0 +1,32 @@
+6853.68         -enc_layers  3  -dec_layers  1  -bridge  dense_nonlinear
+6887.20         -enc_layers  4  -dec_layers  1  -bridge  none
+8555.34         -enc_layers  3  -dec_layers  1  -bridge  dense
+8935.91         -enc_layers  3  -dec_layers  3  -bridge  none
+10393.87        -enc_layers  4  -dec_layers  3  -bridge  none
+11962.70        -enc_layers  1  -dec_layers  4  -bridge  dense
+13406.09        -enc_layers  3  -dec_layers  3  -bridge  dense_nonlinear
+13683.85        -enc_layers  3  -dec_layers  1  -bridge  none
+18044.08        -enc_layers  1  -dec_layers  1  -bridge  dense_nonlinear
+19363.94        -enc_layers  4  -dec_layers  1  -bridge  dense
+19949.32        -enc_layers  3  -dec_layers  3  -bridge  dense
+20000.52        -enc_layers  1  -dec_layers  3  -bridge  none
+21732.53        -enc_layers  1  -dec_layers  1  -bridge  none
+24614.25        -enc_layers  1  -dec_layers  3  -bridge  dense_nonlinear
+31662.76        -enc_layers  4  -dec_layers  3  -bridge  dense
+31907.84        -enc_layers  3  -dec_layers  4  -bridge  none
+35021.75        -enc_layers  3  -dec_layers  4  -bridge  dense
+38773.43        -enc_layers  4  -dec_layers  1  -bridge  dense_nonlinear
+43781.96        -enc_layers  1  -dec_layers  1  -bridge  dense
+43907.18        -enc_layers  4  -dec_layers  4  -bridge  dense
+
+
+56807.00        -enc_layers  4  -dec_layers  4  -bridge  none
+97230.82        -enc_layers  3  -dec_layers  3  -bridge  copy
+150345.89       -enc_layers  1  -dec_layers  4  -bridge  none
+826256.52       -enc_layers  4  -dec_layers  3  -bridge  dense_nonlinear
+2597942.87      -enc_layers  1  -dec_layers  1  -bridge  copy
+43030436.42     -enc_layers  3  -dec_layers  4  -bridge  dense_nonlinear
+218671318.20    -enc_layers  1  -dec_layers  4  -bridge  dense_nonlinear
+438368019.84    -enc_layers  4  -dec_layers  4  -bridge  copy
+736528093.91    -enc_layers  4  -dec_layers  4  -bridge  dense_nonlinear
+13840630916.26  -enc_layers  1  -dec_layers  3  -bridge  dense
