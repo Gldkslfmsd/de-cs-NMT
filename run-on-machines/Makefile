@@ -35,17 +35,18 @@ QS="th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.tx
 #|| echo $$us $$ip
 
 
-missing_params: gen-parameters.sh
-	./gen-parameters.sh > params
+missing_params: gen-parameters2.sh collect/missing
+	./gen-parameters2.sh > params
 	grep . -n params > p
 	: > para ;cat collect/missing | while read line; do grep "^$$line"":" p >> para ; done
 	sed 's/^[^:]*://' para > params
-	split --lines=1 params params-
+	python3 split.py params `wc -l $(IPS) | cut -f 1 -d" "` params-
 #	tail -1 params >> params-ap
 
 params: gen-parameters2.sh
 	bash gen-parameters2.sh > params
-	split -n 30 params params-
+	rm -rf params-*
+	python3 split.py params `wc -l $(IPS) | cut -f 1 -d" "` params-
 #	tail -1 params >> params-ap
 
 

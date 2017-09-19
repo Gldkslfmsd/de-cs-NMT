@@ -12,6 +12,7 @@ while read line; do
 	echo
 	echo
 	echo $line #-log_file $HOME/$HOST""-$i-$suf"".log
+	export THC_CACHING_ALLOCATOR=0
 	eval "$line > ~/`hostname`-$i"".out 2>`hostname`-$i"".err" 
 	echo $!  > ~/$i"".pid # $HOME/$HOST""-$i-$suf"".pid
 
