@@ -1,0 +1,145 @@
+6    536.88              -enc  layers  2  -dec  layers  2  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      sum
+19   548.04              -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  concat
+17   549.18              -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  concat
+15   551.79              -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  concat
+3    557.96              -enc  layers  2  -dec  layers  2  -encoder  type  brnn    -attention  none    -bridge  dense  nonlinear  -brnn    merge      concat
+167  569.52
+1    570.69
+229  576.86
+80   582.49              -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   750
+153  589.18              -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   500
+89   596.24              -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  concat
+18   597.03              -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  sum
+97   601.46              -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  concat
+77   603.93              -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   750
+79   605.67              -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   500
+85   606.93              -enc  layers  3  -dec  layers  2  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      concat
+86   606.93              -enc  layers  3  -dec  layers  2  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      sum
+249  610.98
+93   610.35              -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  concat
+90   631.62              -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  sum
+96   636.57              -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  sum
+10   647.01              -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  sum
+235  651.36
+12   666.74              -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  sum
+14   699.22              -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  sum
+100  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  sum
+103  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   250
+104  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   500
+105  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   750
+106  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   250
+107  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   500
+108  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   750
+109  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   250
+110  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   500
+111  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   750
+112  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   250
+113  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   500
+114  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   750
+115  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   250
+116  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   500
+117  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   750
+118  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   250
+11   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  concat
+119  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   500
+120  999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   750
+123  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  brnn    -attention  none    -bridge  dense  nonlinear  -brnn    merge      concat
+124  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  brnn    -attention  none    -bridge  dense  nonlinear  -brnn    merge      sum
+125  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      concat
+126  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      sum
+129  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  concat
+130  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  sum
+131  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  concat
+132  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  sum
+133  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  concat
+134  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  sum
+135  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  concat
+136  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  sum
+137  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  concat
+138  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  sum
+13   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  concat
+139  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  concat
+140  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  sum
+143  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   250
+144  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   500
+145  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   750
+146  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   250
+147  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   500
+148  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   750
+149  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   250
+150  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   500
+151  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   750
+152  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   250
+154  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   750
+155  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   250
+156  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   500
+157  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   750
+158  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   250
+159  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   500
+160  999999999999999999  -enc  layers  3  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   750
+16   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  sum
+20   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  sum
+23   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   250
+24   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   500
+25   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   750
+26   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   250
+27   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   500
+28   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   750
+2    999999999999999999
+29   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   250
+30   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   500
+31   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   750
+32   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   250
+33   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   500
+34   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   750
+35   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   250
+36   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   500
+37   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   750
+38   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   250
+39   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   500
+40   999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   750
+43   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  brnn    -attention  none    -bridge  dense  nonlinear  -brnn    merge      concat
+44   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  brnn    -attention  none    -bridge  dense  nonlinear  -brnn    merge      sum
+45   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      concat
+46   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      sum
+4    999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  brnn    -attention  none    -bridge  dense  nonlinear  -brnn    merge      sum
+49   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  concat
+50   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  sum
+51   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  concat
+52   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  sum
+53   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  concat
+54   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  sum
+55   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  concat
+56   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  sum
+57   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  concat
+58   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  sum
+5    999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      concat
+59   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  concat
+60   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  sum
+63   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   250
+64   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   500
+65   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   750
+66   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   250
+67   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   500
+68   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   750
+69   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   250
+70   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   500
+71   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  none    -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   750
+72   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   250
+73   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   500
+74   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     2       -cnn     size   750
+75   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   250
+76   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     3       -cnn     size   500
+78   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   250
+7    999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      sum
+81   999999999999999999  -enc  layers  2  -dec  layers  3  -encoder  type  cnn     -attention  global  -bridge  dense  nonlinear  -cnn     kernel     4       -cnn     size   750
+83   999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  brnn    -attention  none    -bridge  dense  nonlinear  -brnn    merge      concat
+84   999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  brnn    -attention  none    -bridge  dense  nonlinear  -brnn    merge      sum
+87   999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  brnn    -attention  global  -bridge  dense  nonlinear  -brnn    merge      sum
+91   999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  concat
+92   999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  sum
+94   999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  sum
+95   999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  concat
+98   999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  2       -pdbrnn  merge  sum
+9    999999999999999999  -enc  layers  2  -dec  layers  2  -encoder  type  pdbrnn  -attention  none    -bridge  dense  nonlinear  -pdbrnn  reduction  1       -pdbrnn  merge  concat
+99   999999999999999999  -enc  layers  3  -dec  layers  2  -encoder  type  pdbrnn  -attention  global  -bridge  dense  nonlinear  -pdbrnn  reduction  3       -pdbrnn  merge  concat

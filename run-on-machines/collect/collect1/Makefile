@@ -1,7 +1,7 @@
 
 missing miss:
 	: > missing
-	for i in `seq 1 42`; do \
+	for i in `seq 1 121`; do \
 		if [ ! -f $$i"".log ] || ! grep 'perplexity' $$i"".log >/dev/null || grep '999999999999999999' $$i"".log > /dev/null ; then \
 			echo $$i >> missing ; \
 		fi; \

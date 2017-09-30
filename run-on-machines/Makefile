@@ -1,5 +1,5 @@
 
-IPS=30ips
+IPS=10ips-dm
 
 yes-machines:
 	cat nove-ips | while read ip; do \
@@ -34,20 +34,33 @@ QS="th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.tx
 #	cat ok
 #|| echo $$us $$ip
 
+ITER=5
 
-missing_params: gen-parameters2.sh collect/missing
-	./gen-parameters2.sh > params
+missing_params: gen-parameters$(ITER).sh collect/missing
+	./gen-parameters$(ITER).sh > params
 	grep . -n params > p
 	: > para ;cat collect/missing | while read line; do grep "^$$line"":" p >> para ; done
 	sed 's/^[^:]*://' para > params
 	python3 split.py params `wc -l $(IPS) | cut -f 1 -d" "` params-
 #	tail -1 params >> params-ap
 
-params: gen-parameters2.sh
-	bash gen-parameters2.sh > params
+
+#gen_parameters$(ITER).sh collect/waiting
+wait_params: 
+	./gen-parameters$(ITER).sh > params
+	grep . -n params > p
+	: > para ;cat collect/waiting | while read line; do grep "^$$line"":" p >> para ; done
+	sed 's/^[^:]*://' para > params
+	python3 split.py params `wc -l $(IPS) | cut -f 1 -d" "` params-
+
+
+params: gen-parameters$(ITER).sh
+	bash gen-parameters$(ITER).sh > params
 	rm -rf params-*
 	python3 split.py params `wc -l $(IPS) | cut -f 1 -d" "` params-
 #	tail -1 params >> params-ap
+
+
 
 
 
@@ -57,8 +70,8 @@ copy-params:
 	paste p $(IPS) > ip_p
 	: > plan
 	cat ip_p | while read par user ip port; do \
-echo	echo	rsync --rsh=\"ssh -l $$user $$port\" launch-script.sh $$ip:~/ \|\| echo chyba!!! $$us $$ip $$port $$par  >> plan ; \
-echo		rsync --rsh=\"ssh -l $$user $$port\" launch-script.sh $$ip:~/ \|\| echo chyba!!! $$us $$ip $$port $$par  >> plan ; \
+echo	echo	rsync --rsh=\"ssh -l $$user $$port\" launch-script.sh $$ip:~/ \|\| echo chyba!!! $$us $$ip $$port $$par \& >> plan ; \
+echo		rsync --rsh=\"ssh -l $$user $$port\" launch-script.sh $$ip:~/ \|\| echo chyba!!! $$us $$ip $$port $$par \& >> plan ; \
 echo	echo	rsync --rsh=\"ssh -l $$user $$port\" $$par $$ip:~/par \|\| echo chyba!!! $$us $$ip $$port $$par \& >> plan ; \
 echo		rsync --rsh=\"ssh -l $$user $$port\" $$par $$ip:~/par \|\| echo chyba!!! $$us $$ip $$port $$par \& >> plan ; \
 	done
@@ -78,7 +91,7 @@ collect-logs:
 	: > plan
 	cat $(IPS) | while read user ip port; do \
 	echo echo ssh -l $$user $$ip $$port >> plan	;	\
-echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:~/*.log $$ip:~/*.out  $$ip:~/*.err collect/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan ; \
+echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:~/*.log $$ip:~/*.out  $$ip:~/*.err collect/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
 	done
 	echo wait >> plan
 #	bash plan

@@ -1,0 +1,84 @@
+38   497.92              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  false  -dropout  words  0    -dropout  type  naive
+44   504.52              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  false  -dropout  words  0.1  -dropout  type  variational
+29   506.01              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0    -dropout  type  variational
+42   510.41              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  false  -dropout  words  0.1  -dropout  type  naive
+46   511.00              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  false  -dropout  words  0.3  -dropout  type  naive
+10   515.35              -src  word  vec  size  250   -tgt  word  vec  size  1000
+34   516.59              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0.3  -dropout  type  naive
+66   519.19              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  false  -dropout  words  0.1  -dropout  type  naive
+50   520.39              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  true   -dropout  words  0    -dropout  type  naive
+15   523.41              -src  word  vec  size  500   -tgt  word  vec  size  1000
+18   523.41              -src  word  vec  size  750   -tgt  word  vec  size  500
+64   523.66              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  false  -dropout  words  0    -dropout  type  variational
+14   524.71              -src  word  vec  size  500   -tgt  word  vec  size  750
+55   524.96              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  true   -dropout  words  0.1  -dropout  type  naive
+30   525.40              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0.1  -dropout  type  naive
+52   525.17              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  true   -dropout  words  0    -dropout  type  variational
+22   526.10              -src  word  vec  size  1000  -tgt  word  vec  size  250
+26   526.25              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0    -dropout  type  naive
+48   528.56              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  false  -dropout  words  0.3  -dropout  type  variational
+60   532.26              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  true   -dropout  words  0.3  -dropout  type  variational
+68   535.70              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  false  -dropout  words  0.1  -dropout  type  variational
+56   536.08              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  true   -dropout  words  0.1  -dropout  type  variational
+58   536.12              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  true   -dropout  words  0.3  -dropout  type  naive
+70   539.18              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  false  -dropout  words  0.3  -dropout  type  naive
+72   540.44              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  false  -dropout  words  0.3  -dropout  type  variational
+86   547.97              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  false  -dropout  words  0    -dropout  type  naive
+88   549.82              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  false  -dropout  words  0    -dropout  type  variational
+92   554.41              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  false  -dropout  words  0.1  -dropout  type  variational
+6    557.44              -src  word  vec  size  250   -tgt  word  vec  size  100
+78   557.83              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  true   -dropout  words  0.1  -dropout  type  naive
+94   557.93              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  false  -dropout  words  0.3  -dropout  type  naive
+74   559.34              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  true   -dropout  words  0    -dropout  type  naive
+90   559.98              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  false  -dropout  words  0.1  -dropout  type  naive
+1    560.27              -src  word  vec  size  100   -tgt  word  vec  size  100
+76   562.66              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  true   -dropout  words  0    -dropout  type  variational
+96   562.21              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  false  -dropout  words  0.3  -dropout  type  variational
+82   572.24              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  true   -dropout  words  0.3  -dropout  type  naive
+81   581.41              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  true   -dropout  words  0.1  -dropout  type  variational
+114  673.85              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  false  -dropout  words  0.1  -dropout  type  naive
+110  678.76              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  false  -dropout  words  0    -dropout  type  naive
+118  682.45              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  false  -dropout  words  0.3  -dropout  type  naive
+2    709.47              -src  word  vec  size  100   -tgt  word  vec  size  250
+16   718.24              -src  word  vec  size  750   -tgt  word  vec  size  100
+120  903.73              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  false  -dropout  words  0.3  -dropout  type  variational
+116  906.88              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  false  -dropout  words  0.1  -dropout  type  variational
+112  942.75              -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  false  -dropout  words  0    -dropout  type  variational
+3    1020.79             -src  word  vec  size  100   -tgt  word  vec  size  500
+31   1107.20             -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0.1  -dropout  type  naive
+4    1303.90             -src  word  vec  size  100   -tgt  word  vec  size  750
+17   1564.59             -src  word  vec  size  750   -tgt  word  vec  size  250
+5    1871.08             -src  word  vec  size  100   -tgt  word  vec  size  1000
+32   1922.75             -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0.1  -dropout  type  variational
+33   3000.48             -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0.1  -dropout  type  variational
+102  11226.67            -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  true   -dropout  words  0.1  -dropout  type  naive
+100  12176.44            -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  true   -dropout  words  0    -dropout  type  variational
+98   15667.91            -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  true   -dropout  words  0    -dropout  type  naive
+104  23402.30            -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  true   -dropout  words  0.1  -dropout  type  variational
+8    38525.35            -src  word  vec  size  250   -tgt  word  vec  size  500
+106  44826.89            -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  true   -dropout  words  0.3  -dropout  type  naive
+108  49972.75            -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.75  -dropout  input  true   -dropout  words  0.3  -dropout  type  variational
+12   96828.16            -src  word  vec  size  500   -tgt  word  vec  size  250
+11   196125.46           -src  word  vec  size  500   -tgt  word  vec  size  100
+36   239296.10           -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0.3  -dropout  type  variational
+13   465104.65           -src  word  vec  size  500   -tgt  word  vec  size  500
+9    604069.96           -src  word  vec  size  250   -tgt  word  vec  size  750
+19   782305.24           -src  word  vec  size  750   -tgt  word  vec  size  750
+39   1367202.35          -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  false  -dropout  words  0    -dropout  type  naive
+40   3059298.38          -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  false  -dropout  words  0    -dropout  type  variational
+24   59902181.98         -src  word  vec  size  1000  -tgt  word  vec  size  750
+25   18147657336.19      -src  word  vec  size  1000  -tgt  word  vec  size  1000
+37   110138174058759.09  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0.3  -dropout  type  variational
+20   999999999999999999  -src  word  vec  size  750   -tgt  word  vec  size  1000
+21   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  100
+23   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  500
+27   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0    -dropout  type  naive
+28   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0    -dropout  type  variational
+35   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  true   -dropout  words  0.3  -dropout  type  naive
+41   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.1   -dropout  input  false  -dropout  words  0    -dropout  type  variational
+54   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  true   -dropout  words  0.1  -dropout  type  naive
+62   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.3   -dropout  input  false  -dropout  words  0    -dropout  type  naive
+7    999999999999999999  -src  word  vec  size  250   -tgt  word  vec  size  250
+79   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  true   -dropout  words  0.1  -dropout  type  naive
+80   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  true   -dropout  words  0.1  -dropout  type  variational
+84   999999999999999999  -src  word  vec  size  1000  -tgt  word  vec  size  1000  -dropout  0.5   -dropout  input  true   -dropout  words  0.3  -dropout  type  variational
