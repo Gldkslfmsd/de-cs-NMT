@@ -4,8 +4,8 @@ jrc jrc.cs.gz jrc.de.gz:
 	wget http://opus.lingfil.uu.se/download.php?f=JRC-Acquis%2Fmono%2FJRC-Acquis.de.gz -O jrc.de.gz ; \
 	wait
 
-#DIR=/mnt/obo-machacek
-DIR=.
+DIR=/mnt/obo-machacek/subtitles
+#DIR=.
 $(DIR)/osub.cs.gz:
 	wget http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2016%2Fmono%2FOpenSubtitles2016.cs.gz -O $(DIR)/osub.cs.gz
 
