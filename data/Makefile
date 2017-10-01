@@ -188,9 +188,9 @@ $(DIR)/osub.de.prep.tok.bpe$B: $(DIR)/osub.de.prep.tok  osub_model_bpe$B.de
 	subword/apply_bpe.py -c osub_model_bpe$B.de < $(DIR)/osub.de.prep.tok > $(DIR)/osub.de.prep.tok.bpe$B
 
 osub.cs.bpe: $(DIR)/osub.cs.prep.tok.bpe$B
-	ln -l $(DIR)/osub.cs.prep.tok.bpe$B osub.cs.bpe
+	ln -s $(DIR)/osub.cs.prep.tok.bpe$B osub.cs.bpe
 osub.de.bpe: $(DIR)/osub.de.prep.tok.bpe$B
-	ln -l $(DIR)/osub.de.prep.tok.bpe$B osub.de.bpe
+	ln -s $(DIR)/osub.de.prep.tok.bpe$B osub.de.bpe
 
 
 
