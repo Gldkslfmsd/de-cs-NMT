@@ -296,7 +296,7 @@ train$C:
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
 
 
-C=osub-2
+#C=osub-2
 .ONESHELL:
 train$C:
 	cd $(ONMT)
@@ -312,7 +312,7 @@ train$C:
 	-validation_metric perplexity \
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
 
-C=osub-3
+#C=osub-3
 .ONESHELL:
 train$C:
 	cd $(ONMT)
@@ -328,7 +328,7 @@ train$C:
 	-validation_metric loss \
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
 
-C=osub-4
+#C=osub-4
 .ONESHELL:
 train$C:
 	cd $(ONMT)
@@ -345,7 +345,7 @@ train$C:
 	-validation_metric perplexity \
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
 
-C=osub-5
+#C=osub-5
 .ONESHELL:
 train$C:
 	cd $(ONMT)
