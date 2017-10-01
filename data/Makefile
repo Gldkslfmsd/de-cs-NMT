@@ -28,9 +28,7 @@ preprocess $(DATA.prep): $(DATA) moses
 	for d in $(DATA); do \
 		echo $$d ; \
 		cat $$d | \
-		perl $(MOSES)/remove-non-printing-char.perl | \
-		perl $(MOSES)/replace-unicode-punctuation.perl | \
-		perl $(MOSES)/normalize-punctuation.perl > $$d"".prep ;\
+		./preprocess.sh > $$d"".prep ;\
 	done
 
 TOKENIZED=dev.cs.prep.tok dev.de.prep.tok train.cs.prep.tok test.cs.prep.tok train.de.prep.tok test.de.prep.tok	
@@ -45,11 +43,33 @@ tokenize $(TOKENIZED): moses $(DATA.prep) $(DATA)
 		$(TOK_CMD) -l de < $$d > $$d"".prep.tok; \
 	done
 
+#############################################################
+# w2c corpus
 
-# I skip truecasing...
-#RECASE=$(MOSES)/scripts/recaser
-#recase:
-#	:
+B=7500
+
+w2c/web.de.txt.gz:
+	make -C w2c web.de.txt.gz
+w2c/web.cs.txt.gz:
+	make -C w2c web.cs.txt.gz
+
+
+tokenize_w2c: w2c/web.de.txt.gz w2c/web.cs.txt.gz
+	gunzip -c w2c/web.cs.txt.gz | ./preprocess.sh | $(TOK_CMD) -l cs  | gzip > w2c/web.cs.txt.prep.tok.gz &
+	gunzip -c w2c/web.de.txt.gz | ./preprocess.sh | $(TOK_CMD) -l de  | gzip > w2c/web.de.txt.prep.tok.gz
+	wait
+
+	
+w2c_bpe: w2c/web.de.txt.prep.tok.gz w2c/web.cs.txt.prep.tok.gz
+	gunzip -c w2c/web.cs.txt.prep.tok.gz | subword/apply_bpe.py -c model_bpe$B.cs | gzip > w2c/web.cs.txt.prep.tok.bpe$B.gz &
+	gunzip -c w2c/web.de.txt.prep.tok.gz | subword/apply_bpe.py -c model_bpe$B.de | gzip > w2c/web.de.txt.prep.tok.bpe$B.gz
+	wait
+
+
+
+
+#############################################################
+# Morfessor
 
 install_morfessor p3:
 	virtualenv -p python3 p3
@@ -67,6 +87,10 @@ morfesize: morphesize.py $(TOKENIZED)
 		p3/bin/python3 morphesize.py de < $$d"".prep.tok > $$d"".prep.tok.mor & \
 	done
 	wait
+
+
+############################################################################################################################################
+# Byte pair encoding
 
 subword:
 	git clone https://github.com/rsennrich/subword-nmt.git subword

@@ -94,25 +94,26 @@ train5:
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
 	echo $$! > /home/obo-machacek/train4.pid
 
-train.de.bpe: data/train.de.prep.tok.bpe7500
-	cp data/train.de.prep.tok.bpe7500 train.de.bpe
-train.cs.bpe: data/train.cs.prep.tok.bpe7500
-	cp data/train.cs.prep.tok.bpe7500 train.cs.bpe
-dev.cs.bpe:
-	cp data/dev.cs.prep.tok.bpe7500 dev.cs.bpe
-dev.de.bpe:
-	cp data/dev.de.prep.tok.bpe7500 dev.de.bpe
+BPE=2500
+train.de.bpe$(BPE): #data/train.de.prep.tok.bpe$(BPE)
+	cp data/train.de.prep.tok.bpe$(BPE) train.de.bpe$(BPE)
+train.cs.bpe$(BPE): #data/train.cs.prep.tok.bpe$(BPE)
+	cp data/train.cs.prep.tok.bpe$(BPE) train.cs.bpe$(BPE)
+dev.cs.bpe$(BPE):
+	cp data/dev.cs.prep.tok.bpe$(BPE) dev.cs.bpe$(BPE)
+dev.de.bpe$(BPE):
+	cp data/dev.de.prep.tok.bpe$(BPE) dev.de.bpe$(BPE)
 
 
 .ONESHELL:
-preprocess-bpe: dev.de.bpe dev.cs.bpe train.cs.bpe train.de.bpe
+preprocess-bpe: dev.de.bpe$(BPE) dev.cs.bpe$(BPE) train.cs.bpe$(BPE) train.de.bpe$(BPE)
 	cd $(ONMT)
 	th preprocess.lua \
-        -train_src $D/train.de.bpe \
-        -train_tgt $D/train.cs.bpe \
-        -valid_src $D/dev.de.bpe \
-        -valid_tgt $D/dev.cs.bpe \
-        -save_data $D/data-bpe
+        -train_src $D/train.de.bpe$(BPE) \
+        -train_tgt $D/train.cs.bpe$(BPE) \
+        -valid_src $D/dev.de.bpe$(BPE) \
+        -valid_tgt $D/dev.cs.bpe$(BPE) \
+        -save_data $D/data-bpe$(BPE)
 
 C=bpe1
 .ONESHELL:
@@ -131,6 +132,7 @@ train-bpe1:
 	-validation_metric perplexity \
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
 
+###################################################################################################
 C=bpe2
 .ONESHELL:
 train-bpe2:
@@ -149,6 +151,27 @@ train-bpe2:
 	-validation_metric loss \
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
 
+C=bpe2.2
+.ONESHELL:
+train-bpe2.2:
+	cd $(ONMT)
+	nohup th train.lua -data $D/data-bpe-train.t7 \
+        -save_config conf$C \
+        -gpuid 1  \
+        -end_epoch 0 \
+	-layers 2 \
+        -max_batch_size 64 \
+	-rnn_type GRU \
+        -seed 123 \
+        -log_file /home/obo-machacek/train$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric loss \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+	echo $! > /home/obo-machacek/train$C.pid
+
+####################################################################################################
+
 #C=bpe3
 .ONESHELL:
 train-bpe3:
@@ -166,7 +189,29 @@ train-bpe3:
 	-validation_metric perplexity \
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
 
-C=bpe4
+
+C=bpe3.2
+.ONESHELL:
+train-bpe3.2:
+	cd $(ONMT)
+	nohup th train.lua -data $D/data-bpe$(BPE)-train.t7 \
+        -save_config conf$C \
+        -gpuid  4 \
+        -end_epoch 0 \
+        -async_parallel false \
+        -max_batch_size 64 \
+        -seed 123 \
+        -log_file /home/obo-machacek/train$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric perplexity \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+	echo $! > /home/obo-machacek/train$C.pid
+
+####################################################################################################
+
+
+#C=bpe4
 .ONESHELL:
 train-bpe4:
 	cd $(ONMT)
@@ -182,3 +227,54 @@ train-bpe4:
         -save_every 50 \
 	-validation_metric loss \
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+
+#C=bpe4.2
+.ONESHELL:
+train-bpe4.2:
+	cd $(ONMT)
+	nohup th train.lua -data $D/data-bpe-train.t7 \
+        -save_config conf$C \
+        -gpuid 3  \
+        -end_epoch 0 \
+	-layers 4 \
+        -max_batch_size 64 \
+        -seed 123 \
+        -log_file /home/obo-machacek/train$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric loss \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+
+
+
+####################################################################################################
+# pretrain word vectors:
+
+DIR=/mnt/obo-machacek/vectors
+
+$(DIR)/data.de:
+	gunzip -c /home/obo-machacek/de-cs-NMT/data/w2c/web.de.txt.prep.tok.bpe7500.gz > $(DIR)/data.de
+
+$(DIR)/data.cs:
+	gunzip -c /home/obo-machacek/de-cs-NMT/data/w2c/web.cs.txt.prep.tok.bpe7500.gz > $(DIR)/data.cs
+
+.ONESHELL:
+dicts $(DIR)/vocab.de $(DIR)/vocab.cs: $(DIR)/data.de $(DIR)/data.cs
+	mkdir -p $(DIR)
+	cd $(ONMT)
+	th tools/build_vocab.lua -save_vocab $(DIR)/vocab.de -words_min_frequency 2 -data $(DIR)/data.de &
+	th tools/build_vocab.lua -save_vocab $(DIR)/vocab.cs -words_min_frequency 2 -data $(DIR)/data.cs
+	wait
+
+
+.ONESHELL:
+embed:
+	cd $(ONMT)
+	th tools/embeddings.lua -dict_file $(DIR)/vocab.de.dict -save_data $(DIR)/emb.de -embed_file ~/de-cs-NMT/vec.de -embed_type word2vec-bin
+
+.ONESHELL:
+preprocess-sub:
+	cd $(ONMT)
+	th preprocess.lua -train_src $$HOME/de-cs-NMT/data/subtitles/osub.de -train_tgt $$HOME/de-cs-NMT/data/subtitles/osub.cs -valid_src $$HOME/de-cs-NMT/dev.de.prep.tok.mor -valid_tgt $$HOME/de-cs-NMT/dev.cs.prep.tok.mor -save_data /mnt/obo-machacek/subtitles/data-osub
+
+
