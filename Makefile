@@ -296,11 +296,11 @@ train$C:
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
 
 
-#C=osub-2
+C=osub-2
 .ONESHELL:
 train$C:
 	cd $(ONMT)
-	nohup th train.lua -data $(DATA) \
+	THC_CACHING_ALLOCATOR=0 nohup th train.lua -data $(DATA) \
         -save_config conf$C \
         -gpuid 1 2 3 4  \
         -end_epoch 13 \
@@ -316,7 +316,7 @@ train$C:
 .ONESHELL:
 train$C:
 	cd $(ONMT)
-	nohup th train.lua -data $(DATA) \
+	THC_CACHING_ALLOCATOR=0 nohup th train.lua -data $(DATA) \
         -save_config conf$C \
         -gpuid 1 2 3 4  \
         -end_epoch 13 \
@@ -332,7 +332,7 @@ train$C:
 .ONESHELL:
 train$C:
 	cd $(ONMT)
-	nohup th train.lua -data $(DATA) \
+	THC_CACHING_ALLOCATOR=0 nohup th train.lua -data $(DATA) \
         -save_config conf$C \
         -gpuid 1 2 3 4  \
         -end_epoch 13 \
@@ -349,7 +349,7 @@ train$C:
 .ONESHELL:
 train$C:
 	cd $(ONMT)
-	nohup th train.lua -data $(DATA) \
+	THC_CACHING_ALLOCATOR=0 nohup th train.lua -data $(DATA) \
         -save_config conf$C \
         -gpuid 1 2 3 4  \
         -end_epoch 13 \
