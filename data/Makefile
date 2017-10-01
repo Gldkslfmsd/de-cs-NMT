@@ -147,3 +147,50 @@ check_overlap: $(TOKENIZED)
 
 clean_data:
 	rm -rf dev* train* test*
+
+
+
+#####################################################
+# osub
+
+DIR=/mnt/obo-machacek/subtitles
+
+osub.cs:
+	make -C subtitles osub.cs
+	ln -s subtitles/osub.cs .
+	mkdir -p $(DIR)
+
+osub.de:
+	make -C subtitles osub.de
+	ln -s subtitles/osub.de .
+
+
+$(DIR)/osub.cs.prep: osub.cs
+	./preprocess.sh < osub.cs > $(DIR)/osub.cs.prep
+$(DIR)/osub.de.prep: osub.de
+	./preprocess.sh < osub.de > $(DIR)/osub.de.prep
+
+$(DIR)/osub.de.prep.tok: $(DIR)/osub.de.prep
+	$(TOK_CMD) -l de <  $(DIR)/osub.de.prep > $(DIR)/osub.de.prep.tok
+$(DIR)/osub.cs.prep.tok: $(DIR)/osub.cs.prep
+	$(TOK_CMD) -l cs <  $(DIR)/osub.cs.prep > $(DIR)/osub.cs.prep.tok
+
+B=7500
+
+osub_model_bpe$B.cs: $(DIR)/osub.cs.prep.tok
+	subword/learn_bpe.py -s $B < $(DIR)/osub.cs.prep.tok > osub_model_bpe$B.cs
+osub_model_bpe$B.de: $(DIR)/osub.de.prep.tok
+	subword/learn_bpe.py -s $B < $(DIR)/osub.de.prep.tok > osub_model_bpe$B.de
+
+$(DIR)/osub.cs.prep.tok.bpe$B: $(DIR)/osub.cs.prep.tok osub_model_bpe$B.cs
+	subword/apply_bpe.py -c model_bpe$B.cs < $(DIR)/osub.cs.prep.tok > $(DIR)/osub.cs.prep.tok.bpe$B
+$(DIR)/osub.de.prep.tok.bpe$B: $(DIR)/osub.de.prep.tok  osub_model_bpe$B.de
+	subword/apply_bpe.py -c model_bpe$B.de < $(DIR)/osub.de.prep.tok > $(DIR)/osub.de.prep.tok.bpe$B
+
+osub.cs.bpe: $(DIR)/osub.cs.prep.tok.bpe$B
+	ln -l $(DIR)/osub.cs.prep.tok.bpe$B osub.cs.bpe
+osub.de.bpe: $(DIR)/osub.de.prep.tok.bpe$B
+	ln -l $(DIR)/osub.de.prep.tok.bpe$B osub.de.bpe
+
+
+
