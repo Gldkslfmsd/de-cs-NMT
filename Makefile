@@ -43,8 +43,8 @@ baseline: data/moses
 		perl $(MOSES)/tokenizer.perl -no-escape -threads `nproc` -l cs | \
 		perl multi-bleu.perl data/test.cs.prep.tok
 
-ONMT=/home/obo-machacek/OpenNMT
-D=/home/obo-machacek/de-cs-NMT
+ONMT=$$HOME/OpenNMT
+D=$$HOME/de-cs-NMT
 .ONESHELL:
 preprocess-a:
 	cd $(ONMT)
@@ -300,7 +300,7 @@ C=osub-2
 .ONESHELL:
 train$C:
 	cd $(ONMT)
-	THC_CACHING_ALLOCATOR=0 nohup th train.lua -data $(DATA) \
+	nohup THC_CACHING_ALLOCATOR=0 th train.lua -data $(DATA) \
         -save_config conf$C \
         -gpuid 1 2 3 4  \
         -end_epoch 13 \
