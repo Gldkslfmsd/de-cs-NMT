@@ -165,21 +165,21 @@ osub.de:
 	ln -s subtitles/osub.de .
 
 
-$(DIR)/osub.cs.prep: osub.cs
+$(DIR)/osub.cs.prep: osub.cs moses
 	./preprocess.sh < osub.cs > $(DIR)/osub.cs.prep
 $(DIR)/osub.de.prep: osub.de
 	./preprocess.sh < osub.de > $(DIR)/osub.de.prep
 
-$(DIR)/osub.de.prep.tok: $(DIR)/osub.de.prep
+$(DIR)/osub.de.prep.tok: $(DIR)/osub.de.prep moses
 	$(TOK_CMD) -l de <  $(DIR)/osub.de.prep > $(DIR)/osub.de.prep.tok
-$(DIR)/osub.cs.prep.tok: $(DIR)/osub.cs.prep
+$(DIR)/osub.cs.prep.tok: $(DIR)/osub.cs.prep moses
 	$(TOK_CMD) -l cs <  $(DIR)/osub.cs.prep > $(DIR)/osub.cs.prep.tok
 
 B=7500
 
-osub_model_bpe$B.cs: $(DIR)/osub.cs.prep.tok
+osub_model_bpe$B.cs: $(DIR)/osub.cs.prep.tok subword
 	subword/learn_bpe.py -s $B < $(DIR)/osub.cs.prep.tok > osub_model_bpe$B.cs
-osub_model_bpe$B.de: $(DIR)/osub.de.prep.tok
+osub_model_bpe$B.de: $(DIR)/osub.de.prep.tok subword
 	subword/learn_bpe.py -s $B < $(DIR)/osub.de.prep.tok > osub_model_bpe$B.de
 
 $(DIR)/osub.cs.prep.tok.bpe$B: $(DIR)/osub.cs.prep.tok osub_model_bpe$B.cs
