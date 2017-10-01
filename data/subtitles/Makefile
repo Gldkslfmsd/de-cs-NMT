@@ -13,3 +13,6 @@ $(DIR)/osub.de.tar.gz:
 	wget http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2016%2Fmono%2FOpenSubtitles2016.de.gz -O $(DIR)/osub.de.gz
 
 sub: $(DIR)/osub.de.tar.gz $(DIR)/osub.cs.gz
+
+subxces $(DIR)/osub.cs-de.xml.gz:
+	wget http://opus.lingfil.uu.se/download.php?f=OpenSubtitles2016%2Fxml%2Fcs-de.xml.gz -O $(DIR)/osub.cs-de.xml.gz
