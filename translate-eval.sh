@@ -6,7 +6,7 @@ MODEL=`realpath $1`
 WD=$(pwd)
 if [ ! -f $WD/$1.cs.pred ]; then
 	echo translating
-	cd /home/obo-machacek/OpenNMT
+	cd $HOME/OpenNMT
 	echo $WD
 	time th translate.lua -model $MODEL -src $WD/test.de -output $WD/$1.cs.pred -replace_unk -gpuid 3
 fi

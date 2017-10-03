@@ -345,7 +345,7 @@ train$C:
 	-validation_metric perplexity \
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
 
-#C=osub-5
+C=osub-5
 .ONESHELL:
 train$C:
 	cd $(ONMT)
