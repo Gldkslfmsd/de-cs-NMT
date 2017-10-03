@@ -1,10 +1,12 @@
 
-IPS=10ips-dm
+#IPS=10ips-dm
+#IPS=new-machines
+IPS=new14
 
 yes-machines:
-	cat nove-ips | while read ip; do \
-		echo $$ip; \
-		echo hostname | ssh bojar@$$ip ; \
+	cat $(IPS) | while read line; do \
+		echo $$line; \
+		echo hostname | ssh -l $$line ; \
 	done
 
 .ONESHELL:
@@ -34,7 +36,7 @@ QS="th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.tx
 #	cat ok
 #|| echo $$us $$ip
 
-ITER=5
+ITER=6
 
 missing_params: gen-parameters$(ITER).sh collect/missing
 	./gen-parameters$(ITER).sh > params
@@ -87,11 +89,22 @@ echo		rsync --rsh=\"ssh -l $$user $$port\" $$par $$ip:~/par \|\| echo chyba!!! $
 #	done; wait
 #
 .ONESHELL:
-collect-logs:
+collect-new-logs:
 	: > plan
 	cat $(IPS) | while read user ip port; do \
 	echo echo ssh -l $$user $$ip $$port >> plan	;	\
-echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:~/*.log $$ip:~/*.out  $$ip:~/*.err collect/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:~/*.log $$ip:~/*.out $$ip:~/*.err collect-$(IPS)/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	done
+	echo wait >> plan
+#	bash plan
+
+
+.ONESHELL:
+collect-de:
+	: > plan
+	cat 5ips-de | while read user ip port; do \
+	echo echo ssh -l $$user $$ip $$port >> plan	;	\
+echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:~/*.log $$ip:~/*.out $$ip:~/*.err collect-de/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
 	done
 	echo wait >> plan
 #	bash plan
