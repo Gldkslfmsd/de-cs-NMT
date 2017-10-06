@@ -45,6 +45,7 @@ baseline: data/moses
 
 ONMT=$$HOME/OpenNMT
 D=$$HOME/de-cs-NMT
+SAVE_DATA=/mnt/obo-machacek
 .ONESHELL:
 preprocess-a:
 	cd $(ONMT)
@@ -94,7 +95,7 @@ train5:
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
 	echo $$! > /home/obo-machacek/train4.pid
 
-BPE=2500
+BPE=50000
 train.de.bpe$(BPE): #data/train.de.prep.tok.bpe$(BPE)
 	cp data/train.de.prep.tok.bpe$(BPE) train.de.bpe$(BPE)
 train.cs.bpe$(BPE): #data/train.cs.prep.tok.bpe$(BPE)
@@ -113,7 +114,7 @@ preprocess-bpe: dev.de.bpe$(BPE) dev.cs.bpe$(BPE) train.cs.bpe$(BPE) train.de.bp
         -train_tgt $D/train.cs.bpe$(BPE) \
         -valid_src $D/dev.de.bpe$(BPE) \
         -valid_tgt $D/dev.cs.bpe$(BPE) \
-        -save_data $D/data-bpe$(BPE)
+        -save_data $(SAVE_DATA)/data-bpe$(BPE)
 
 C=bpe1
 .ONESHELL:
@@ -132,8 +133,44 @@ train-bpe1:
 	-validation_metric perplexity \
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
 
+C=bpe30k-1
+.ONESHELL:
+train-bpe30k-1:
+	cd $(ONMT)
+	THC_CACHING_ALLOCATOR=0 nohup th train.lua -data $(SAVE_DATA)/data-bpe$(BPE)-train.t7 \
+        -save_config conf$C \
+        -gpuid 1 2 3 4 \
+        -end_epoch 0 \
+        -async_parallel true \
+        -max_batch_size 64 \
+        -seed 123 \
+        -log_file $$HOME/train$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric perplexity \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+
+C=bpe50k-1
+.ONESHELL:
+train-bpe30k-1:
+	cd $(ONMT)
+	THC_CACHING_ALLOCATOR=0 nohup th train.lua -data $(SAVE_DATA)/data-bpe$(BPE)-train.t7 \
+        -save_config conf$C \
+        -gpuid 1 2 3 4 \
+        -end_epoch 0 \
+        -async_parallel true \
+        -max_batch_size 64 \
+        -seed 123 \
+        -log_file $$HOME/train$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric perplexity \
+        -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
+
+
+
 ###################################################################################################
-C=bpe2
+#C=bpe2
 .ONESHELL:
 train-bpe2:
 	cd $(ONMT)
@@ -151,7 +188,7 @@ train-bpe2:
 	-validation_metric loss \
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
 
-C=bpe2.2
+#C=bpe2.2
 .ONESHELL:
 train-bpe2.2:
 	cd $(ONMT)
@@ -190,7 +227,7 @@ train-bpe3:
         -save_model /mnt/obo-machacek/model$C > /home/obo-machacek/train$C.out &
 
 
-C=bpe3.2
+#C=bpe3.2
 .ONESHELL:
 train-bpe3.2:
 	cd $(ONMT)
@@ -279,7 +316,7 @@ preprocess-sub:
 
 
 DATA=/mnt/obo-machacek/subtitles/data-osub-train.t7
-C=osub-1
+#C=osub-1
 .ONESHELL:
 train$C:
 	cd $(ONMT)
@@ -296,7 +333,7 @@ train$C:
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
 
 
-C=osub-2
+#C=osub-2
 .ONESHELL:
 train$C:
 	cd $(ONMT)
@@ -345,7 +382,7 @@ train$C:
 	-validation_metric perplexity \
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
 
-C=osub-5
+#C=osub-5
 .ONESHELL:
 train$C:
 	cd $(ONMT)

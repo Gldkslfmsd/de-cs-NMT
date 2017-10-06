@@ -46,7 +46,7 @@ tokenize $(TOKENIZED): moses $(DATA.prep) $(DATA)
 #############################################################
 # w2c corpus
 
-B=7500
+B=30000
 
 w2c/web.de.txt.gz:
 	make -C w2c web.de.txt.gz
@@ -96,7 +96,8 @@ subword:
 	git clone https://github.com/rsennrich/subword-nmt.git subword
 
 rewrite=! # ! if not rewrite, nothing if yes
-PARAM=100 1000 2500 5000 7500 10000 15000 18000 20000 50000 100000 1000000
+#PARAM=100 1000 2500 5000 7500 10000 15000 18000 20000 50000 100000 1000000
+PARAM=30000 50000 80000
 analyze_bpe: $(TOKENIZED) subword
 	for s in $(PARAM); do \
 		{ \
@@ -157,12 +158,12 @@ DIR=/mnt/obo-machacek/subtitles
 
 osub.cs:
 	make -C subtitles osub.cs
-	ln -s subtitles/osub.cs .
+	-ln -s subtitles/osub.cs .
 	mkdir -p $(DIR)
 
 osub.de:
-	make -C subtitles osub.de
-	ln -s subtitles/osub.de .
+	#make -C subtitles osub.de
+	-ln -s subtitles/osub.de .
 
 
 $(DIR)/osub.cs.prep: osub.cs moses

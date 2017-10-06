@@ -31,6 +31,11 @@ osub.de: osub.cs-de.tmx.gz
 osub.cs: osub.cs-de.tmx.gz
 	gunzip -c osub.cs-de.tmx.gz | grep '<tuv xml:lang="cs">' | sed -r 's/^ *<tuv xml:lang="cs"><seg>//;s#</seg></tuv>$$##;s/[0-9]+\. ?//' > osub.cs
 
+/mnt/obo-machacek/subtitles/osub.cs.prep.tok.fixlI: osub.cs.prep.tok
+	sed 's/\([a-z]\)I\([ýáěíeéioůúuoa ]\)/\1l\2/g'  osub.cs.prep.tok > /mnt/obo-machacek/subtitles/osub.cs.prep.tok.fixlI
 
-osub.cs.cleaned:
+osub.cs.clear osub.de.clear:  /mnt/obo-machacek/subtitles/osub.cs.prep.tok.fixlI /mnt/obo-machacek/subtitles/osub.de.prep.tok
+	python3 clear-osub.py /mnt/obo-machacek/subtitles/osub.cs.prep.tok.fixlI /mnt/obo-machacek/subtitles/osub.de.prep.tok
+	ln -s /mnt/obo-machacek/subtitles/osub.cs.prep.tok.fixlI.clear osub.cs.clear
+	ln -s /mnt/obo-machacek/subtitles/osub.de.prep.tok osub.de.clear
 	
