@@ -194,4 +194,45 @@ osub.de.bpe: $(DIR)/osub.de.prep.tok.bpe$B
 	ln -s $(DIR)/osub.de.prep.tok.bpe$B osub.de.bpe
 
 
+#####################################################
+# osub-v2
+
+DIR=/mnt/obo-machacek/subtitles
+
+BB=7500 30000 50000 80000
+
+osub-v2-models:
+	for i in $(BB); do make B=$$i osub_model_clear_bpe$$i.cs  osub_model_clear_bpe$$i.de -j & done ; wait
+
+osub-v2:
+	for i in $(BB); do make B=$$i $(DIR)/osub.cs.prep.tok.clear.bpe$$i $(DIR)/osub.de.prep.tok.clear.bpe$$i -j & done ; wait
+eup-v2:
+	for i in $(BB); do make B=$$i $(DIR)/eup.cs.bpe$$i $(DIR)/eup.de.bpe$$i -j & done ; wait
+
+eup-osub-v2:
+	for i in $(BB); do cat $(DIR)/eup.de.bpe$$i $(DIR)/osub.de.prep.tok.clear.bpe$$i > $(DIR)/osub2-eup.de.bpe$$i & cat $(DIR)/eup.cs.bpe$$i $(DIR)/osub.cs.prep.tok.clear.bpe$$i > $(DIR)/osub2-eup.cs.bpe$$i & done ; wait
+
+
+
+osub_model_clear_bpe$B.cs: $(DIR)/osub.cs.prep.tok.clear subword
+	subword/learn_bpe.py -s $B < $(DIR)/osub.cs.prep.tok.clear > osub_model_clear_bpe$B.cs
+osub_model_clear_bpe$B.de: $(DIR)/osub.de.prep.tok.clear subword
+	subword/learn_bpe.py -s $B < $(DIR)/osub.de.prep.tok.clear > osub_model_clear_bpe$B.de
+
+$(DIR)/osub.cs.prep.tok.clear.bpe$B: $(DIR)/osub.cs.prep.tok.clear osub_model_clear_bpe$B.cs
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.cs < $(DIR)/osub.cs.prep.tok.clear > $(DIR)/osub.cs.prep.tok.clear.bpe$B
+$(DIR)/osub.de.prep.tok.clear.bpe$B: $(DIR)/osub.de.prep.tok.clear  osub_model_clear_bpe$B.de
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.de < $(DIR)/osub.de.prep.tok.clear > $(DIR)/osub.de.prep.tok.clear.bpe$B
+
+$(DIR)/eup.de.bpe$B: osub_model_clear_bpe$B.de
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.de < train.de.prep.tok > $(DIR)/eup.de.bpe$B
+$(DIR)/eup.cs.bpe$B: osub_model_clear_bpe$B.cs
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.cs < train.cs.prep.tok > $(DIR)/eup.cs.bpe$B
+	
+
+osub.cs.clear.bpe: $(DIR)/osub.cs.prep.tok.bpe$B
+	ln -s $(DIR)/osub.cs.prep.tok.bpe$B osub.cs.bpe$B
+osub.de.clear.bpe: $(DIR)/osub.de.prep.tok.bpe$B
+	ln -s $(DIR)/osub.de.prep.tok.bpe$B osub.de.bpe$B
+
 

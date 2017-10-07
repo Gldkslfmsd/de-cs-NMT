@@ -314,6 +314,12 @@ preprocess-sub:
 	cd $(ONMT)
 	th preprocess.lua -train_src $$HOME/de-cs-NMT/data/osub.de.bpe -train_tgt $$HOME/de-cs-NMT/data/osub.cs.bpe -valid_src $$HOME/de-cs-NMT/data/dev.de.prep.tok.bpe7500 -valid_tgt $$HOME/de-cs-NMT/data/dev.cs.prep.tok.bpe7500 -save_data /mnt/obo-machacek/subtitles/data-osub
 
+preprocess-sub-v2:
+	cd $(ONMT)
+	th preprocess.lua -train_src $$HOME/de-cs-NMT/data/osub.de.bpe -train_tgt $$HOME/de-cs-NMT/data/osub.cs.bpe -valid_src $$HOME/de-cs-NMT/data/dev.de.prep.tok.bpe7500 -valid_tgt $$HOME/de-cs-NMT/data/dev.cs.prep.tok.bpe7500 -save_data /mnt/obo-machacek/subtitles/data-osub
+
+
+
 
 DATA=/mnt/obo-machacek/subtitles/data-osub-train.t7
 #C=osub-1
@@ -398,3 +404,45 @@ train$C:
         -save_every 50 \
 	-validation_metric perplexity \
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
+
+
+
+####################################
+# osub-v2
+
+SUBT=/mnt/obo-machacek/subtitles
+
+.ONESHELL:
+preprocess-osub-$(BPE): dev.de.bpe$(BPE) dev.cs.bpe$(BPE) $(SUBT)/osub2-eup.cs.bpe$(BPE) $(SUBT)/osub2-eup.de.bpe$(BPE) 
+	cd $(ONMT)
+	th preprocess.lua \
+        -train_src $(SUBT)/osub2-eup.de.bpe$(BPE) \
+        -train_tgt $(SUBT)/osub2-eup.cs.bpe$(BPE) \
+        -valid_src $D/dev.de.bpe$(BPE) \
+        -valid_tgt $D/dev.cs.bpe$(BPE) \
+        -save_data $(SUBT)/data-osub2-eup-bpe$(BPE)
+
+B=7500 30000 50000 80000
+preprocess-osub-eup:
+	for i in $B; do make BPE=$$i preprocess-osub-$$i & done; wait
+
+
+
+C=osub-eup-$(BPE)
+.ONESHELL:
+train$C:
+	cd $(ONMT)
+	THC_CACHING_ALLOCATOR=0 nohup th train.lua -data /mnt/obo-machacek/subtitles/data-osub2-eup-bpe$(BPE)-train.t7 \
+        -save_config conf$C \
+        -gpuid 1 2 3 4  \
+        -end_epoch 13 \
+	-layers 3 \
+        -max_batch_size 64 \
+        -seed 123 \
+        -log_file $$HOME/train-$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric perplexity \
+        -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
+
+
