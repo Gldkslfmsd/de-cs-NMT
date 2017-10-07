@@ -446,3 +446,21 @@ train$C:
         -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
 
 
+C=osub-eup2-$(BPE)
+.ONESHELL:
+train$C:
+	cd $(ONMT)
+	THC_CACHING_ALLOCATOR=0 nohup th train.lua -data /mnt/obo-machacek/subtitles/data-osub2-eup-bpe$(BPE)-train.t7 \
+        -save_config conf$C \
+        -gpuid 1 2 3 4  \
+        -end_epoch 13 \
+	-layers 2 \
+        -max_batch_size 64 \
+        -seed 123 \
+        -log_file $$HOME/train-$C.log \
+        -report_every 50 \
+        -save_every 50 \
+	-validation_metric perplexity \
+        -save_model /mnt/obo-machacek/model$C > $$HOME/train$C.out &
+
+
