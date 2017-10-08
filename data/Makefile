@@ -226,6 +226,12 @@ $(DIR)/osub.de.prep.tok.clear.bpe$B: $(DIR)/osub.de.prep.tok.clear  osub_model_c
 
 $(DIR)/eup.de.bpe$B: osub_model_clear_bpe$B.de
 	subword/apply_bpe.py -c osub_model_clear_bpe$B.de < train.de.prep.tok > $(DIR)/eup.de.bpe$B
+
+osub.test.de.bpe$B: osub_model_clear_bpe$B.de
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.de < test.de.prep.tok > osub.test.de.bpe$B
+osub.test.cs.bpe$B: osub_model_clear_bpe$B.cs
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.cs < test.cs.prep.tok > osub.test.cs.bpe$B
+
 $(DIR)/eup.cs.bpe$B: osub_model_clear_bpe$B.cs
 	subword/apply_bpe.py -c osub_model_clear_bpe$B.cs < train.cs.prep.tok > $(DIR)/eup.cs.bpe$B
 	
