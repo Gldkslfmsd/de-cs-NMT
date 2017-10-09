@@ -195,3 +195,12 @@ ref_len=57048)
 	DATA v2
 -- opensubtitles, 
 
+
+bojar 13.65.37.251 -p 50018
+-- train-osub-eup-50000.log
+-- -layers 3 -max_batch_size 64 -validation_metric perplexity
+bojar 13.65.37.251 -p 50019
+bojar 13.65.37.251 -p 50020
+bojar 13.65.37.251 -p 50022
+bojar 13.65.37.251 -p 50024
+
