@@ -200,7 +200,17 @@ bojar 13.65.37.251 -p 50018
 -- train-osub-eup-50000.log
 -- -layers 3 -max_batch_size 64 -validation_metric perplexity
 bojar 13.65.37.251 -p 50019
+-- train-osub-eup-30000.log
+-- -layers 3 -max_batch_size 64 -validation_metric perplexity
 bojar 13.65.37.251 -p 50020
+train-osub-eup-7500.log
 bojar 13.65.37.251 -p 50022
+-- train-osub-eup2-50000.log
+-- -layers 2
+-- -max_batch_size 64
+-- -validation_metric perplexity
 bojar 13.65.37.251 -p 50024
+-- train-osub-eup2-30000.log
 
+azure
+-- train-osub-eup-80000.log

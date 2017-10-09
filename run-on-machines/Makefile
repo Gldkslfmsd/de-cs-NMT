@@ -1,8 +1,8 @@
 
 #IPS=10ips-dm
-#IPS=new-machines
+IPS=new-machines
 #IPS=new14
-IPS=csen-machines
+#IPS=csen-machines
 
 yes-machines:
 	cat $(IPS) | while read line; do \
