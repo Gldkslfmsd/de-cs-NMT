@@ -10,4 +10,5 @@ best-files:
 
 THR=1500
 best-files-threshold:
-	for i in translatio*; do 	./stats.sh $$i |  head -n 5 | while read _ model _ _ score _ ; do if [ `echo $$score | sed 's/[.,]//g'` -gt $(THR) ]; then echo `basename $$model`; fi; done ; done
+	for i in translatio*; do 	./stats.sh $$i |  head -n 3 | while read _ model _ _ score _ ; do if [ `echo $$score | sed 's/[.,]//g'` -gt $(THR) ]; then echo $$model; fi; done ; done
+
