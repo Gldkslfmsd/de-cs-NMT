@@ -1,12 +1,13 @@
 QS="th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo"
 : > ok
 #cat 10ips-dm |
-cat 5ips-de |
+#cat 5ips-de |
 #cat 15ips-obo |
 #echo bojar 13.65.37.251 -p 50010 | 
 #cat new-machines |
 #cat new14 |
 #cat moje-stroje |
+cat csen-machines |
 while read us ip; do 
 		echo $us $ip; 
 #		echo for s in \`find .\`\; do sudo chown $us \$s\; done  |
@@ -31,7 +32,7 @@ while read us ip; do
 #		echo cp  /share/obo-machacek/data-osub2*.t7 /mnt/obo-machacek/subtitles |
 
 #		echo rm -f /mnt/*pred* |
-#		echo cd /mnt \; cp /share/obo-machacek/translate_all.sh /mnt \; nohup ./translate_all.sh \& |
+		echo "cd /mnt ; cp /share/obo-machacek/translate_all.sh /mnt ; nohup  ./translate_all.sh &" |
 
 #		echo source ~/.bashrc \; luarocks install tds  |
 #		echo cp /share/obo-machacek/demo.sh . \; ./demo.sh |
@@ -54,7 +55,10 @@ while read us ip; do
 
 #		echo git clone https://github.com/Gldkslfmsd/de-cs-NMT.git |
 #		echo mkdir -p /mnt/obo-machacek/subtitles |
-		echo cd de-cs-NMT \; git pull |
+#		echo cd de-cs-NMT \; git pull |
+	
+#		echo cd /mnt \; cp /share/obo-machacek/fold_models.sh . \; ./fold_models.sh \; ls *.t7 \| wc -l |
+#		echo ps aux \| grep translate.lua |
 #		echo 'make -C ~/de-cs-NMT/data/subtitles osub.cs osub.de -j' |
 #		echo 'make -C ~/de-cs-NMT/data osub.cs.bpe osub.de.bpe -j -B' |
 		

@@ -1,7 +1,8 @@
 
 #IPS=10ips-dm
 #IPS=new-machines
-IPS=new14
+#IPS=new14
+IPS=csen-machines
 
 yes-machines:
 	cat $(IPS) | while read line; do \
@@ -129,6 +130,21 @@ echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:/mnt/translation_* translation_r
 	echo		rsync azure2:/mnt/csen-data/mini/translation_* translation_results/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
 	echo wait >> plan
 #	bash plan
+
+.ONESHELL:
+collect-pred:
+	: > plan
+	cat csen-machines | while read user ip port; do \
+	echo echo ssh -l $$user $$ip $$port >> plan	;	\
+echo		rsync --rsh=\"ssh -l $$user $$port\" --max-size 5MB $$ip:/mnt/* translation_pred/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	done
+	echo echo azure2 >> plan	;	\
+	echo		rsync --max-size 5MB azure2:/mnt/csen-data/mini/*  translation_pred/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	echo wait >> plan
+#	bash plan
+
+
+
 
 
 
