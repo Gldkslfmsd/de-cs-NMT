@@ -1,10 +1,12 @@
 QS="th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo"
 : > ok
 #cat 10ips-dm |
-#cat 5ips-de |
+cat 5ips-de |
+#cat 15ips-obo |
 #echo bojar 13.65.37.251 -p 50010 | 
 #cat new-machines |
-cat new14 |
+#cat new14 |
+#cat moje-stroje |
 while read us ip; do 
 		echo $us $ip; 
 #		echo for s in \`find .\`\; do sudo chown $us \$s\; done  |
@@ -15,10 +17,21 @@ while read us ip; do
 #		echo cd OpenNMT \&\& th preprocess.lua -train_src \~/csen-data/train.bpe.cs -train_tgt \~/csen-data/train.bpe.en  -valid_src \~/csen-data/dev.bpe.cs -valid_tgt \~/csen-data/dev.bpe.en -save_data /mnt/csen-onmt-data  |
 # 		echo rm -rf nvidia *out *log *pid *.err \; cd OpenNMT \; rm -rf nvidia *out *log *pid *err *pid# |
 #		echo rm -rf abc cmd lsonmt* |
-		echo "nohup [ ! -s par.running ] && ./launch-script.sh par &" |
+#		echo "nohup [ ! -s par.running ] && ./launch-script.sh par &" |
 #		echo "nohup ./launch-script.sh par &" |
 #		echo cp /share/obo-machacek/install-onmt.sh . \; ./install-onmt.sh |
 #		echo cp /share/obo-machacek/install-lua5.2.sh . \; ./install-lua5.2.sh |
+
+#		echo cp /share/obo-machacek/preserve_checkpoints.sh . \; ./preserve_checkpoints.sh |
+#		echo cd de-cs-NMT \; git pull |
+#		echo cd de-cs-NMT \; git pull \; nohup ./translate-eval-last.sh \& |
+#		echo cp /mnt/HIDDEN-machacek/model* /share/obo-machacek/backup \; |
+
+#		echo mkdir -p /mnt/obo-machacek/subtitles \; |
+#		echo cp  /share/obo-machacek/data-osub2*.t7 /mnt/obo-machacek/subtitles |
+
+#		echo rm -f /mnt/*pred* |
+#		echo cd /mnt \; cp /share/obo-machacek/translate_all.sh /mnt \; nohup ./translate_all.sh \& |
 
 #		echo source ~/.bashrc \; luarocks install tds  |
 #		echo cp /share/obo-machacek/demo.sh . \; ./demo.sh |
@@ -41,7 +54,7 @@ while read us ip; do
 
 #		echo git clone https://github.com/Gldkslfmsd/de-cs-NMT.git |
 #		echo mkdir -p /mnt/obo-machacek/subtitles |
-#		echo cd de-cs-NMT \; git pull |
+		echo cd de-cs-NMT \; git pull |
 #		echo 'make -C ~/de-cs-NMT/data/subtitles osub.cs osub.de -j' |
 #		echo 'make -C ~/de-cs-NMT/data osub.cs.bpe osub.de.bpe -j -B' |
 		

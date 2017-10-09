@@ -100,14 +100,37 @@ echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:~/*.log $$ip:~/*.out $$ip:~/*.er
 
 
 .ONESHELL:
-collect-de:
+collect-logs-de:
 	: > plan
 	cat 5ips-de | while read user ip port; do \
 	echo echo ssh -l $$user $$ip $$port >> plan	;	\
 echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:~/*.log $$ip:~/*.out $$ip:~/*.err collect-de/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
 	done
 	echo wait >> plan
+
+.ONESHELL:
+collect-logs:
+	: > plan
+	cat 10ips-dm | while read user ip port; do \
+	echo echo ssh -l $$user $$ip $$port >> plan	;	\
+echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:~/*.log $$ip:~/*.out $$ip:~/*.err collect/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	done
+	echo wait >> plan
 #	bash plan
+
+.ONESHELL:
+collect-tr-res:
+	: > plan
+	cat csen-machines | while read user ip port; do \
+	echo echo ssh -l $$user $$ip $$port >> plan	;	\
+echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:/mnt/translation_* translation_results/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	done
+	echo echo azure2 >> plan	;	\
+	echo		rsync azure2:/mnt/csen-data/mini/translation_* translation_results/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	echo wait >> plan
+#	bash plan
+
+
 
 
 

@@ -146,3 +146,52 @@ BLEU = 3.03, 27.8/5.6/1.5/0.5 (BP=0.932, ratio=0.935, hyp_len=53312, ref_len=570
 
 modelbpe3_epoch24_26.25.t7.cs.pred
 BLEU = 2.93, 24.0/4.8/1.4/0.4 (BP=1.000, ratio=1.143, hyp_len=65200, ref_len=57048)
+
+
+
+Raw opensubtitles, BPE 7500
+===========================
+
+osub-1:
+-validation_metric perplexity
+-max_batch_size 64
+BLEU = 2.34, 29.0/5.7/1.8/0.6 (BP=0.654, ratio=0.702, hyp_len=40064,
+ref_len=57048)
+
+osub-2:
+-max_batch_size 1024
+-validation_metric perplexity
+modelosub-2_epoch13_20.75.t7.cs.pred
+BLEU = 2.34, 29.0/5.7/1.8/0.6 (BP=0.654, ratio=0.702, hyp_len=40064,
+ref_len=57048)
+
+
+modelosub-3_epoch13_20.75.t7
+-max_batch_size 1024
+-validation_metric loss
+BLEU = 2.34, 29.0/5.7/1.8/0.6 (BP=0.654, ratio=0.702, hyp_len=40064,
+ref_len=57048)
+
+
+osub-4
+-max_batch_size 1024
+-layers 3
+-validation_metric perplexity
+modelosub-4_epoch13_20.75.t7.cs.pred
+BLEU = 2.34, 29.0/5.7/1.8/0.6 (BP=0.654, ratio=0.702, hyp_len=40064,
+ref_len=57048)
+
+osub-5
+-layers 3
+-max_batch_size 64
+-validation_metric perplexity
+modelosub-5_epoch13_20.75.t7.cs.pred
+BLEU = 2.34, 29.0/5.7/1.8/0.6 (BP=0.654, ratio=0.702, hyp_len=40064,
+ref_len=57048)
+
+
+
+
+	DATA v2
+-- opensubtitles, 
+
