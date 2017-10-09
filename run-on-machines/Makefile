@@ -143,6 +143,15 @@ echo		rsync --rsh=\"ssh -l $$user $$port\" --max-size 5MB $$ip:/mnt/* translatio
 	echo wait >> plan
 #	bash plan
 
+collect-tr-res-de:
+	: > plan
+	cat 5ips-de | while read user ip port; do \
+	echo echo ssh -l $$user $$ip $$port >> plan	;	\
+echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:/mnt/obo-machacek/translation_* translation_results_de/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	done
+	echo echo azure >> plan	;	\
+	echo		rsync azure:/mnt/obo-machacek/translation_* translation_results_de/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	echo wait >> plan
 
 
 
