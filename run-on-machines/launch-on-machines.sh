@@ -1,13 +1,13 @@
 QS="th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo"
 : > ok
 #cat 10ips-dm |
-#cat 5ips-de |
+cat 5ips-de |
 #cat 15ips-obo |
 #echo bojar 13.65.37.251 -p 50010 | 
 #cat new-machines |
 #cat new14 |
 #cat moje-stroje |
-cat csen-machines |
+#cat csen-machines |
 while read us ip; do 
 		echo $us $ip; 
 #		echo for s in \`find .\`\; do sudo chown $us \$s\; done  |
@@ -32,7 +32,10 @@ while read us ip; do
 #		echo cp  /share/obo-machacek/data-osub2*.t7 /mnt/obo-machacek/subtitles |
 
 #		echo rm -f /mnt/*pred* |
-		echo "cd /mnt ; cp /share/obo-machacek/translate_all.sh /mnt ; nohup  ./translate_all.sh &" |
+		echo "cd /mnt ; cp /share/obo-machacek/translate_de_mnt.sh /mnt ; nohup  ./translate_de_mnt.sh &" |
+#		echo "cd /mnt/obo-machacek ; cp /share/obo-machacek/translate_all_de.sh . ; nohup ./translate_all_de.sh &" |
+#		echo cd /mnt/obo-machacek \; rm -f modelosub-?*.pred* |
+
 
 #		echo source ~/.bashrc \; luarocks install tds  |
 #		echo cp /share/obo-machacek/demo.sh . \; ./demo.sh |
@@ -66,7 +69,7 @@ while read us ip; do
 #		echo cp /share/obo-machacek/data-osub-train.t7 /mnt/obo-machacek/subtitles/ |
 		#echo ls -la /mnt/obo-machacek/subtitles/data-osub-train.t7 |
 
-#		echo cp /share/obo-machacek/preserve_checkpoints.sh . |
+#		echo cd /mnt/obo-machacek \; cp /share/obo-machacek/preserve_checkpoints.sh . |
 #		echo nohup ./preserve_checkpoints.sh \& |
 
 #		echo  cd /mnt \; sudo chown bojar . |

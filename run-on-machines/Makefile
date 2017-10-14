@@ -153,6 +153,18 @@ echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:/mnt/obo-machacek/translation_* 
 	echo		rsync azure:/mnt/obo-machacek/translation_* translation_results_de/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
 	echo wait >> plan
 
+.ONESHELL:
+collect-pred-de:
+	: > plan
+	cat 5ips-de | while read user ip port; do \
+	echo echo ssh -l $$user $$ip $$port >> plan	;	\
+echo		rsync --rsh=\"ssh -l $$user $$port\" --max-size 5MB $$ip:/mnt/obo-machacek/* $$ip:/mnt/* translation_pred_de/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	done
+	echo echo azure2 >> plan	;	\
+	echo		rsync --max-size 5MB azure2:/mnt/obo-machacek/* $$ip:/mnt/* translation_pred_de/ \|\| echo chyba!!! $$us $$ip $$port $$par >> plan \& ; \
+	echo wait >> plan
+#	bash plan
+
 
 
 
