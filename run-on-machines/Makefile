@@ -158,5 +158,6 @@ echo		rsync --rsh=\"ssh -l $$user $$port\" $$ip:/mnt/obo-machacek/translation_* 
 
 
 
-
+tar-results:
+	tar -czvf --update csen-zachrana.tar models translation_pred translation_results collect/* collect-new-machines 
 
