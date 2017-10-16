@@ -193,24 +193,14 @@ ref_len=57048)
 
 
 	DATA v2
--- opensubtitles, 
+============
+-- opensubtitles trošku pročištěný (TODO: jak?) + eup, 
 
+-- pozorování: dospěIý skvěIý ChtěIi
+To je to co jsem chtěI sly et !
+VěděI jsem , e přijde .
 
-bojar 13.65.37.251 -p 50018
--- train-osub-eup-50000.log
--- -layers 3 -max_batch_size 64 -validation_metric perplexity
-bojar 13.65.37.251 -p 50019
--- train-osub-eup-30000.log
--- -layers 3 -max_batch_size 64 -validation_metric perplexity
-bojar 13.65.37.251 -p 50020
-train-osub-eup-7500.log
-bojar 13.65.37.251 -p 50022
--- train-osub-eup2-50000.log
--- -layers 2
--- -max_batch_size 64
--- -validation_metric perplexity
-bojar 13.65.37.251 -p 50024
--- train-osub-eup2-30000.log
-
-azure
--- train-osub-eup-80000.log
+translation_results-obomab1dd000003:2017-10-09_21:44:06  /mnt/obo-machacek/modelosub-eup-50000_checkpoint.t7     BLEU  =  13.93,  48.3/20.9/10.5/5.4  (BP=0.900,  ration=0.904)
+translation_results-first-test:2017-10-09_21:17:23       /mnt/obo-machacek/modelosub-eup-80000_checkpoint.t7     BLEU  =  13.01,  45.5/18.9/9.4/4.7   (BP=0.932,  ration=0.935)
+translation_results-first-test:2017-10-09_10:18:13       /mnt/obo-machacek/modelosub-eup-80000_epoch7_40.48.t7   BLEU  =  12.75,  44.4/18.4/9.1/4.5   (BP=0.944,  ration=0.945)
+translation_results-obomab1dd000003:2017-10-08_19:07:20  /mnt/obo-machacek/modelosub-eup-50000_epoch5_92.58.t7   BLEU  =  12.47,  44.5/18.2/8.8/4.4   (BP=0.938,  ration=0.940)

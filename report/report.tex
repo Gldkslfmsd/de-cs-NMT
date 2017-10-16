@@ -1,0 +1,153 @@
+\documentclass[a4]{article}
+%\usepackage{czech}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}   % pro unicode UTF-8
+\usepackage{booktabs}
+\usepackage{hyperref}
+%#\usepackage{qtree}
+%\usepackage{graphviz}
+\usepackage{authblk}
+%\usepackage{tikz-dependency}
+\usepackage[ampersand]{easylist}
+
+%\usepackage{verse}
+
+\def\furl#1{\footnote{\url{#1}}}
+
+
+\begin{document}
+
+\title{Neuronový strojový překlad z němčiny do češtiny}
+
+\author{Dominik Macháček}
+\affil{
+%Saarland University, Saarbrücken, Germany,
+dominik.machacek@matfyz.cz
+}
+
+\date{\today}
+
+%\pacs{PACS numbers go here. These are classification codes for your  research. See {\tt http://publish.aps.org/PACS/} for more info.}
+\maketitle
+
+%\begin{abstract}
+%TODO: An abstract is a great convenience for the reader and is required by all journals.
+%\end{abstract}
+
+
+\section{Úvod}
+
+V tomto článku shrnujeme experimenty trénování neuronového strojového
+překladu z~němčiny do češtiny.
+
+\section{Jiné strojové překlady}
+
+\subsection{Zeman: frázový překlad pro WMT13}
+
+Dosud nejlepší strojový překlad z~němčiny do češtiny vytvořil Dan Zeman
+v~roce 2014. Systém je popsán v~článku \cite{zeman}.
+
+Jedná se o frázový překlad s~použitím systému Moses. Pro trénování autor
+použil paralelní korpusy Europarl a News Commentary ve verzích, jaké byly
+k~dispozici jako trénovací data pro
+WMT13\furl{http://www.statmt.org/wmt13/translation-task.html}. Pro vývoj
+sloužila sada překladů novinových článků News Commentary 2011, pro testování
+News Commentary 2013.
+
+Ve fázi preprocessingu byla data tokenizována, zvláštní znaky byly
+normalizovány nebo odstraněny. Následně byly normalizována reprezentace
+uvozovek a byl aplikován truecasing.
+
+%Například slovo {\it Nationalessen} je
+%složeno ze slov {\it National} (národní) a {\it Essen} (jídlo). Samo o sobě
+%ve slovníku být nemusí, ale každé z~jeho kořenů ano. Proto 
+%
+
+Dále se autor snažil vyřešit problém s~německými složenými slovy, která
+zvyšují počet neznámých slov. K tomu použil nástroj
+Morfessor\cite{morfessor}. Text je před překládáním rozdělen na morfémy,
+poté přeložen a poté opět složen do celých slov.
+
+TODO: jak to vlastně je? A co lemmatizace?
+
+Pro přehledné porovnání s~ostatními překladatelskými systémy je výsledek
+nahrán na \url{matrix.statmt.org}.
+
+\subsection{Tlustý: Využí hrubé reprezentace slov ve strojovém
+překladu do češtiny}
+
+V roce 2016 vznikla diplomová práce Marka Tlustého \cite{tlusty}, ve které se autor
+zabývá dělením německých a maďarských slov na kratší části podle jejich
+morfologického významu. Dělí se tedy např. na morfémy nebo jednotlivé kořeny
+složených slov. To má sloužit ke snížení podílu neznámých slov v~testovací
+množině oproti trénovací a ke zlepšení frázového překladu. 
+
+Autor experimentoval s~několika strategiemi a existujícími nástroji, téměř
+všechny vykázaly zlepšení podle metrik BLEU a METEOR oproti systémům bez
+hrubé reprezentace.  Překlad byl realizován sysémem Moses. Autor použil
+korpus Europarl\cite{europarl}, který sám rozdělil na trénovací, testovací a vývojovou
+část. 
+
+V~práci není srovnání s~předchozím překladem Dana Zemana, ani v~ní nejsou
+vloženy výsledné natrénované modely. Rovněž práce neobsahuje podrobný manuál, jak
+zreplikovat její nejlepší výsledky.
+
+Neuronový strojový překlad se v~práci vůbec nezmiňuje. 
+U něj se rovněž používá hrubá reprezentace slov, nejčastěji
+tzv. byte pair encoding, u něhož se dělí slova na podslova podle absolutní četnosti jejich
+částí. Na morfologický význam vzniklých podslov se nebere zřetel. Toto je
+jiná strategie než u frázového překladu a v~práci se neuvádí. 
+
+%To, že strategie pro hrubou reprezentaci slov pro frázový překlad budou vykazovat dobré
+%výsledky i pro neuronový překlad, není zřejmé.
+
+
+\section{Data a preprocessing}
+
+\subsection{Pročištění europarlu}
+
+\subsection{BPE}
+
+\subsection{Opensubtitles}
+
+\section{Evaluace podle BLEU}
+
+\section{Analýza nejlepšího překladu}
+
+\section{Závěr}
+
+
+\begin{thebibliography}{99}
+
+
+
+\bibitem{zeman}
+ Ondřej Bojar, Daniel Zeman: {\sl Czech Machine Translation in the project
+ CzechMATE}. Publikováno v~{\sl The Prague Bulletin of Mathematical
+ Linguistics}, číslo 101., duben 2014, strany 71–96.
+
+\bibitem{morfessor}
+	Mathias Creutz, Krista Lagus: {\sl Unsupervised models for morpheme
+	segmentation and
+	morphology learning}. ACM Transactions on Speech and Language Processing
+	(TLSP), 4(1)(3),
+	2007. URL \url{http://dl.acm.org/citation.cfm?id=1187418}.
+
+\bibitem{tlusty}
+ Bc. Marek Tlustý: {\sl  Využí hrubé reprezentace slov ve strojovém
+překladu do češtiny}. Diplomová práce. Praha, 2016.
+% \url{https://github.com/Gldkslfmsd/sekacek}
+
+
+
+
+
+\end{thebibliography}
+
+
+
+
+
+\end{document}
+
+
