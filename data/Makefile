@@ -97,7 +97,7 @@ subword:
 
 rewrite=! # ! if not rewrite, nothing if yes
 #PARAM=100 1000 2500 5000 7500 10000 15000 18000 20000 50000 100000 1000000
-PARAM=30000 50000 80000
+PARAM=7500 30000 50000 80000
 analyze_bpe: $(TOKENIZED) subword
 	for s in $(PARAM); do \
 		{ \
@@ -116,7 +116,13 @@ analyze_bpe: $(TOKENIZED) subword
 			[ $(rewrite) -f pbe$$s.cs.oov ] && perl $(MOSES)/../analysis/oov.pl dev.cs.prep.tok.bpe$$s < train.cs.prep.tok.bpe$$s > pbe$$s.cs.oov & \
 		} & \
 	done ; 	wait
-		
+
+test_bpe: $(TOKENIZED) subword
+	for s in $(PARAM); do \
+			[ $(rewrite) -f test.cs.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.cs < test.cs.prep.tok > test.cs.prep.tok.bpe$$s & \
+			[ $(rewrite) -f test.de.prep.tok.bpe$$s ] && subword/apply_bpe.py -c model_bpe$$s.de < test.de.prep.tok > test.de.prep.tok.bpe$$s & \
+	done; wait
+
 
 print_bpe_oov:
 	for s in $(PARAM); do \
@@ -197,12 +203,29 @@ osub.de.bpe: $(DIR)/osub.de.prep.tok.bpe$B
 #####################################################
 # osub-v2
 
-DIR=/mnt/obo-machacek/subtitles
+#DIR=/mnt/obo-machacek/subtitles
+DIR=.
 
 BB=7500 30000 50000 80000
 
 osub-v2-models:
 	for i in $(BB); do make B=$$i osub_model_clear_bpe$$i.cs  osub_model_clear_bpe$$i.de -j & done ; wait
+
+dev-test-osub-v2:
+	for i in $(BB); do make B=$$i dev.osub2-eup.bpe$$i.cs  dev.osub2-eup.bpe$$i.de test.osub2-eup.bpe$$i.de test.osub2-eup.bpe$$i.cs -j & done ; wait
+
+#TODO
+dev.osub2-eup.bpe$B.cs:
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.cs < dev.cs.prep.tok > dev.osub2-eup.bpe$B.cs
+dev.osub2-eup.bpe$B.de:
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.de < dev.de.prep.tok > dev.osub2-eup.bpe$B.de
+test.osub2-eup.bpe$B.cs:
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.cs < test.cs.prep.tok > test.osub2-eup.bpe$B.cs
+test.osub2-eup.bpe$B.de:
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.de < test.de.prep.tok > test.osub2-eup.bpe$B.de
+
+
+
 
 osub-v2:
 	for i in $(BB); do make B=$$i $(DIR)/osub.cs.prep.tok.clear.bpe$$i $(DIR)/osub.de.prep.tok.clear.bpe$$i -j & done ; wait
@@ -213,6 +236,8 @@ eup-osub-v2:
 	for i in $(BB); do cat $(DIR)/eup.de.bpe$$i $(DIR)/osub.de.prep.tok.clear.bpe$$i > $(DIR)/osub2-eup.de.bpe$$i & cat $(DIR)/eup.cs.bpe$$i $(DIR)/osub.cs.prep.tok.clear.bpe$$i > $(DIR)/osub2-eup.cs.bpe$$i & done ; wait
 
 
+osub.cs.prep.tok.clear:
+	ln -s subtitles-v2/osub.cs.prep.tok.clear .
 
 osub_model_clear_bpe$B.cs: $(DIR)/osub.cs.prep.tok.clear subword
 	subword/learn_bpe.py -s $B < $(DIR)/osub.cs.prep.tok.clear > osub_model_clear_bpe$B.cs
@@ -224,17 +249,18 @@ $(DIR)/osub.cs.prep.tok.clear.bpe$B: $(DIR)/osub.cs.prep.tok.clear osub_model_cl
 $(DIR)/osub.de.prep.tok.clear.bpe$B: $(DIR)/osub.de.prep.tok.clear  osub_model_clear_bpe$B.de
 	subword/apply_bpe.py -c osub_model_clear_bpe$B.de < $(DIR)/osub.de.prep.tok.clear > $(DIR)/osub.de.prep.tok.clear.bpe$B
 
+# europarl is BPEed on model trained on subtitles only
 $(DIR)/eup.de.bpe$B: osub_model_clear_bpe$B.de
 	subword/apply_bpe.py -c osub_model_clear_bpe$B.de < train.de.prep.tok > $(DIR)/eup.de.bpe$B
-
+$(DIR)/eup.cs.bpe$B: osub_model_clear_bpe$B.cs
+	subword/apply_bpe.py -c osub_model_clear_bpe$B.cs < train.cs.prep.tok > $(DIR)/eup.cs.bpe$B
+	
 osub.test.de.bpe$B: osub_model_clear_bpe$B.de
 	subword/apply_bpe.py -c osub_model_clear_bpe$B.de < test.de.prep.tok > osub.test.de.bpe$B
 osub.test.cs.bpe$B: osub_model_clear_bpe$B.cs
 	subword/apply_bpe.py -c osub_model_clear_bpe$B.cs < test.cs.prep.tok > osub.test.cs.bpe$B
 
-$(DIR)/eup.cs.bpe$B: osub_model_clear_bpe$B.cs
-	subword/apply_bpe.py -c osub_model_clear_bpe$B.cs < train.cs.prep.tok > $(DIR)/eup.cs.bpe$B
-	
+
 
 osub.cs.clear.bpe: $(DIR)/osub.cs.prep.tok.bpe$B
 	ln -s $(DIR)/osub.cs.prep.tok.bpe$B osub.cs.bpe$B
