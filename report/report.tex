@@ -38,9 +38,9 @@ dominik.machacek@matfyz.cz
 \section{Úvod}
 
 V tomto článku shrnujeme experimenty trénování neuronového strojového
-překladu z~němčiny do češtiny.
+překladu z~němčiny do češtiny s~použitím OpenNMT.
 
-\section{Jiné strojové překlady}
+\section{Předchozí práce zabývající se překladem z~němčiny do češtiny}
 
 \subsection{Zeman: frázový překlad pro WMT13}
 
@@ -102,13 +102,127 @@ jiná strategie než u frázového překladu a v~práci se neuvádí.
 %výsledky i pro neuronový překlad, není zřejmé.
 
 
-\section{Data a preprocessing}
+\section{Data}
 
-\subsection{Pročištění europarlu}
+Pro trénování našeho systému pro strojový překlad jsme postupně vyzkoušeli tři množiny
+paralelních německo-českých dat: Europarl, OpenSubtitles a spojení Europarlu
+a OpenSubtitles. Velikost korpusů udává tabulka \ref{tab:data}.
 
-\subsection{BPE}
+\begin{table}[ht]
+\begin{verbatim}
+trénovací data            |  počet vět
+======================================
+Europarl                  |    555 399
+pročištěný_Europarl       |    555 022
+OpenSubtitles             |  9 344 614
+pročištěné_OpenSubtitles  |  8 212 213
+Europarl+OpenSubtitles    |  8 767 235
+                          
+dev: News 11              |      3 000
+test: News 13             |      3 005
+\end{verbatim}
+\caption{Velikost všech částí použitých dat}
+\label{tab:data}
+\end{table}
 
-\subsection{Opensubtitles}
+
+Pro vývojov a testování jsme použili stejná data jako v~baselinovém systému
+Dana Zemana.
+
+\subsection{Příprava dat}
+
+\subsubsection{Předzpracování dat}
+
+Všechna data jsme předzpracovali stejným postupem jako v~baselinovém
+systému. Data byla tokenizována, zvláštní znaky byly
+normalizovány nebo odstraněny. Následně byly normalizována reprezentace
+uvozovek. K~tomu jsme použili nástroje ze systému Moses\cite{moses}.
+
+Truecasing ani lowercasing jsme na rozdíl od frázového překladu neaplikovali.
+
+
+\subsubsection{Pročištění Europarlu}
+
+Zevrubnou analýzou Europarlu jsme zjistili, že v~česko-německé části jsou některé
+věty špatně přeložené či špatně anotované. Příkladem jsou věty v~tabulce
+\ref{tab:europarl}. Některé věty jsou ve skutečnosti v~angličtině či v~jiném
+jazyce, ale jsou označeny jako české. Některé věty zřejmě pochází
+z~projevu v~určitém jazyce, do kterého řečník vložil latinskou, chorvatskou
+či obdobnou větu v~jiném jazyce, než v~jakém pronášel projev. V~korpusu
+tyto věty nepřekládají. 
+
+Takovéto věty by mohly negativně ovlivnit kvalitu překladu. Proto jsme se
+rozhodli je odfiltrovat. K~tomu jsme použili
+nástroj pro detekci jazyka {\tt langdetect}\cite{langdetect} a několik
+dalších pravidel, která jsme odpozorovali na části korpusu.
+
+\begin{table}[ht]
+\begin{verbatim}
+cs: Izvolite, prosim!
+de: Izvolite, prosim!
+
+cs: (Die Sitzung wird um 9.00 eröffnet.)
+de: (Die Sitzung wird um 00 eröffnet.)
+
+cs: Citizens should be able to hold law-makers accountable.
+de: Die Bürger müssen in der Lage sein, von den Gesetzgebern Rechenschaft zu
+verlangen.
+
+cs: (La seduta è tolta alle 22.20)
+de: (Die Sitzung wird um 20 Uhr geschlossen.)
+
+cs: (
+de: (
+
+cs: Caveant consules!
+de: Caveant consules!
+\end{verbatim}
+\caption{Příklady nekvalitních vět v~Europarlu.}
+\label{tab:europarl}
+\end{table}
+
+\subsubsection{Pročištění titulků}
+
+Korpus OpenSubtitles je velmi rozsáhlý, ale není považován za kvalitní
+zdroj pro neuronový strojový překlad, protože mnohé věty, které obsahuje,
+jsou velmi krátké nebo nejsou přesně zarovnány. Takovéto věty jsme se
+použili odfiltrovat jednoduchým pravidlem. Krátké věty jsme se snažili
+odfiltrovat tak, že jsme zahodili ty věty, které v~češtině i v~němčině měly
+méně než 4 slova. Špatně zarovnané věty jsme se snažili odfiltrovat tak, že
+jsme zahodily ty věty, u kterých rozdíl počtu slov byl větší než 16. Tato
+pravidla zřejmě nejsou optimální, ale použili jsme je alespoň jako
+startovací parametry.
+
+Rovněž jsme zjistili, že v~některých českých větách se vyskytují slova jako
+{\it skvěIý}, ve kterých je znak {\it I} místo {\it l}. To jsme se snažili
+napravit regulárním výrazem.
+
+\subsection{Hrubá reprezentace slov: Morfessor a BPE}
+
+Následně jsme se snažili vyřešit problém s~bohatými slovníky rozdělením
+slov na podčásti. Nejdříve jsme zopakovali postup Dana Zemana a použili
+nástroj Morfessor\cite{morfessor}. Poté jsme ještě vyzkoušeli
+byte-pair-encoding s~různými počty slov, a to 7500, 30000, 50000 a 80000.
+
+\section{Trénování modelů s~OpenNMT}
+
+Pro natrénování neuronového překladu jsme se rozhodli použít systém
+OpenNMT\cite{opennmt}. 
+Zde shrneme několik problémů s~tímto frameworkem, na které jsme narazili:
+
+-- instalace: torch a LuaJit vs Lua5.2
+
+-- padá to na nedostatek paměti
+
+-- padá to bez chybové hlášky
+
+-- dokumentace se rychle mění
+
+-- dokumentace instalace v~jednu chvíli nebyla úplná
+
+-- ve kterém luarocks se mají nainstalovat knihovny? ve kterém source?
+
+TODO
 
 \section{Evaluace podle BLEU}
 
@@ -137,6 +251,20 @@ jiná strategie než u frázového překladu a v~práci se neuvádí.
  Bc. Marek Tlustý: {\sl  Využí hrubé reprezentace slov ve strojovém
 překladu do češtiny}. Diplomová práce. Praha, 2016.
 % \url{https://github.com/Gldkslfmsd/sekacek}
+
+\bibitem{moses}
+ P. Koehn: Moses. TODO 
+
+
+
+\bibitem{langdetect}
+ Michal Danilák: {\sl langdetect: Port of Google's language-detection library to
+ Python.}
+ \url{https://github.com/Mimino666/langdetect}
+% \url{https://github.com/Gldkslfmsd/sekacek}
+
+\bibitem{opennmt}
+ OpenNMT. \url{http://opennmt.net/about/}. TODO
 
 
 
