@@ -5,20 +5,32 @@ all() {
 	OSUB=$2
 	TESTSUB=$3
 	for B in $BPE; do
-		for i in model-$OSUB""europarl-1gpu$B""*Z model-$OSUB""europarl-1gpu$B""*.t7 ; do 
-			if [ -f $i"".cs.pred ]; then
-				continue
+		for i in model-$OSUB""europarl-?gpu$B""*Z model-$OSUB""europarl-?gpu$B""*.t7 ; do 
+			if [ ! -f $i"".cs.pred ]; then
+				echo -n echo /lnet/spec/work/people/machacek/opennmt-experiments/de-cs-NMT/final_data/models/translate-eval.sh  
+				echo -n ' '
+				echo -n `realpath $i`
+				echo -n ' '
+				echo -n /lnet/spec/work/people/machacek/opennmt-experiments/de-cs-NMT/final_data/$OSUB""europarl/test.$TESTSUB""eup.bpe$B"".de 
+				echo -n ' '
+				echo -n "| qsub -q gpu.q -l gpu=1,gpu_cc_min3.5=1,gpu_ram=2G &"
+				echo -n ' '
+				echo
+				echo
 			fi
-			echo -n echo /lnet/spec/work/people/machacek/opennmt-experiments/de-cs-NMT/final_data/models/translate-eval.sh  
-			echo -n ' '
-			echo -n `realpath $i`
-			echo -n ' '
-			echo -n /lnet/spec/work/people/machacek/opennmt-experiments/de-cs-NMT/final_data/$OSUB""europarl/test.$TESTSUB""eup.bpe$B"".de 
-			echo -n ' '
-			echo -n "| qsub -q gpu.q -l gpu=1,gpu_cc_min3.5=1,gpu_ram=2G &"
-			echo -n ' '
-			echo
-			echo
+			if [ ! -f $i"".cs.devpred ]; then
+				echo -n echo /lnet/spec/work/people/machacek/opennmt-experiments/de-cs-NMT/final_data/models/translate-eval.sh  
+				echo -n ' '
+				echo -n `realpath $i`
+				echo -n ' '
+				echo -n /lnet/spec/work/people/machacek/opennmt-experiments/de-cs-NMT/final_data/$OSUB""europarl/dev.$TESTSUB""eup.bpe$B"".de 
+				echo -n " dev"
+				echo -n ' '
+				echo -n "| qsub -q gpu.q -l gpu=1,gpu_cc_min3.5=1,gpu_ram=2G &"
+				echo -n ' '
+				echo
+				echo
+			fi
 		done
 	done
 }
