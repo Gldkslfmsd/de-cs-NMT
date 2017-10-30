@@ -201,8 +201,43 @@ napravit regulárním výrazem.
 
 Následně jsme se snažili vyřešit problém s~bohatými slovníky rozdělením
 slov na podčásti. Nejdříve jsme zopakovali postup Dana Zemana a použili
-nástroj Morfessor\cite{morfessor}. Poté jsme ještě vyzkoušeli
+nástroj Morfessor\cite{morfessor}, čímž se snížil počet slov na méně než
+desetinu, viz tabulka \ref{tab:morf}.
+
+
+\begin{table}[ht]
+\begin{verbatim}
+data                       |  Training set unique 1-grams
+========================================================
+de, tokenizovaný Europarl  |  191741        (100  %)
+de, Morfessor, Europarl    |   18008        (9.4  %)
+--------------------------------------------------------
+cs, tokenizovaný Europarl  |  183227        (100  %)
+cs, Morfessor, Europarl    |   16477        (8.9  %)
+\end{verbatim}
+\caption{Velikost slovníku trénovacích dat před a po použití Morfessoru}
+\label{tab:morf}
+\end{table}
+
+
+
+Poté jsme ještě vyzkoušeli
 byte-pair-encoding s~různými počty slov, a to 7500, 30000, 50000 a 80000.
+
+
+\section{Automatická evaluace}
+
+Pro evaluaci všech modelů používáme skript pro BLEU skóre \texttt{multi-bleu.perl} ze systému
+Moses\cite{moses}. Výsledky skriptu záleží na námi použité tokenizaci, není
+proto vhodné naše BLEU skóre porovnávat
+s~překlady stejných testovacích dat jinými systémy s~jinými tokenizátory.
+
+Pro porování s~baselinovým frázovým překladem Dana Zemana jsme jeho
+testovací data tokenizovali naším tokenizátorem a použili náš evaluační
+skript. Jeho BLEU skóre je 13.99.
+
+Před použitím skriptu naše přeložená data postprocesujeme, hrubou reprezentaci
+slov převádíme na původní.
 
 \section{Trénování modelů s~OpenNMT}
 
@@ -224,7 +259,75 @@ OpenNMT\cite{opennmt}.
 %
 %TODO
 %
-\section{Evaluace podle BLEU}
+
+
+
+\subsection{Trénování s~OpenNMT-py a Morfessorem}
+
+Pro první experimenty s~trénováním jsme použili OpenNMT-py a Europarl s~dělení slov
+podle Morfessoru. Modely jsme průběžně vyhodnocovali podle
+BLEU skóre, nejlepší skóre na testovacím vstupu bylo 4.74.
+
+Na základě těchto experimentů a faktu, že OpenNMT-py nedokáže paralelní
+trénink na více grafických kartách, jsme se rozhodli pro ostatní
+experimenty používat OpenNMT-Lua.
+
+\subsection{Trénování s~BPE a OpenNMT-Lua}
+
+
+
+\subsubsection{Popis konfigurací}
+
+Následující konfi
+
+-- defaultní konfigurace
+-- rychlost trénování
+
+\begin{itemize}
+\begin{verbatim}
+label                | data     |  BPE |  max_batch_size | layers | GPU | rychlost_1._epochy
+europarl-1gpu30000-1 | Europarl | 30k  | 
+europarl-1gpu30000-3
+europarl-1gpu30000-4
+europarl-1gpu30000-5
+europarl-1gpu30000-6
+europarl-1gpu50000-1
+europarl-1gpu7500-1
+europarl-1gpu80000-1
+
+
+osub-europarl-1gpu30000-1
+osub-europarl-1gpu50000-1
+osub-europarl-1gpu80000-1
+
+
+osub-europarl50000-2
+\end{verbatim}
+
+\end{itemize}
+
+\subsubsection{Průběh trénování}
+
+\ref{fig:europarl}
+
+\ref{fig:osub}
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=1.3\linewidth]{europarl_test.png}
+    \caption{BLEU skóre na testovací množině. Trénováno na Europarlu
+	s~různými BPE.}
+  \label{fig:europarl}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=1.3\linewidth]{osub_europarl_test.png}
+    \caption{BLEU skóre na testovací množině. Trénováno na Europarlu
+	s~různými BPE.}
+  \label{fig:osub}
+\end{figure}
 
 
 
