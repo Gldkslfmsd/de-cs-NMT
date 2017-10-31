@@ -42,7 +42,10 @@ for a in sys.argv[1:]:
 	ax.plot(times, bleus, label=a)
 
 #legend = ax.legend(loc='upper right', shadow=True)
-legend = ax.legend(loc='lower right', shadow=True)
+if sys.argv[1].startswith("osub"):
+	legend = ax.legend(loc='lower right', shadow=True)
+else:
+	legend = ax.legend(loc='upper right', shadow=True)
 #frame = legend.get_frame()
 #frame.set_facecolor('0.90')
 
@@ -57,4 +60,4 @@ plt.ylabel("test BLEU")
 #
 #plt.show()
 #plt.savefig("europarl_test.png")
-plt.savefig("osub_europarl_test.png")
+#plt.savefig("osub_europarl_test.png")
