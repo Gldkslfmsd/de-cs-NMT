@@ -14,7 +14,7 @@ for i in *.t7 *Z; do
 	if [ ! -f $i"".cs.$RES""pred.post ]; then continue; fi
 	if [ ! -f $i"".cs.$RES""pred.post.res ]; then
 		RESULT=`perl $EVAL /net/work/people/machacek/opennmt-experiments/de-cs-NMT/final_data/$TEST"".cs.post < $i"".cs.$RES""pred.post 2>/dev/null`
-		echo $RESULT > $i"".cs.pred.post.$RES""res
+		echo $RESULT > $i"".cs.$RES""pred.post.res
 	else
 		RESULT=`cat $i"".cs.$RES""pred.post.res`
 	fi
