@@ -1,0 +1,601 @@
+SRC	Kein Artikel übrigens schreibt ausdrücklich die Gleichstellung von Männern und Frauen fest .
+REF	Ostatně žádný paragraf písemně nevymezuje explicitní rovnoprávnost mužů a žen .
+ZEM	Žádný článek mimochodem píše výslovně rovnost mužů a žen .
+MT	Žádný článek mimochodem výslovně nepíše o rovnosti mužů a žen .
+NOTE:	flawless	
+
+SRC	Darunter auch die Mutter , die das Passwort zu einem der Konten hat .
+REF	Je mezi nimi i matka , která má jméno a heslo jednoho z účtů .
+ZEM	Včetně matky , které heslo jednoho z účtů .
+MT	Včetně matky , která má heslo k jednomu z účtů .
+NOTE:	flawless	
+
+SRC	Unter der scheidenden Regierung Felipe Calderons hat sich Mexiko wirtschaftlich gut bewähren können , doch das Land ist im Griff eines Drogenkriegs , der in den letzten sechs Jahren bereits 60.000 Menschenleben gekostet hat .
+REF	Mexiko si v době úřadování odstupujícího Felipe Calderona vedlo dobře hospodářsky , země je však ve spárech drogové války , která si již odhadem vzala za oběť 60 000 životů za šest let .
+ZEM	Za odcházející vlády Felipe Calderons se Mexiko ekonomicky dobře funguje dobře , ale země je pod kontrolou jednoho Drogenkriegs , který v posledních šesti letech již 60 000 lidských životů .
+MT	Pod vládou Felipe Caldersons se Mexiko dařilo ekonomicky dobře , ale země je pod vlivem drogové války , která za posledních šest let stála 60 tisíc životů .
+NOTE:	DE-genitiv Calderons, im Griff=ve spárech, CS-shoda: *Mexiko dařilo, 
+
+
+SRC	In diesem Sinne untergraben diese Maßnahmen teilweise das demokratische System der USA .
+REF	V tomto smyslu tato opatření částečně podkopou americký demokratický systém .
+ZEM	V tomto smyslu podkopává tato opatření částečně demokratický systém v USA .
+MT	V tomto smyslu tato opatření podkopávají demokratický systém Spojených států .
+NOTE:	missingAdverb teilweise=částečně
+
+SRC	In welchem Licht erscheinen da die Worte David Rockefellers aus dem Jahr 1994 : " Das einzige , was wir brauchen , ist eine alles umspannende Krise , und die Menschen werden die neue Weltordnung begrüßen . "
+REF	V jakém světle se nyní jeví slova , která vyřkl David Rockefeller v roce 1994 : " Jediné co potřebujeme je všeobecná krize a lidé budou souhlasit s novým světovým pořádkem . "
+ZEM	V jakém světle , protože slova Davida Rockefellers z roku 1994 : " jediné , co potřebujeme , je celý krize a lidé budou nový světový řád . "
+MT	V jakém světle se objeví slova Davida Rockefellera z roku 1994 : " Jediná věc , kterou potřebujeme , je vše , co potřebujeme , a lidé uvítají nový světový řád . "
+NOTE:	alignment:ershienen!=objeví missingClause umspannende Krise!=je vše, co potřebujeme
+
+SRC	Der 19-jährige Community College-Student und Fußballspieler Anthony Orozco steht im Südosten Colorados für ein Vergehen vor Gericht , das in diesem Staat schon bald legal sein wird : Der Besitz einiger weniger Marihuanabrocken und einer Pfeife , mit der er diese rauchte .
+REF	Devatenáctiletý Anthony Orozco , student na vyšší odborné škole a fotbalista z jihovýchodního Colorada , čelí obvinění z trestných činů za něco , co bude brzy v celém státu legální - za držení několika gramů marihuany a dýmky , kterou používal na její kouření .
+ZEM	19 let , komunitních College - student a fotbalista Anthony Orozco je v jihovýchodním ; za trestný čin před soudem , který v tomto státě již brzy legálně bude : držení některých méně Marihuanabrocken a píská , s níž se tyto kouřila .
+MT	19letý vysokoškolský student a fotbalista Anthony Orozco stojí v jihovýchodním Coorrasu za trestný čin , který v tomto státě brzy bude .
+NOTE:	worldKnoledge: Community College=VOŠ, missingWord vor Gericht=před sousedm, Colorados!=Coorras, missingClause
+
+SRC	Ich bin sicher , man neckt dich nur .
+REF	Jsem si jistý , že je to jen žert .
+ZEM	Jsem si jist , že neckt tě jen .
+MT	Jsem si jistá , že tě jen škádlí .
+NOTE:	flawless, worldKnowledgeNeeded (author's gender)
+
+SRC	" Wir sind die digitalen Einwanderer , die sie lehren sollen , wo wir doch selbst noch lernen " sagt er .
+REF	My jsme digitální přistěhovalci , kteří je musíme učit , a přitom se sami teprve učíme , " říká .
+ZEM	" Jsme digitální přistěhovalců , kteří se učí , kde jsme ale ještě učit , " říká .
+MT	" Jsme digitální přistěhovalci , kteří je mají naučit , kde se učíme . "
+NOTE:	missingClause: říká missingWord noch => wrongClause	kde se učíme
+
+SRC	Und wenn Schweden Herrn Assange auf der Botschaft Ecuadors in London oder über Skype verhörte , wie es die schwedische Rechtsprechung zulässt und in anderen Fällen gemacht wurde , sei das Problem erledigt .
+REF	A pokud Švédsko pana Assangeho vyslechne na ekvádorském velvyslanectví v Londýně nebo přes Skype , jak to bez problému umožňuje tamní legislativa a jak už bylo provedeno v jiných případech , bude zítra tomuto problému učiněn konec . "
+ZEM	A když Švédsko pana Assange na velvyslanectví ekvádoru v Londýně nebo o Skype verhörte , jak je švédská judikatura umožňuje a v jiných případech , je problém vyřešen .
+MT	A pokud Švédsko naslouchalo panu Assangovi na ambasádě Ekvádoru v Londýně nebo o Skype , jak to umožňuje švédská judikatura a v jiných případech byla vyřešena .
+NOTE:	missingClause: bude problém vyřešen, wrongPreposition: über Skype!=o Skype, missingAuxVerb: pokud _by_
+
+SRC	Mit der Politik habe ich gerade erst angefangen und versuche , für mein Programm die Unterstützung der Mehrheit zu finden .
+REF	V politice jsem teprve začal a pro svůj program se pokusím získat většinovou podporu .
+ZEM	S politiky jsem teprve začalo a snažím se , aby můj program na podporu většiny .
+MT	S politikou jsem právě začal a snažím se získat podporu většiny .
+NOTE:	missingWord pro můj program
+
+SRC	Ebenso dubios mutet die Formulierung an , die " Beleidigung von Menschen " sei verboten .
+REF	Stejně pochybně působí formulace , že je zakázáno " urážení lidí . "
+ZEM	Stejně pochybné je formulace , které " hanobení lidí " je zakázáno .
+MT	Stejně tak se formuluje formulace , která zakazuje " urážet lidi . "
+NOTE:	wrongWord: formuluje formulace, missingWord: dubios=>pochybně
+
+SRC	Wenn nämlich ein Teilchen mit einer elektrischen Ladung beschleunigt oder die Richtung ändert , wird das elektromagnetische Feld genau an diesem Ort " gestört " , in etwa wie ein Kieselstein , der in einen Teich geworfen wurde .
+REF	Když totiž částice s elektrickým nábojem zrychlí nebo změní svůj směr , " vyruší " tím elektromagnetické pole v tomto konkrétním místě , podobně jako oblázek hozený do rybníka .
+ZEM	Pokud totiž částic s elektrickým zásilku urychluje nebo směrem změní , bude to elektromagnetické pole právě na tomto místě " obtěžován , " asi jako Kieselstein , do rybníka vyhodí .
+MT	Pokud se s elektrickým nákladem zrychluje nebo změní směr , elektromagnetický pole bude na tomto místě " rušen " jako kámen , který byl uvržen do rybníku .
+NOTE:	missingWord: Teilchen, wrongWord: Ladung!=náklad Kieselstein geworfen!=kámen uvržen, agreement: elektromagnetický pole
+
+SRC	Konflikte sind unvermeidbar , sie müssen aber im Streben nach einem gemeinsamen Weg überwunden werden .
+REF	Konflikty jsou nevyhnutelné , ale musí být překonány vůlí kráčet spolu .
+ZEM	Konflikty jsou nevyhnutelné , ale musí v touze po společné cestě překonat .
+MT	konflikty jsou nevyhnutelné , ale musí být překonány v honbě za společnými způsoby .
+NOTE:	wrongWord: v honbě
+
+SRC	230 Manat ( etwa die gleiche Summe in Euro ) , erhält Mirzayeva monatlich als Rente , für hiesige Verhältnisse ein Betrag , von dem man gut leben kann .
+REF	Mirzajeva dostává každý měsíc důchod 230 manatů ( přibližně stejná částka v eurech ) . To je na zdejší poměry obnos , ze kterého se dá dobře vyžít .
+ZEM	230 Manat ( přibližně stejnou částku v eurech ) , dostává Mirzayeva měsíčně jako důchod , zde je částka , o níž se dobře žije .
+MT	230 manat ( přibližně stejná částka v eurech ) dostává Mirzayeva měsíčně jako důchod , pro místní poměry , které mohou žít dobře .
+NOTE:	wrongClause pro místní poměry, které mohou žít dobře. AgreementNeeded.
+
+SRC	Wir haben die klassische Raumkonfiguration auf den Kopf gestellt und den Lesebereich von innen nach außen gestülpt .
+REF	My jsme klasickou prostorovou konfiguraci postavili vzhůru nohama a prostor pro čtenáře jsme vysunuli zevnitř ven .
+ZEM	Máme klasickou Raumkonfiguration postavilo na hlavu a Lesebereich zevnitř navenek doposud .
+MT	Položili jsme klasickou konfiguraci na hlavu a převrhli se na povrch .
+NOTE:	missingWord Lesebereich, Raum-, wrongWord položili na hlavu, ...
+
+SRC	Und dies , ohne seine Laufbahn in den verschiedenen Ligen zu berücksichtigen , in denen er gespielt hat .
+REF	Nemluvě o jeho působení v různých ligách , kde hrál .
+ZEM	A to bez jeho kariéru v různých lig , v nichž hrál .
+MT	A to , aniž by zohlednil jeho kariéru v různých lizích , kde hrál .
+NOTE:	wrongGrammar: ligách!=*lizích
+
+SRC	Auch die Ukraine wird dort erwähnt .
+REF	Uváděna je také Ukrajina .
+ZEM	Také ukrajina je tam uvedeno .
+MT	Na Ukrajině se také zmiňuje .
+NOTE:	Ungrammatical: na Ukrajině
+
+SRC	Weltaidstag : Stampfen , singen , helfen
+REF	Světový den boje proti AIDS : dupání , zpívání , pomoc
+ZEM	Weltaidstag : Stampfen , zpívat , pomoci
+MT	Světový den .
+NOTE:	missingClause, missingWords
+
+SRC	Um die Menschheit zu retten , stellt sich die wichtige Frage , wie wir uns in der Schwerelosigkeit oder auf dem Ersatzplaneten fortpflanzen können ?
+REF	Aby zachránili lidstvo , vyvstává hlavní otázka : jak udržet svůj rod v podmínkách beztíže nebo na dané náhradní planetě ?
+ZEM	Aby lidstvo zachránit , je důležitá otázka , jak se vznáší nebo na náhradní planetu množit ?
+MT	Abychom zachránili lidstvo , je důležitá otázka , jak se rozmnožovat v beztíze nebo na náhradní planetě ?
+NOTE:	wrongWord: Schwerelosigkeit!=v beztíze, missingWord: my
+
+SRC	Viele junge Leute wollen das Land verlassen , so wie diejenigen , die sich die amerikanischen Zuwendungen zu Nutze machen konnten : die Kapitalflucht ist beträchtlich .
+REF	Řada mladých chce odjet tak , jako odjedou ti , kdo dokázali využít americké štědrosti : únik kapitálu je značný .
+ZEM	Mnozí mladí lidé chtějí , aby opustili zemi , stejně jako ti , kdo se američtí granty využít nemohli : odliv kapitálu je značná .
+MT	Mnoho mladých lidí chce opustit zemi , stejně jako ti , kteří se mohli chopit americké výživy : kapitálové úniky je značné .
+NOTE:	Ungrammatical: kapitálové úniky *je, Agreement
+
+SRC	Das Paar hatte zwei Kinder , Preston und Heidi , und sie lebten lange Zeit in der kalifornischen Stadt Malibu , wo viele Berühmtheiten ihren Wohnsitz haben .
+REF	Manželský pár měl dvě děti , Prestona a Heidi , a dlouhou dobu žili v kalifornském městě Malibu , kde pobývá mnoho celebrit .
+ZEM	Tento pár měl dvě děti , Preston a Heidi , a žili dlouho v kalifornském městě Malibu , kde mnohé celebrity bydlí .
+MT	Pár měl dvě děti , Preston a Heidi , a žili dlouho v kalifornském městě Malibu , kde je spousta celebrit .
+NOTE:	notNice: ne úplně hezký styl, missingWord: Wohnsitz
+
+SRC	Wir sollen unseren amerikanischen Kollegen davon erzählen , wie toll ein Besuch dieses Landes ist und Druck auf die politische Führung ausüben , ihre Bindungen zu Mexiko zu intensivieren .
+REF	Měli bychom říkat našim americkým spoluobčanům , jak skvělé je tuto zemi navštívit , a tlačit na politické vůdce , aby upevnili vztahy s Mexikem .
+ZEM	Se svými americkými kolegy vyprávět , jak výborná návštěva této země je a tlak na politické vedení , jejich vazby k Mexiku .
+MT	Máme říci našim americkým kolegům , jak je skvělé , že tato země je návštěva této země a vyvíjejí tlak na politické vedení , aby zintenzivnil své vazby k Mexiku .
+NOTE:	worldKnowledgeNeeded: wir sollen => máme říci ? máme říkat ? měli bychom říkat; wrongAgreement: wie toll ein Besuch dieses Land ist, vyvíjet tlak
+
+SRC	" Für mich ist es wichtig , über mein eigenes Geld und Zeit zu verfügen " sagt ein anderer , ungefähr zwanzig Jahre alter Mann .
+REF	Ale pro mě je důležité spoléhat na vlastní peníze a čas , " říká jiný , asi dvacetiletý , mladík .
+ZEM	" Pro mě je důležité , že o můj vlastní čas a peníze k dispozici , " říká další , přibližně dvacet let starý muž .
+MT	" Pro mě je důležité mít své vlastní peníze a čas , "
+NOTE:	missingClause: říká jiný...
+
+SRC	Die EZB sieht in ihrem Bericht übrigens vor , die verschiedenen , heute als hoch angesehenen Risiken im Falle eines Erfolgs dieser Währung neu zu bewerten .
+REF	ECB ve své zprávě navíc předpokládá přehodnocení různých rizik , jež jsou dnes považována za zvýšená , pokud tento druh peněz bude úspěšný .
+ZEM	ECB vidí ve své zprávě , mimochodem , různé , dnes jako vysoce prestižní rizika v případě úspěchu této měny .
+MT	ECB ve své zprávě mimochodem předpokládá , že v případě úspěchu této měny znovu přehodnotí různé rizika .
+NOTE:	wrongAlignment: übrigens!=mimochodem, missingClause: heute als hoch angesehenen Risiken, wrongAgreement: různé rizika
+
+SRC	" Sie sollen auch wählerisch sein , wenn es ihnen am Wichtigsten ist , beliebt zu sein , tausende Freunde zu haben , ohne über die Folgen nachzudenken " , fügt er hinzu .
+REF	Také , aby byli - co se týká okolí - rozvážní , v době , kdy to , po čem nejvíce touží , je být oblíbení , mít tisíce přátel a nemyslet na důsledky , " dodává .
+ZEM	" Mají také nevybírají , koho popraví ; být , pokud se jim to nejdůležitější , je populární , tisíce přátel , bez následků přemýšlet , " doplňuje ho .
+MT	" Ať jsou také vybíraví , když je nejdůležitější být populární , mít tisíce přátel , aniž by o tom přemýšleli . "
+NOTE:	
+
+SRC	Auslegungssache , wie so vieles in dem Entwurf , der Mursi zur Unterschrift vorliegt und nach seinen Worten " sehr bald " den Ägyptern zur Volksabstimmung präsentiert werden wird .
+REF	Věc výkladu , jako mnoho dalšího v tomto návrhu , který Mursí předloží k podpisu a podle svých slov bude " velmi brzy " prezentovat Egypťanům za účelem lidového hlasování .
+ZEM	Auslegungssache , jako mnoho v návrhu , který Mursi k podpisu a podle svých slov " velmi brzy " Egypťany k referendu bude předložen .
+MT	To , jak mnoho věcí v návrhu , který je k podpisu Murdosi , a podle slov " velmi brzy " předloží Egypťanům k referendu .
+NOTE:	
+
+SRC	Aber ich würde dem auch nicht zu viel Gewicht beimessen wollen , das ist keine völlig einseitige Beziehung .
+REF	Nechtěl bych tomu ale ani připisovat příliš velký význam , to není úplně jednostranný vztah .
+ZEM	Ale chtěl bych také příliš velkou váhu , to není zcela jednostranný vztah .
+MT	Chtěl bych však také příliš zdůraznit , že to není zcela jednostranný vztah .
+NOTE:	
+
+SRC	" Ich denke , dank unserer Einladung hat nun jeder Bewohner eine gewisse Beziehung zu diesem neuen Haus .
+REF	" Myslím , že díky našemu pozvání má teď k novému domu každý obyvatel určitý vztah .
+ZEM	" Myslím , že díky naší pozvání má nyní každý obyvatel určitý vztah k této nové sněmovně .
+MT	" Myslím , že díky našemu pozvání , každý občan má vztah s tímto novým domem .
+NOTE:	
+
+SRC	Selbst eingefleischte Architekten und Bauingenieure schütteln ob des unbekannten Baustoffs den Kopf .
+REF	Nad neznámým stavebním materiálem kroutí hlavami dokonce i zapřisáhlí architekti a stavební inženýři .
+ZEM	I zarytí architekti a Bauingenieure potřást zda z neznámých Baustoffs hlavu .
+MT	Dokonce i architekti a stavební inženýři se třese , jestli neidentifikovatelné staveniště .
+NOTE:	
+
+SRC	Die Waffen gelangen über mehrere Kanäle auf den Schwarzmarkt .
+REF	" Černý " trh se zbraněmi je zásobován několika kanály .
+ZEM	Ty zbraně , o několik kanálů na černém trhu .
+MT	Zbraně se dostanou přes několik kanálů na černém trhu .
+NOTE:	
+
+SRC	Vorbeugen der Krankheit
+REF	Prevence onemocnění
+ZEM	Prevence onemocnění
+MT	Předcházení nemoci .
+NOTE:	flawless
+
+SRC	Man gewährt dem Sterbenden je nach Wunsch eine Mundpflege mit Brandy oder Pepsi .
+REF	Když člověk umírá , lze mu poskytnout například doušek brandy nebo pepsi , podle chuti .
+ZEM	Člověk přiznává umírajících podle přání je Mundpflege s Brandy nebo pepsi .
+MT	Umíráte po přání , aby umíraly , nebo pepsi .
+NOTE:	completelyWrong
+
+SRC	An diesem Abend saß ich im College allein beim Abendessen , als mich jemand leicht auf die Schulter tippte .
+REF	Při večeři ve škole jsem seděla sama , když jsem ucítila lehké poklepání na rameno .
+ZEM	Tento večer jsem seděla v College jen na večeři , když mě někdo snadno na rameni tippte .
+MT	Tu noc jsem seděl na vysoké na večeři , když mě někdo praštil na rameno .
+NOTE:	missingWord: allein, worldKnowledge: author's gender, wrongWord: tippte!=praštil
+
+SRC	Die Anhörung befasst sich mit Mannings Zeit im Militärgefängnis in Quantico , Virginia
+REF	Slyšení se zaměřuje na Manningův pobyt ve vojenské vazbě ve městě Quantico ve Virginii .
+ZEM	Slyšení se zabývá Mannings čas v Militärgefängnis Quantico ve Virginii ,
+MT	Slyšení se týká Manningova času v vojenské věznici v Quanticu , ve Virginii .
+NOTE:	wrongWord: Zeit!=času, ungrammatical *v vojenské!=ve ve vojenské
+
+SRC	Und noch eine Frage : Müssen alle wissen , was du in jedem Moment tust ?
+REF	A ještě jedna : Potřebují neustále všichni vědět , co právě děláš ?
+ZEM	A ještě jedna otázka : všichni musí vědět , co v každém okamžiku uděláš ?
+MT	A ještě jedna otázka .
+NOTE:	missingClause: musejí všichni vědět...
+
+SRC	Aber das bedeutet nicht zwangsläufig , " ich will , dass Sie mich einschläfern " , sondern " ich möchte , dass meine Schmerzen gelindert werden " .
+REF	To ale nemusí vždy nutně znamenat " chci , abyste mi poskytli eutanazii , " znamená to spíše " chci , abyste mě zbavili bolesti . "
+ZEM	To však nutně neznamená , že " nechci , aby jste mě bez majitele , " ale " jsem rád , že moje bolest zmírnilo . "
+MT	Ale to nutně neznamená " chci , abyste mě utratili , " ale " chci , aby moje bolest byla zmírněna . "
+NOTE:	wrongWord: einschläfern KOHO? člověka => uspali, eutanazie. zvíře => utratili
+
+SRC	Mehrere bleiben auch völlig ungeklärt .
+REF	Nějaké procento rovněž zůstává zcela nevysvětlené .
+ZEM	Několik zůstat i zcela jasno .
+MT	Několik lidí zůstává naprosto nevyřešené .
+NOTE:	notNice: několik lidí, agreement
+
+SRC	Im Showbusiness kopiert heute oft einer den anderen .
+REF	Showbusiness je přeplněný věcmi , kde jedna napodobuje druhou .
+ZEM	V Showbusiness kopíruje dnes často k ostatním .
+MT	V show showbusinessu je dneska někdo jiný .
+NOTE:	wrongWord: show showbusinessu, missingVerb kopiert
+
+SRC	Das Robert-Koch-Institut geht davon aus , dass mindestens vier von fünf aller in Deutschland gemeldeten Syphilis-Fälle durch sexuelle Kontakte zwischen Männern übertragen werden .
+REF	Ústav Roberta Kocha vychází z toho , že minimálně čtyři z pěti všech případů syfilidy , které byly hlášeny v Německu , jsou přenášeny sexuálními kontakty mezi muži .
+ZEM	To - Robert Koch - institut předpokládá , že nejméně čtyři z pěti všech v Německu Syphilis hlášených případů prostřednictvím sexuální kontakty mezi muži .
+MT	Institut Roberta Koche předpokládá , že nejméně čtyři z pěti z pěti lidí oznámených v Německu jsou vysílány sexuální kontakty mezi muži .
+NOTE:	missingWord: Syphilis-Fälle, wrongWord übertragen!=vysílány, wrongPhrase čtyři z pěti z pěti lidí
+
+SRC	Mit dem Wenigen arbeitet er aber recht erfolgreich , wobei er der Realität manchmal etwas nachhilft - was dann nicht immer so elegant wirkt ( die Szenen , in der die drohende Krise auf dem Flughafen in Teheran von einem Telefonat in Amerika abgewendet wird , oder auch die Verfolgungsjagd auf der Startbahn , wirken etwas gekünstelt ) .
+REF	Docela úspěšně s tím málem pracuje , občas si k realitě něco přimyslí - tam už všechno tak elegantně nevychází ( scéna , v níž hrozící krizi na teheránském letišti odvrátí telefonát v Americe i honička po ranveji působí dost přitažené za vlasy ) .
+ZEM	S poškození pracuje , ale poměrně úspěšně , s realitou někdy něco nachhilft - což se ne vždy tak elegantně působí ( scény , ve které blížící se krize na letišti v Teheránu z telefonátu v americe se předejde , nebo také Verfolgungsjagd na Startbahn , něco gekünstelt ) .
+MT	Je však velmi úspěšný , když pracuje na skutečnosti , že někdy pomáhá , což není vždy tak elegantní ( scéna , ve které se nachází krize na letišti v Teheránu , nebo i honičková honička na letišti ) .
+NOTE:	missingWords, wrongWord Verfolgungsjagd!=honičková honička
+
+SRC	- Deine Arbeiten haben einen unverkennbaren Stil .
+REF	- Tvá díla jsou charakteristická rozpoznatelným způsobem .
+ZEM	- Tvoje práce mají zřetelný styl .
+MT	Tvoje práce má nevýrazný styl .
+NOTE:	wrongWord unverkennbaren?=nevýrazný, wrongNumber 
+
+SRC	Bananen müssen 14 cm lang sein
+REF	Kvalitní banány mají mít 14 centimetrů
+ZEM	Banány musí být 14 centimetrů
+MT	Banány musí být 14 cm dlouhý .
+NOTE:	wrongAgreement banány dlouhý => probably corrupted by OpenSubtitles coloquial language
+
+SRC	Im Zuge der Steigerung der Konkurrenzfähigkeit der deutschen Wirtschaft kommt es regelmäßig zu Fällen , in denen Arbeitnehmer einen derart geringen Lohn erhalten , dass der Staat ihr Einkommen bis zum Existenzminimum aufstocken muss .
+REF	V rámci zvýšení konkurenceschopnosti německé ekonomiky dochází zcela běžně k případům , že řádně zaměstnaní lidé dostávají takovou mzdu , že jim musí stát doplácet do existenčního minima .
+ZEM	V rámci zvýšení konkurenceschopnosti německého hospodářství je pravidelně v případech , ve kterých pracovníci mají tak nízký plat , že stát své příjmy do existenčního minima zvýšit .
+MT	Při zvyšování konkurenceschopnosti německého hospodářství pravidelně dochází k případům , v nichž pracovníci dostávají tak nízké mzdy , že stát musí mít svůj příjem na minimum .
+NOTE:	wrongClause stát musí mít svůj příjem na minimum
+
+SRC	Die Debatte muss in Kürze wieder aufgenommen werden , obwohl ein Gesetzesentwurf vorbereitet wird .
+REF	Debata by měla zanedlouho pokračovat a současně se chystá návrh zákona .
+ZEM	Debata musí brzy obnoven , přestože návrh zákona připravuje .
+MT	Diskuse musí být znovu zahájena , přestože návrh zákona je připraven .
+NOTE:	wrongTense: je připravován nebo se připravuje
+
+SRC	Etwa 200.000 bis 400.000 , und das ist auch weiterhin so .
+REF	Dvě stě až 400 tisíc , což beru dál .
+ZEM	Zhruba 200 až 300 tisíc , a to je tak i nadále .
+MT	Asi 200 000 do 400.000 a to je i nadále .
+NOTE:	wrong
+
+SRC	Heute findet bei vielen Männern , bei denen man Krebs erkannt hat , keine Behandlung statt , da ihr Krebs nicht aggressiv ist und keine Bedrohung für ihr Leben darstellt .
+REF	Dnes se řada mužů , u nichž byla rakovina diagnostikována , neléčí , jelikož jejich druh rakoviny není agresivní a neohrožuje je na životě .
+ZEM	Dnes se v mnoha mužů , u nichž je rakovina , žádná léčba , protože jejich rakovinu agresivní a žádnou hrozbu pro svůj život .
+MT	Dnes v mnoha mužích , u kterých se rakovina objevila , není léčba , protože její rakovina není agresivní a není hrozbou pro jejich životy .
+NOTE:	wrongClause: v mnoha mužích
+
+SRC	Die Leute glauben , wir sind wie der Bullingdon Club , ohne uns überhaupt kennengelernt zu haben " .
+REF	Lidé se domnívají , že jsme jako Bullingdon Club , aniž by se s námi vůbec sešli . "
+ZEM	Lidé se domnívají , že jsou jak Bullingdon klubu , aniž by nás vůbec poznali , aby . "
+MT	Lidé si myslí , že jsme jako Bulldon Club , aniž bychom se vůbec poznali .
+NOTE:	wrongSubject: ti lidé nás nepoznali
+
+SRC	Als die Antwort in einem Kapitel im November 1990 bekannt wurde , wurde sie von durchschnittlich 41 Millionen Zuschauern gesehen , die " Dallas " in das zweite am meisten gesehene Unterhaltungsprogramm seit dem Ende von " MASH " 1983 , das 50 Millionen Zuschauer hatte , verwandelten .
+REF	Listopadový díl roku 1980 , v němž byla odpověď odhalena , sledovalo v průměru 41 milionů televizních diváků . Dallas se tak stal druhým nejsledovanějším zábavním pořadem historie po skončení vysílání seriálu MASH v roce 1983 , který sledovalo 50 milionů diváků .
+ZEM	Jako odpověď v kapitole v listopadu 1990 , byly v průměru 41 milionů diváků , kteří " Dallasu " v druhé nejvíce gesehene Unterhaltungsprogramm od konce " MASH " 1983 , 50 milionů diváků , se změnil .
+MT	Když byla odpověď v listopadu 1990 oznámena , byla spatřena průměrným 41 milionům diváků , kteří byli " Dallas " v druhé nejčistší podenitě od konce roku 1983 , který měl 50 milionů diváků .
+NOTE:	wrongClause, NamedEntity: Mash=>*podenite
+
+SRC	Unter Hitzeeinwirkung und Druck verfärbt sich das sogenannte Landbouwplastic ( KLP ) zu einem dunklen , homogenen , belastungsfähigen Material , das ein bissl nach Neuwagen und ein bissl nach Sportschuh riecht .
+REF	Působením žáru a tlaku se takzvaný Landbouwplastic ( KLP ) zbarví v tmavý , homogenní a zatížitelný materiál , který páchne trochu jako nové auto a trochu jako sportovní boty .
+ZEM	Pod tlakem a Hitzeeinwirkung verfärbt se takzvaný Landbouwplastic ( KLP ) temné , homogenní , belastungsfähigen materiálu , který je bissl po nových automobilech a bissl po Sportschuh riecht .
+MT	Pod teplotou a tlakem se takzvaný Landbowstistic ( KKP ) stane tmavým , homogenickým , schopným materiálem , který voní do nových aut a bisbických rukavic .
+NOTE:	wrongWord: riecht!=voní namedEntity Landbouwplastic ( KLP ), wrongWord Sportschuh!=bisbických rukavic, wrongPreposition nach!=do
+
+SRC	Im Jahr 1937 tauchte in der Fachpresse der von Ing . Rohoziński stammende Entwurf einer fotoelektrischen Jagdrakete auf , und im darauf folgenden Jahr erschien das Werk " Rakieta - torpeda powietrzna i rakietobomba lotnicza " des Autors Leliwa-Krzywoblocky .
+REF	V roce 1937 se v odborném tisku objevil návrh fotoelektrické stíhací rakety , kterou navrhl inženýr Rohoziński a v následujícím roce vyšla práce Rakieta - torpeda powietrzna i rakietobomba lotnicza autora Leliwy-Krzywoblockého .
+ZEM	V roce 1937 se v Fachpresse z Ing. Rohoziński vytvářeného návrh fotoelektrischen Jagdrakete , a v následující rok se zdál dílem " Rakieta - torpeda powietrzna i rakietobomba lotnicza " autora Leliwa - Krzywoblocky .
+MT	V roce 1937 se objevil v odborníku , který se objevil v ing ing , a v následujícím roce se objevil projekt " Rakita . "
+NOTE:	wrongClause, namedEntity, loanPhrase
+
+SRC	Es ist nicht überraschend , dass die Artikel meistens einstimmig verabschiedet wurden .
+REF	Nepřekvapí pak , že články ústavy byly často odhlasovány jednomyslně .
+ZEM	Není divu , že články většinou jednomyslně schválila .
+MT	Není překvapivé , že články byly většinou jednomyslně přijaty .
+NOTE:	flawless
+
+SRC	Dies spornt die Anderen an , ihr Spielniveau zu verbessern .
+REF	To vedlo i ostatní k tomu , že zvýšili vlastní úroveň hry .
+ZEM	To podněcuje ostatní , jejich Spielniveau zlepšit .
+MT	To posiluje ostatní .
+NOTE:	missingClause
+
+SRC	Von dieser Rakete wurden drei Typen entwickelt ( Meteor-1A , -1B und -1C ) , die sich voneinander in der Größe des Transportraums für wissenschaftliche Instrumente unterschieden .
+REF	Byly vyvinuty tři typy ( označené Meteor-1A , -1B a -1C ) , které se lišily velikostí prostoru pro vědecké přístroje .
+ZEM	Tato raketa tři typy rozvíjí ( Meteor - 1A , - 1B a - 1C ) , které se liší ve velikosti Transportraums pro vědecké nástroje .
+MT	Z této rakety byly vyvinuty tři typy ( meteorit 1A , 1B a 1C ) , které se navzájem odlišují ve velikosti dopravy pro vědecké nástroje .
+NOTE:	namedEntity Meteor, wrongWord Transportraum!=velikost dopravy, wrongWord wissentschaftliche Instrumente!=nástroje
+
+SRC	Besonders katastrophal ist die Tatsache , dass die heutigen Eliten den in Zukunft möglichen Verlusten von Hunderttausenden von Menschenleben , den humanitären und sozialen Katastrophen , deren Zeugen wir bereits heute sind , sowie den Verbrechen gegen die Menschlichkeit , wie wir sie aus der älteren und neueren Geschichte kennen , in vollkommener Ignoranz gegenüber stehen .
+REF	Zvláště katastrofální je skutečnost , že současné elity zcela ignorují v budoucnosti možné statisícové ztráty na životech , humanitární a sociální katastrofy , kterých jsme již nyní svědky spolu se zločiny proti lidskosti , jak je známe ze starých i nových dějin .
+ZEM	Zvlášť katastrofální je skutečnost , že dnešní elity v budoucnosti možné ztráty stovek tisíc životů , sociální a humanitární katastrofy , které jsme byli svědky již dnes , a zločiny proti lidskosti , jak ji ze starších a novějších dějinách známe , v naprosté ignorance .
+MT	Obzvláště katastrofální je skutečnost , že dnešní elity , které jsou v budoucnu v plné nevědomosti stovky tisíc lidí , humanitárních a sociálních katastrof , které jsou svědky , a zločiny proti lidskosti , jsou naprosto nepochopitelné , a zločiny proti lidskosti , jak je známe ze starších a novější historie .
+NOTE:	???
+
+SRC	Der offiziellen Version der Ereignisse zufolge beging Mariana 2010 Selbstmord .
+REF	Podle oficiální verze spáchala Mariana v roce 2010 sebevraždu .
+ZEM	Oficiální verze událostí podle Mariany spáchal sebevraždu v roce 2010 .
+MT	Podle oficiálních verzí událostí spáchala Mariana 2010 sebevraždu .
+NOTE:	missingWord: v roce 2010
+
+SRC	Tatsächlich sind die 234 Artikel , die von der islamistisch dominierten 100-köpfigen Verfassungsgebenden Versammlung da in einem nächtlichen , 15-stündigen Parforceritt durchgepeitscht wurden , teilweise Besorgnis erregend .
+REF	234 paragrafy , které stohlavé Ústavodárné shromáždění s převahou islamistů narychlo schválilo v patnáctihodinovém nočním maratonu , částečně vzbuzují znepokojení .
+ZEM	Ve skutečnosti jsou 234 články , které islamisticky dominovali 100 také ústavodárné shromáždění , protože v pozdních nočních , 15 - čtyřiadvacetihodinovou Parforceritt protlačila , částečně hrozivá .
+MT	Ve skutečnosti , 234 článků , které byly udrženy islámským ústavním shromážděním v nočním , patnáctihodinovém paraforceritském shromáždění , jsou znepokojující .
+NOTE: wrongWord paraforceritském
+
+SRC	Angst vor einem Gottesstaat am Nil von Gnaden der mächtigen Muslimbruderschaft .
+REF	Strach před " božím státem " na Nilu vydaným na milost mocnému Muslimskému bratrstvu .
+ZEM	Strach z teokracií na Nilu od excelence mocné muslimského bratrstva .
+MT	Strach z božího státu v Nilu od milosti muslimské církve .
+NOTE:	wrongPreposition: *v Nilu missingWord mächtigen, namedEntity Muslimbruderschaft, ...
+
+SRC	Damit reagieren die Behörden auf die jüngsten Ereignisse : Verletzte bei Schießereien auf Hochzeiten sowie sieben Tote beim Amoklauf des Moskauer Juristen Dmitri Winogradow .
+REF	Je to reakce vládních orgánů na nedávné události : podnětem byly případy střelby na svatbách , které se obešly bez obětí , a masakr připravený moskevským advokátem Dimitrijem Vinogradovem , jehož následkem zahynulo sedm lidí .
+ZEM	Aby reagovat úřady na nedávné události : bylo zraněno při střelbě na svatby a sedm mrtvých při přestřelce moskevského právníků Dmitrij Winogradow .
+MT	Úřady reagují na nedávné události : zranění při střelbě na svatbách a sedm mrtvých při vraždění moskevského právního zástupce Dmitriho Wingrawa .
+NOTE:	
+
+SRC	Im Jahr 2000 gab es in der Presse eine Umfrage , bei der es um die Auszeichnung " Persönlichkeiten unserer Stadt " ging .
+REF	V roce 2000 byl uspořádán průzkum byl v tisku , zvláštní cena byla " Lidé v našem městě . "
+ZEM	V roce 2000 byla v tisku průzkum veřejného mínění , v němž jde o ocenění " osobností našeho města . "
+MT	V roce 2000 bylo v tisku zveřejněno průzkum " osobnosti našeho města . "
+NOTE:	
+
+SRC	Mit ihren 97 Jahren ist sie für diese Breiten noch vergleichsweise jung .
+REF	V 97 letech je na tuto zeměpisnou šířku ještě relativně mladá .
+ZEM	Se svými 97 let je pro tuto oblast ještě relativně mladá .
+MT	S jejími 97 lety je pro ty jezdy ještě mladá .
+NOTE:	
+
+SRC	Die Formulare , so Fein , enthielten keine Beschwerden über Misshandlung , obwohl die Beamten Manning direkt zu seiner Behandlung befragt hatten .
+REF	Formuláře neukazují žádné stížnosti na špatné zacházení , i když se důstojníci Manninga přímo zeptali na to , jakým způsobem je s ním zacházeno , tvrdil Fein .
+ZEM	Formuláře , tak jemná , obsahovaly žádné stížnosti na špatné zacházení , přestože úředníci Manning přímo k jeho léčbě konzultuje .
+MT	Dokumenty , tak dobře , nebyly žádné stížnosti ohledně týrání , i když se úředníci Manning ptali přímo na jeho léčbu .
+NOTE:	
+
+SRC	Und zuallererst sollten wir diese bescheuerten Virtual-Reality-Helme los werden !
+REF	A v první řadě - k čertu s těmi hloupými helmami virtuální reality !
+ZEM	A především bychom měli tyto bescheuerten Virtual - Reality - barvou děje !
+MT	A nejdřív se musíme zbavit těch hloupých virtuálních přilby !
+NOTE:	
+
+SRC	Wir haben eine gute Position in der Qualifikationsgruppe für die WM .
+REF	V kvalifikaci na MS jsme na dobrém místě .
+ZEM	Máme dobrou pozici v Qualifikationsgruppe pro mistrovství světa ve fotbale .
+MT	Máme dobrou pozici ve skupině kvalifikací pro WM .
+NOTE:	
+
+SRC	Kombination der Genres
+REF	Kombinace žánrů
+ZEM	Kombinace Genres
+MT	Kombinace genomu
+NOTE:	
+
+SRC	Ende der 90er Jahre kam es dann schließlich dazu .
+REF	Nakonec se dočkala koncem 90. let .
+ZEM	Koncem 90. let 20. století se pak konečně .
+MT	Konec devadesátých let nakonec nastal .
+NOTE:	
+
+SRC	Ehemalige Mudschaheddin , die afghanische Regierung und aktuelle Taliban haben den gemeinsamen Wunsch , die Frauen in einer untergeordneten Position zu halten .
+REF	Někdejší mudžáhedíni , afghánská vláda a současní talibánci se shodují ve snaze zachovat ženy v podřízeném postavení .
+ZEM	Bývalý mudžahedínů , afghánská vláda a Taliban mají společnou touhu ženy v podřízeném postavení .
+MT	Bývalí Mužahehedíni , afghánská vláda a současný Taliban mají společné přání udržet ženy v nižším postavení .
+NOTE:	
+
+SRC	Auch das Hobby-Eberly-Teleskop in Texas ist im Höhenwinkel fixiert .
+REF	Ve výškovém úhlu je fixován i teleskop Hobby-Eberly v Texasu .
+ZEM	I koníček - Eberly - Teleskop v Texasu je v Höhenwinkel fixovaná .
+MT	Dokonce i teleskop Ebery-Eberlyho v Texasu je fixovaný na výšku .
+NOTE:	
+
+SRC	Bezirksstaatsanwalt Pete Hautzinger unterstützte diese Entscheidung , entschloss sich aber auch dazu , nicht alle ausstehenden Besitzverfahren fallen zu lassen .
+REF	Okresní prokurátor , Pete Hautzinger , toto rozhodnutí podporuje , ale rovněž se rozhodl nezamítnout všechny probíhající případy držení .
+ZEM	Bezirksstaatsanwalt Pete Hautzinger podpořila toto rozhodnutí , rozhodla se ale také k tomu , že ne všechny zbývající Besitzverfahren padnout .
+MT	Okresní prokurátor Pete Hautzinger podpořil toto rozhodnutí , ale také se rozhodl , že nebude muset zrušit všechny existující postupy .
+NOTE:	
+
+SRC	" Wenn er das Referendum ausruft , werden wir zu seinem Palast gehen und ihn stürzen " , sagte der Oppositionelle Jasser Said .
+REF	" Pokud vyhlásí referendum , půjdeme k jeho paláci a svrhneme ho , " řekl příslušník opozice Jásir Said .
+ZEM	" Pokud se referendum vyhlásit , budeme k jeho paláci a ho svrhnout , " řekl opoziční Jasser Said .
+MT	" Pokud zavolá referendum , půjdeme do jeho paláce , " řekl opoziční Jasser Said .
+NOTE:	
+
+SRC	Leider hat mich meine Verletzung daran gehindert , etwas Spielzeit herauszuschlagen .
+REF	Bohužel kvůli zranění jsem nemohl hrát tak , jak bych si představoval .
+ZEM	Bohužel mě porušování bráněno , něco Spielzeit zajistili obrovské výhody a úlevy .
+MT	Bohužel mě moje zranění zastavilo , když jsem se dostal do hry .
+NOTE:	
+
+SRC	Der Föderale Sicherheitsdienst schaltete vor Kurzem unzählige Scheinwebseiten , und Käufer , die Waffen erwerben wollen , gehen dem Dienst zuhauf ins Netz .
+REF	Federální bezpečnostní služba nedávno rozhodila ohromnou síť nastrčených webových stránek a osoby , které si přejí koupit vojenskou zbraň , může shrabovat lopatou .
+ZEM	Federální bezpečnostní služba přešel nedávno bezpočet Scheinwebseiten , a kupující , kteří chtějí získat zbraně , se tato služba více než dost do sítě .
+MT	Federální bezpečnostní služba nedávno zachytila nespočet falešných stránek , a kupující , kteří chtějí zbraně , jdou do sítě .
+NOTE:	
+
+SRC	Via Kurznachrichtendienst Twitter bezichtigte er die Anhänger Mursis , einen " Putsch gegen die Demokratie " führen zu wollen .
+REF	Prostřednictvím služby krátkých zpráv Twitter obvinil přívržence Mursího , že chtějí provést " puč proti demokracii . "
+ZEM	Přes Kurznachrichtendienst Twitter obvinil ze jeho příznivci Mursis , " puč proti demokracii . "
+MT	Visa zkrácená služba Twitteru obvinila stoupence Muriel , aby vedl převrat proti demokracii .
+NOTE:	
+
+SRC	In Swasiland leben 245000 Aidswaisen .
+REF	Ve Svazijsku je 245 000 sirotků po rodičích , kteří zemřeli na AIDS .
+ZEM	Ve Svazijsku žijí 245000 Aidswaisen .
+MT	V Swasilandu žije 24 000 lidí .
+NOTE:	
+
+SRC	Man habe ihm nur eine Matratze , eine Decke , Flip-Flops , Kleidung und seine Brille erlaubt .
+REF	Manning řekl , že mu byla povolena pouze jedna matrace , přikrývka , nazouváky , nějaké oblečení a brýle .
+ZEM	Je mu jen postelí , strop , Flip - Flops , oblečení a jeho brýle .
+MT	Je to jen matrace , přikrývka , flaška , oblečení a brýle .
+NOTE:	
+
+SRC	Die Krankheit macht ihre Arbeit : eine unermessliche Schwäche hindert ihn daran , allein auf die Toilette zu gehen und sogar selbst zu essen .
+REF	Nemoc vykonala své dílo : nesmírná slabost mu znemožňuje odebrat se sám na toaletu nebo se jen sám najíst .
+ZEM	Nemoc dělá svou práci : strastiplnou slabost , brání mu to sám , používat toaletu , a dokonce i jíst .
+MT	Ta nemoc dělá svou práci , která mu brání v tom , aby šla na záchod sama a dokonce i sama snědla .
+NOTE:	
+
+SRC	Es sind in der Tat nicht alle Teilchen und nicht alle Materialien , die mit dem elektromagnetischen Feld interagieren .
+REF	S elektromagnetickým polem nereagují totiž ani všechny částice ani všechny materiály .
+ZEM	To jsou vlastně všechny částice a ne všechny materiály , které s elektromagnetickými poli působí .
+MT	Ve skutečnosti nejsou všechny částice a všechny materiály spojené s elektromagnetickým polem .
+NOTE:	
+
+SRC	Seit vielen Jahren verwendet man in den Niederlanden in Gewächshäusern und auf Feldern ein millimeterdünnes Kunststoffvlies als Wurzelunterlage .
+REF	Již mnoho let se ve sklenících a na polích v Nizozemí používá jako podklad pod kořeny milimetrové rouno ze syntetické hmoty .
+ZEM	Po mnoha letech je v Nizozemsku skleníků a na polích je millimeterdünnes Kunststoffvlies jako Wurzelunterlage .
+MT	Již mnoho let se v Nizozemsku používalo v Nizozemsku a na polích miliardový kalaval , jako podklad .
+NOTE:	
+
+SRC	Wie haben Sie die EM 2012 mit der französischen Nationalmannschaft erlebt ?
+REF	Jak jste prožíval Euro 2012 s francouzskou reprezentací ?
+ZEM	Jak jste EM 2012 s francouzským národním týmem zažil ?
+MT	Jak jste se setkal s francouzským národním týmem ?
+NOTE:	
+
+SRC	Seit 2011 haben ein Dutzend Staaten Gesetze verabschiedet , die von den Wählern fordern , dass sie ihre US-Staatsbürgerschaft nachweisen .
+REF	Od roku 2011 přijalo asi dvanáct států zákony , které stanoví povinnost voličů prokazovat , že jsou americkými občany .
+ZEM	Od roku 2011 se tucet státy přijaly zákony , které voliči požadují , aby své americké občanství prokázat .
+MT	Od roku 2011 již tucet států přijalo právní předpisy , které voliči požadují , aby prokázala své občanství .
+NOTE:	
+
+SRC	Es ist nicht möglich , gegen diese Regel zu verstoßen - und versuchen Sie es nicht zu stark , da Sie sich wehtun werden .
+REF	Toto pravidlo nelze obejít - a nepokoušejte se o to příliš usilovně , jinak si ublížíte .
+ZEM	Je možné , že proti tomuto pravidlu porušovat a pokuste se je příliš silná , protože jste se poškodí .
+MT	Není možné porušit toto pravidlo - a nepokoušejte se to příliš přehánět , protože se cítíte ublíženě .
+NOTE:	
+
+SRC	Zu viele verletzte Gefühle .
+REF	Příliš mnoho nepřátelských pocitů .
+ZEM	Příliš mnoho zraněných pocity .
+MT	Příliš mnoho zraněných .
+NOTE:	
+
+SRC	Noch ist nicht abzusehen , ob der Funke dieser Proteste ganze Massen mobilisieren wird .
+REF	Zda se tato událost stane jiskrou , která zažehne plamen masového hnutí , je zatím nejasné .
+ZEM	Zatím není jasné , zda požár těchto protestů celé masy mobilizovat .
+MT	Ještě není vidět , zda bude jiskra těchto protestů mobilizovat celé masy .
+NOTE:	
+
+SRC	Dabei muss man nicht nur Sprachtests , sondern auch Tests in die russische Geschichte und die Grundlagen der Gesetzgebung ablegen .
+REF	Zkoušky se však budou skládat nejen z jazykových znalostí , ale také z ruské historie a ze základů práva .
+ZEM	Přitom je třeba nejen Sprachtests , ale také testy v ruské historii a základy právní předpisy .
+MT	V této souvislosti se musí vyvarovat nejen jazyků , ale i testů v ruských dějinách a základy právních předpisů .
+NOTE:	
+
+SRC	Der Vater des Kindes , Andrijan Nikolajew , war ebenfalls Kosmonaut .
+REF	Otcem dítěte byl také kosmonaut Andrijan Nikolajev .
+ZEM	Otec dítěte , Andrijan Nikolajew , byla také Kosmonaut .
+MT	Otec dítěte , Andrijan Nikolajev , byl také kosmonaut .
+NOTE:	
+
+SRC	In Jaffa können Sie neuvermählte Paare aus ganz Israel und sogar anderen Ländern bei Fototerminen antreffen .
+REF	V Jaffě možná potkáte novomanžele , kteří sem přijíždějí z celého Izraele a dokonce i z dalších zemí , aby se nechali vyfotit .
+ZEM	V Jaffa můžete neuvermählte páry z celé Izrael , a dokonce i v dalších zemích ke snaze nechat se někde vyfotografovat .
+MT	V Jaffu můžete dosáhnout nových párů z celého Izraele a dokonce i dalších zemí na fotografiích .
+NOTE:	
+
+SRC	Erderwärmung oder Zusammenstoß mit Killerasteroid .
+REF	Globální oteplení nebo kolize se zabijáckým asteroidem .
+ZEM	Globální oteplování , nebo srážka s Killerasteroid .
+MT	Globální oteplování , nebo střet s zabijákem .
+NOTE:	
+
+SRC	Das Spektakel ähnelt dem Eurovision Song Contest .
+REF	Je to jako pěvecká soutěž Eurovision .
+ZEM	Podívanou připomíná hudební soutěž Eurovize .
+MT	Divadlo se podobá Eurovizi Conview .
+NOTE:	
+
+SRC	Efe versuchte wiederholt , Zugang zu dem unterzeichneten Dokument bei der VI. Ordentlichen Sitzung der Staats- und Regierungsoberhäupter der Unasur zu erlangen . Quellen in der Staats- und Präsidentenkanzlei teilten anfangs mit , dass sie es nach der Klausur übergeben würden , erklärten danach jedoch , dass es zu gewisser Zeit auf der Webseite der peruanischen Regierung veröffentlicht würde .
+REF	Agentura Efe se opakovaně pokoušela získat přístup k dokumentu podepsaném na šesté schůzi hlav států a vlád organizace Unasur , ale zástupci ministerstva zahraničí i prezidentské kanceláře , kteří na začátku stanovili , že dokument zveřejní po skončení summitu , uvedli , že bude později zveřejněn na webových stránkách peruánské vlády .
+ZEM	Efe se snažil opakovaně , přístup k podpisu dokumentu při VI. řádného zasedání hlav států a vlád UNASUR. zdrojů do hlav států a Präsidentenkanzlei rozdělili na začátku s tím , že po test předat , poté však prohlásili , že určitý čas na webových stránkách peruánská vláda zveřejnila .
+MT	Efe se opakovaně snažil získat přístup k podepsání tohoto dokumentu ve VI.Ordenském zasedání hlav států a vlád , přičemž zdroje ve státní a prezidentské kanceláři se zpočátku shodují s tím , že by to bylo na internetových stránkách zveřejněno .
+NOTE:	
+
+SRC	Ein weiterer Kanal des Schwarzmarkts ist der Schmuggel .
+REF	Dalším zdrojem " černého " trhu je pašování .
+ZEM	Další kanál , který Schwarzmarkts je pašování .
+MT	Další kanál černého trhu je pašování .
+NOTE:	
+
+SRC	Toleriert , manchmal von den lokalen Aufständischen unterstützt , werden Letztere nicht mehr da sein , wenn die westlichen Länder diskreter werden .
+REF	Nyní zažívají toleranci a častou pomoc místních povstalců , ale pokud se západní síly stáhnou , jejich podpora poklesne .
+ZEM	Tolerují , někdy od místních povstalců , vzniká více , kdyby západní země diskreter .
+MT	Netolerance , někdy od místních povstalců již nebudou přítomny , pokud západní země budou diskrétnější .
+NOTE:	
+
+SRC	Etwas für die Gesundheit tun
+REF	Zlepšit svoje zdraví
+ZEM	Udělat něco pro zdraví
+MT	Něco pro zdraví .
+NOTE:	
+
+SRC	Was ist privat für jemanden unter 16 Jahren ?
+REF	Co je to soukromí pro člověka mladšího 16 let ?
+ZEM	Co je pro někoho v soukromí za 16 let ?
+MT	Co je soukromé pro někoho pod 16 let ?
+NOTE:	
+
+SRC	Singapur ist ein Stadtstaat .
+REF	Singapur je městský stát .
+ZEM	Singapur je Stadtstaat .
+MT	Singapur je městský stát .
+NOTE:	
+
+SRC	Wenn es aus einem anderen EU-Land kommt , wandert lediglich die Armut von einem Land ins andere ; oder das Kapital bleibt gleich ganz aus , denn in China , Indien , Brasilien , in der Türkei , in Marokko oder Ägypten bzw. in Afrika überhaupt arbeiten die Beschäftigten für einen Bruchteil der europäischen Löhne .
+REF	Jestliže to bude z jiných zemí EU , pak se přestěhuje chudoba z jedné země do druhé , nebo nepřijde vůbec , neboť Číňan , Ind , Brazilec , či Turek , Marokánec , či Egypťan , nebo Afričan stále ještě pracují za zlomek evropské mzdy .
+ZEM	Pokud je z jiné země EU , neemigruje pouze chudoby , z jedné země do druhé , nebo kapitál je vůbec , protože v číně , Indii , Brazílii , v turecku , v Maroku nebo egypt , resp. v Africe vůbec pracují zaměstnanci za zlomek evropské mzdy .
+MT	Pokud pochází z jiné země EU , jde jen o chudobu z jedné země , nebo kapitál zůstává zcela výhradně , protože v Číně , Indii , Brazílii , v Turecku , v Maroku nebo v Maďarsku , v Maroku nebo v Egyptě , v Maroku nebo v Africe , pracují lidé v Evropě .
+NOTE:	
+
+SRC	In den ungewissen Wochen nach dem Beschluss des Staates , kleine Mengen Marihuana zum Eigengebrauch zu legalisieren , hängt die Antwort bei hunderten kleinerer Drogendelikte weniger vom Gesetz , als vom Standort ab .
+REF	V nejistých týdnech po coloradském hlasování o legalizaci malého množství marihuany pro rekreační využití závisí odpověď stovek menších drogových případů spíše na místě než na právu .
+ZEM	V nejisté týdnů po rozhodnutí státu , malé množství marihuany k Eigengebrauch legalizovat , závisí na odpověď ve stovkách menších drogové delikty méně zákon , než o umístění .
+MT	V neinformovaných týdnech po rozhodnutí státu legalizovat malé množství marihuany je odpověď na stovky menších trestných činů méně od zákona než z místa .
+NOTE:	
+
+SRC	Da es vorher geschneit hat und die Temperaturen anschließend fielen , kann es auf den Straßen zu Eisglätte kommen .
+REF	Po předchozím sněžení a následném ochlazení tak mohou být některé komunikace namrzlé .
+ZEM	Protože je předtím bude padat sníh a teploty pak klesly , může se na silnicích Eisglätte .
+MT	Vzhledem k tomu , že sněhová sněmovna sněhová sněmovna měla před sebou sněhové teploty , může dojít k ledu na silnicích .
+NOTE:	
+
+SRC	" Wie haben Tories Sex ? " , fragte mich einer .
+REF	" Jak se konzervativci milují ? " zeptal se jeden .
+ZEM	" Jak se toryové sex ? " zeptal se mě .
+MT	" Jak se Tores vyspal ? "
+NOTE:	
+
+SRC	Hier befindet sich nach christlicher Auffassung der Nabel der Welt , der die Errettung der Menschheit symbolisiert .
+REF	Zde se nachází symbolický křesťanský pupek světa , který symbolizuje spasení lidstva .
+ZEM	Zde se nachází po křesťanské pojetí dvorku na světě , který symbolizuje životní lidstva .
+MT	Zde je křesťanský názor , který symbolizuje lidstvo .
+NOTE:	
+
+SRC	Allerdings sind häufig mehr als hundert Dollar zu zahlen , um den erforderlichen Ausweis zu erhalten .
+REF	Pořízení požadovaného průkazu totožnosti navíc stojí často více než sto dolarů .
+ZEM	Jsou však často více než sto dolarů , aby se jej získat .
+MT	Je však často více než 100 dolarů za získání požadované totožnosti .
+NOTE:	
+
+SRC	Dafür verbietet ein anderer , den Propheten Mohammed und seine Gesandten zu beleidigen oder zu verleumden .
+REF	Zato jiný paragraf zakazuje hanobit nebo pomlouvat proroka Mohameda a jeho vyslance .
+ZEM	To zakazuje další , proroku Mohamedovi a jeho vyslanci urážet nebo hanobit .
+MT	Na to je zakázáno urážet proroka Mohameda a jeho vyslance .
+NOTE:	
+
