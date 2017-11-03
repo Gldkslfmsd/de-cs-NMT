@@ -68,7 +68,7 @@ zvyšují počet neznámých slov. K tomu použil nástroj
 Morfessor\cite{morfessor}. Text je před překládáním rozdělen na morfémy,
 poté přeložen a poté opět složen do celých slov.
 
-TODO: jak to vlastně je? A co lemmatizace?
+%TODO: jak to vlastně je? A co lemmatizace?
 
 Pro přehledné porovnání s~ostatními překladatelskými systémy je výsledek
 nahrán na \url{matrix.statmt.org}.
@@ -421,7 +421,7 @@ binární soubor o velikosti od 173 do 947 MB (to se liší podle BPE a počtu
 vrstev) a jeho ukládání na disk zabírá čas a zdržuje trénink.
 % TODO: vyzkoušet s debug výpisy, jestli je to tak, třeba se to ukládá asynchronně...
 
-\item Kdybchom nechali některé konfigurace trénovat déle, pravděpodobně
+\item Kdybychom nechali některé konfigurace trénovat déle, pravděpodobně
 bychom dosáhli ještě lepších výsledků. Také bychom mohli vyzkoušet
 průměrování modelů, OpenNMT to umožňuje. 
   
@@ -433,10 +433,212 @@ průměrování modelů, OpenNMT to umožňuje.
 
 \section{Analýza nejlepšího překladu}
 
-sd sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds  sdfsdf sdfsdfs sdfsfds 
+Z~testovací množiny jsme náhodně vybrali 100 vět, na kterých jsme se
+snažili analyzovat chyby, které dělá náš překladač s~nejlepším BLEU skóre.
+Vypsali jsme do jednoho souboru zdrojovou a referenční větu a náš překlad.
+
+Následně jsme ke každé větě napsali poznámku, zda je překlad bezchybný nebo
+jaký druh chyby se v~ní nachází. U každé věty mohlo nastat více chyb. Tabulka
+\ref{tab:chyby} zobrazuje počet a druhy jednotlivých chyb, v tabulce
+\ref{tab:chyby2} jsou tytéž chyby spočítány a agregovány do větších kategorií.
+
+Na obrázku \ref{fig:preklad} a \ref{fig:preklad2} je několik ukázkových
+testovacích vět přeložených všemi srovávanými systémy a naše poznámky. Tyto věty
+jsme vybrali tak, aby se na nich ukázaly všechny nejčastější druhy
+chyb.
+
+Z~analýzy vyplývá, že největší problémem překladu jsou špatně přeložená slova,
+v~dlouhých větách a souvětích často chybí důležitá slova nebo celé jednotlivé věty
+souvětí. Problém činí také rozpoznání a správný překlad pojmenovaných entit,
+shoda rodu a čísla podstatného jména se slovesem či s~přídavným jménem
+a správné použití předložek.
+
+Domníváme se také, že chyby ve shodě podstatných a přídavných jmen by mohly být
+způsobeny nekonzistentností trénovacího korpusu OpenSubtitles, který nejspíš
+obsahuje věty v~hovorovém jazyce, a testovací domény, tou jsou novinové články
+ve spisovné češtině. Příkladem je spojení \textit{elektromagnetický pole} ve
+větě na obrázku \ref{fig:preklad3}.
+
+
+\begin{table}[htpb]
+\begin{verbatim}
+počet výskytů | druh chyby
+========================
+      3 agreement
+      1 AgreementNeeded.
+      1 alignment
+      1 almostFlawless
+      1 completelyWrong
+      9 flawless
+      1 flawless??
+      2 gender
+      1 misingClause
+      2 misingWord
+      1 missingAdverb
+      1 missingAuxVerb
+     14 missingClause
+      1 missingPhrase
+      1 missingPreposition
+      1 missingVerb
+     30 missingWord
+      3 missingWords
+      9 namedEntity
+      8 notNice
+      7 ungrammatical
+      2 worldKnowledge
+      2 worldKnowledgeNeeded
+      2 wrong
+      7 wrongAgreement
+      1 wrongAlignment
+      2 wrongCase
+      7 wrongClause
+      1 wrongClauses
+      1 wrongGrammar
+      2 wrongNumber
+      1 wrongPhrase
+      6 wrongPreposition
+      1 wrongSubject
+      1 wrongTense
+      4 wrongVerb
+     39 wrongWord
+==================
+    177 celkem
+\end{verbatim}
+\caption{Analýza nejlepšího překladu: počet a druhy chyb ve 100 náhodně
+vybraných testovacích větách.}
+\label{tab:chyby}
+\end{table}
+
+\begin{table}[htpb]
+\begin{verbatim}
+flawless: 10
+missing: 52
+wrong: 75
+namedEntity: 9
+agreement: 3
+ungrammatical: 7
+notNice: 8
+==========
+total: 164
+\end{verbatim}
+\caption{Analýza nejlepšího překladu: počet vybraných agregovaných druhů chyb.}
+\label{tab:chyby2}
+\end{table}
+
+
+
+
+\begin{figure}[t]
+\centering
+\begin{verbatim}
+SRC	zdrojová věta v němčině
+REF referenční překlad
+ZEM	baselinový frázový překlad Dana Zemana
+GT	překlad Google Translate  
+MT	překlad našeho nejlepšího modelu
+NOTE: anotace MT -- druh chyby
+
+SRC In Swasiland leben 245000 Aidswaisen .
+REF Ve Svazijsku je 245 000 sirotků po rodičích , kteří zemřeli na AIDS .
+ZEM Ve Svazijsku žijí 245000 Aidswaisen .
+GT  Ve Svazijsku , 245.000 AIDS sirotci žijí .
+MT  V Swasilandu žije 24 000 lidí .
+NOTE:   wrongNumber, missingWord Aids
+
+SRC In den ungewissen Wochen nach dem Beschluss des Staates , kleine Mengen
+Marihuana zum Eigengebrauch zu legalisieren , hängt die Antwort bei hunderten
+kleinerer Drogendelikte weniger vom Gesetz , als vom Standort ab .
+REF V nejistých týdnech po coloradském hlasování o legalizaci malého množství
+marihuany pro rekreační využití závisí odpověď stovek menších drogových případů
+spíše na místě než na právu .
+ZEM V nejisté týdnů po rozhodnutí státu , malé množství marihuany
+k Eigengebrauch legalizovat , závisí na odpověď ve stovkách menších drogové
+delikty méně zákon , než o umístění .
+GT  V nejistých týdnů po rozhodnutí státu legalizovat malé množství marihuany
+pro osobní potřebu , odpověď závisí na stovkách malých činů souvisejících
+s drogami méně o právu než přímo na místě .
+MT  V neinformovaných týdnech po rozhodnutí státu legalizovat malé množství
+marihuany je odpověď na stovky menších trestných činů méně od zákona než
+z místa .
+NOTE:   wrongWord:ungewissen!=neinformovaných missingWord:zum Eigengebrauch,
+ungrammatical
+
+SRC Ich bin sicher , man neckt dich nur .
+REF Jsem si jistý , že je to jen žert .
+ZEM Jsem si jist , že neckt tě jen .
+GT  Jsem si jistý , že ti právě škádlení .
+MT  Jsem si jistá , že tě jen škádlí .
+NOTE:   flawless, worldKnowledgeNeeded (author's gender)
+
+SRC Die Waffen gelangen über mehrere Kanäle auf den Schwarzmarkt .
+REF " Černý " trh se zbraněmi je zásobován několika kanály .
+ZEM Ty zbraně , o několik kanálů na černém trhu .
+GT  zbraně dorazí prostřednictvím různých kanálů na černém trhu .
+MT  Zbraně se dostanou přes několik kanálů na černém trhu .
+NOTE:   wrongCase:*na černém trhu!=na černý trh, wrongPreposition:über!=přes
+\end{verbatim}
+\caption{Ukázka překladů vybraných testovacích vět různými systémy a anotace našeho nejlepšího překladu.}
+\label{fig:preklad}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering
+\begin{verbatim}
+SRC Via Kurznachrichtendienst Twitter bezichtigte er die Anhänger Mursis
+, einen " Putsch gegen die Demokratie " führen zu wollen .
+REF Prostřednictvím služby krátkých zpráv Twitter obvinil přívržence Mursího
+, že chtějí provést " puč proti demokracii . "
+ZEM Přes Kurznachrichtendienst Twitter obvinil ze jeho příznivci Mursis , " puč
+proti demokracii . "
+GT  Prostřednictvím krátkých textových zpráv Twitter obvinil , že chce provést
+" útok na demokracii " příznivců Mursi .
+MT  Visa zkrácená služba Twitteru obvinila stoupence Muriel , aby vedl převrat
+proti demokracii .
+NOTE:   wrongWord:Via!=Visa, namedEntity:Mursis, missingWord:wollen=chtějí
+\end{verbatim}
+\caption{Ukázka překladů vybraných testovacích vět různými systémy a anotace našeho nejlepšího překladu.}
+\label{fig:preklad2}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\begin{verbatim}
+SRC Wenn nämlich ein Teilchen mit einer elektrischen Ladung beschleunigt oder
+die Richtung ändert , wird das elektromagnetische Feld genau an diesem Ort
+" gestört " , in etwa wie ein Kieselstein , der in einen Teich geworfen wurde .
+REF Když totiž částice s elektrickým nábojem zrychlí nebo změní svůj směr
+, " vyruší " tím elektromagnetické pole v tomto konkrétním místě , podobně jako
+oblázek hozený do rybníka .
+ZEM Pokud totiž částic s elektrickým zásilku urychluje nebo směrem změní , bude
+to elektromagnetické pole právě na tomto místě " obtěžován , " asi jako
+Kieselstein , do rybníka vyhodí .
+GT  Konkrétně , když částice zrychluje nebo změní směr elektrickým nábojem
+, elektromagnetické pole je " narušeno " v tomto přesném místě , podobně jako
+oblázka , která je v rybníku hodena .
+MT  Pokud se s elektrickým nákladem zrychluje nebo změní směr
+, elektromagnetický pole bude na tomto místě " rušen " jako kámen , který byl
+uvržen do rybníku .
+NOTE:   missingWord: Teilchen, wrongWord: Ladung!=náklad Kieselstein
+geworfen!=kámen uvržen, agreement: elektromagnetický pole
+\end{verbatim}
+\caption{Ukázka překladů vybraných testovacích vět různými systémy a anotace našeho nejlepšího překladu.}
+\label{fig:preklad3}
+\end{figure}
+
+
 
 \section{Závěr}
 
+V~této práci jsme použili neuronové sítě s~frameworkem OpenNMT pro strojový
+překlad z~němčiny do češtiny. Vytvořili jsme překladový model, který je podle
+BLEU skóre lepší než předchozí frázový překlad. 
+
+Překlad nejlepšího modelu jsme ručně analyzovali, abychom zjistili jeho slabé
+stránky, které se dají vylepšit v~příštích pracích.
+
+Rovněž jsme zjistili, že jsme při trénování neuronových sítí nevyzkoušeli
+všechny vhodné parametry, náš překlad tedy může být v~příštích pracích překonán.
 
 \begin{thebibliography}{99}
 

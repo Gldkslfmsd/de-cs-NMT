@@ -2,19 +2,19 @@ SRC	Kein Artikel übrigens schreibt ausdrücklich die Gleichstellung von Männer
 REF	Ostatně žádný paragraf písemně nevymezuje explicitní rovnoprávnost mužů a žen .
 ZEM	Žádný článek mimochodem píše výslovně rovnost mužů a žen .
 MT	Žádný článek mimochodem výslovně nepíše o rovnosti mužů a žen .
-NOTE:	flawless	
+NOTE:	flawless
 
 SRC	Darunter auch die Mutter , die das Passwort zu einem der Konten hat .
 REF	Je mezi nimi i matka , která má jméno a heslo jednoho z účtů .
 ZEM	Včetně matky , které heslo jednoho z účtů .
 MT	Včetně matky , která má heslo k jednomu z účtů .
-NOTE:	flawless	
+NOTE:	flawless
 
 SRC	Unter der scheidenden Regierung Felipe Calderons hat sich Mexiko wirtschaftlich gut bewähren können , doch das Land ist im Griff eines Drogenkriegs , der in den letzten sechs Jahren bereits 60.000 Menschenleben gekostet hat .
 REF	Mexiko si v době úřadování odstupujícího Felipe Calderona vedlo dobře hospodářsky , země je však ve spárech drogové války , která si již odhadem vzala za oběť 60 000 životů za šest let .
 ZEM	Za odcházející vlády Felipe Calderons se Mexiko ekonomicky dobře funguje dobře , ale země je pod kontrolou jednoho Drogenkriegs , který v posledních šesti letech již 60 000 lidských životů .
 MT	Pod vládou Felipe Caldersons se Mexiko dařilo ekonomicky dobře , ale země je pod vlivem drogové války , která za posledních šest let stála 60 tisíc životů .
-NOTE:	DE-genitiv Calderons, im Griff=ve spárech, CS-shoda: *Mexiko dařilo, 
+NOTE:	wrongCase DE-genitiv Calderons, im Griff=ve spárech, wrongAgreement CS-shoda: *Mexiko dařilo, 
 
 
 SRC	In diesem Sinne untergraben diese Maßnahmen teilweise das demokratische System der USA .
@@ -33,7 +33,7 @@ SRC	Der 19-jährige Community College-Student und Fußballspieler Anthony Orozco
 REF	Devatenáctiletý Anthony Orozco , student na vyšší odborné škole a fotbalista z jihovýchodního Colorada , čelí obvinění z trestných činů za něco , co bude brzy v celém státu legální - za držení několika gramů marihuany a dýmky , kterou používal na její kouření .
 ZEM	19 let , komunitních College - student a fotbalista Anthony Orozco je v jihovýchodním ; za trestný čin před soudem , který v tomto státě již brzy legálně bude : držení některých méně Marihuanabrocken a píská , s níž se tyto kouřila .
 MT	19letý vysokoškolský student a fotbalista Anthony Orozco stojí v jihovýchodním Coorrasu za trestný čin , který v tomto státě brzy bude .
-NOTE:	worldKnoledge: Community College=VOŠ, missingWord vor Gericht=před sousedm, Colorados!=Coorras, missingClause
+NOTE:	worldKnowledge: Community College=VOŠ, missingWord vor Gericht=před sousedm, Colorados!=Coorras, missingClause
 
 SRC	Ich bin sicher , man neckt dich nur .
 REF	Jsem si jistý , že je to jen žert .
@@ -345,7 +345,7 @@ SRC	Damit reagieren die Behörden auf die jüngsten Ereignisse : Verletzte bei S
 REF	Je to reakce vládních orgánů na nedávné události : podnětem byly případy střelby na svatbách , které se obešly bez obětí , a masakr připravený moskevským advokátem Dimitrijem Vinogradovem , jehož následkem zahynulo sedm lidí .
 ZEM	Aby reagovat úřady na nedávné události : bylo zraněno při střelbě na svatby a sedm mrtvých při přestřelce moskevského právníků Dmitrij Winogradow .
 MT	Úřady reagují na nedávné události : zranění při střelbě na svatbách a sedm mrtvých při vraždění moskevského právního zástupce Dmitriho Wingrawa .
-NOTE:	
+NOTE:	???
 
 SRC	Im Jahr 2000 gab es in der Presse eine Umfrage , bei der es um die Auszeichnung " Persönlichkeiten unserer Stadt " ging .
 REF	V roce 2000 byl uspořádán průzkum byl v tisku , zvláštní cena byla " Lidé v našem městě . "
@@ -447,7 +447,7 @@ SRC	Die Krankheit macht ihre Arbeit : eine unermessliche Schwäche hindert ihn d
 REF	Nemoc vykonala své dílo : nesmírná slabost mu znemožňuje odebrat se sám na toaletu nebo se jen sám najíst .
 ZEM	Nemoc dělá svou práci : strastiplnou slabost , brání mu to sám , používat toaletu , a dokonce i jíst .
 MT	Ta nemoc dělá svou práci , která mu brání v tom , aby šla na záchod sama a dokonce i sama snědla .
-NOTE:	missingWord:unermessliche, wordlKnowlede:gender
+NOTE:	missingWord:unermessliche, worldKnowlede:gender
 
 SRC	Es sind in der Tat nicht alle Teilchen und nicht alle Materialien , die mit dem elektromagnetischen Feld interagieren .
 REF	S elektromagnetickým polem nereagují totiž ani všechny částice ani všechny materiály .
@@ -483,7 +483,7 @@ SRC	Zu viele verletzte Gefühle .
 REF	Příliš mnoho nepřátelských pocitů .
 ZEM	Příliš mnoho zraněných pocity .
 MT	Příliš mnoho zraněných .
-NOTE:	misingWord:Gefühle
+NOTE:	missingWord:Gefühle
 
 SRC	Noch ist nicht abzusehen , ob der Funke dieser Proteste ganze Massen mobilisieren wird .
 REF	Zda se tato událost stane jiskrou , která zažehne plamen masového hnutí , je zatím nejasné .
@@ -507,7 +507,7 @@ SRC	In Jaffa können Sie neuvermählte Paare aus ganz Israel und sogar anderen L
 REF	V Jaffě možná potkáte novomanžele , kteří sem přijíždějí z celého Izraele a dokonce i z dalších zemí , aby se nechali vyfotit .
 ZEM	V Jaffa můžete neuvermählte páry z celé Izrael , a dokonce i v dalších zemích ke snaze nechat se někde vyfotografovat .
 MT	V Jaffu můžete dosáhnout nových párů z celého Izraele a dokonce i dalších zemí na fotografiích .
-NOTE:	misingWord:vermählte missingWord:Fototerminen wrongVerb:dosáhnout
+NOTE:	missingWord:vermählte missingWord:Fototerminen wrongVerb:dosáhnout
 
 SRC	Erderwärmung oder Zusammenstoß mit Killerasteroid .
 REF	Globální oteplení nebo kolize se zabijáckým asteroidem .
@@ -525,7 +525,7 @@ SRC	Efe versuchte wiederholt , Zugang zu dem unterzeichneten Dokument bei der VI
 REF	Agentura Efe se opakovaně pokoušela získat přístup k dokumentu podepsaném na šesté schůzi hlav států a vlád organizace Unasur , ale zástupci ministerstva zahraničí i prezidentské kanceláře , kteří na začátku stanovili , že dokument zveřejní po skončení summitu , uvedli , že bude později zveřejněn na webových stránkách peruánské vlády .
 ZEM	Efe se snažil opakovaně , přístup k podpisu dokumentu při VI. řádného zasedání hlav států a vlád UNASUR. zdrojů do hlav států a Präsidentenkanzlei rozdělili na začátku s tím , že po test předat , poté však prohlásili , že určitý čas na webových stránkách peruánská vláda zveřejnila .
 MT	Efe se opakovaně snažil získat přístup k podepsání tohoto dokumentu ve VI.Ordenském zasedání hlav států a vlád , přičemž zdroje ve státní a prezidentské kanceláři se zpočátku shodují s tím , že by to bylo na internetových stránkách zveřejněno .
-NOTE:	wrongAgreement:unterzeichneten Dokument!=k podepsání tohoto dokumentu, wrongWord:Ordenském, misingClause
+NOTE:	wrongAgreement:unterzeichneten Dokument!=k podepsání tohoto dokumentu, wrongWord:Ordenském, missingClause
 
 SRC	Ein weiterer Kanal des Schwarzmarkts ist der Schmuggel .
 REF	Dalším zdrojem " černého " trhu je pašování .
@@ -567,35 +567,35 @@ SRC	In den ungewissen Wochen nach dem Beschluss des Staates , kleine Mengen Mari
 REF	V nejistých týdnech po coloradském hlasování o legalizaci malého množství marihuany pro rekreační využití závisí odpověď stovek menších drogových případů spíše na místě než na právu .
 ZEM	V nejisté týdnů po rozhodnutí státu , malé množství marihuany k Eigengebrauch legalizovat , závisí na odpověď ve stovkách menších drogové delikty méně zákon , než o umístění .
 MT	V neinformovaných týdnech po rozhodnutí státu legalizovat malé množství marihuany je odpověď na stovky menších trestných činů méně od zákona než z místa .
-NOTE:	
+NOTE:	wrongWord:ungewissen!=neinformovaných missingWord:zum Eigengebrauch, ungrammatical
 
 SRC	Da es vorher geschneit hat und die Temperaturen anschließend fielen , kann es auf den Straßen zu Eisglätte kommen .
 REF	Po předchozím sněžení a následném ochlazení tak mohou být některé komunikace namrzlé .
 ZEM	Protože je předtím bude padat sníh a teploty pak klesly , může se na silnicích Eisglätte .
 MT	Vzhledem k tomu , že sněhová sněmovna sněhová sněmovna měla před sebou sněhové teploty , může dojít k ledu na silnicích .
-NOTE:	
+NOTE:	wrongWord, ungrammatical
 
 SRC	" Wie haben Tories Sex ? " , fragte mich einer .
 REF	" Jak se konzervativci milují ? " zeptal se jeden .
 ZEM	" Jak se toryové sex ? " zeptal se mě .
 MT	" Jak se Tores vyspal ? "
-NOTE:	
+NOTE:	wrongWord, missingClause
 
 SRC	Hier befindet sich nach christlicher Auffassung der Nabel der Welt , der die Errettung der Menschheit symbolisiert .
 REF	Zde se nachází symbolický křesťanský pupek světa , který symbolizuje spasení lidstva .
 ZEM	Zde se nachází po křesťanské pojetí dvorku na světě , který symbolizuje životní lidstva .
 MT	Zde je křesťanský názor , který symbolizuje lidstvo .
-NOTE:	
+NOTE:	missingWords
 
 SRC	Allerdings sind häufig mehr als hundert Dollar zu zahlen , um den erforderlichen Ausweis zu erhalten .
 REF	Pořízení požadovaného průkazu totožnosti navíc stojí často více než sto dolarů .
 ZEM	Jsou však často více než sto dolarů , aby se jej získat .
 MT	Je však často více než 100 dolarů za získání požadované totožnosti .
-NOTE:	
+NOTE:	missingWord:průkaz
 
 SRC	Dafür verbietet ein anderer , den Propheten Mohammed und seine Gesandten zu beleidigen oder zu verleumden .
 REF	Zato jiný paragraf zakazuje hanobit nebo pomlouvat proroka Mohameda a jeho vyslance .
 ZEM	To zakazuje další , proroku Mohamedovi a jeho vyslanci urážet nebo hanobit .
 MT	Na to je zakázáno urážet proroka Mohameda a jeho vyslance .
-NOTE:	
+NOTE:	missingWord:hanobit
 
