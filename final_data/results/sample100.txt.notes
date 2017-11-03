@@ -501,67 +501,67 @@ SRC	Der Vater des Kindes , Andrijan Nikolajew , war ebenfalls Kosmonaut .
 REF	Otcem dítěte byl také kosmonaut Andrijan Nikolajev .
 ZEM	Otec dítěte , Andrijan Nikolajew , byla také Kosmonaut .
 MT	Otec dítěte , Andrijan Nikolajev , byl také kosmonaut .
-NOTE:	
+NOTE:	flawless
 
 SRC	In Jaffa können Sie neuvermählte Paare aus ganz Israel und sogar anderen Ländern bei Fototerminen antreffen .
 REF	V Jaffě možná potkáte novomanžele , kteří sem přijíždějí z celého Izraele a dokonce i z dalších zemí , aby se nechali vyfotit .
 ZEM	V Jaffa můžete neuvermählte páry z celé Izrael , a dokonce i v dalších zemích ke snaze nechat se někde vyfotografovat .
 MT	V Jaffu můžete dosáhnout nových párů z celého Izraele a dokonce i dalších zemí na fotografiích .
-NOTE:	
+NOTE:	misingWord:vermählte missingWord:Fototerminen wrongVerb:dosáhnout
 
 SRC	Erderwärmung oder Zusammenstoß mit Killerasteroid .
 REF	Globální oteplení nebo kolize se zabijáckým asteroidem .
 ZEM	Globální oteplování , nebo srážka s Killerasteroid .
 MT	Globální oteplování , nebo střet s zabijákem .
-NOTE:	
+NOTE:	wrongWord, missingWord
 
 SRC	Das Spektakel ähnelt dem Eurovision Song Contest .
 REF	Je to jako pěvecká soutěž Eurovision .
 ZEM	Podívanou připomíná hudební soutěž Eurovize .
 MT	Divadlo se podobá Eurovizi Conview .
-NOTE:	
+NOTE:	wrongWord:Divadlo, wrongWord:Conview!=Contest, missingWord:Song
 
 SRC	Efe versuchte wiederholt , Zugang zu dem unterzeichneten Dokument bei der VI. Ordentlichen Sitzung der Staats- und Regierungsoberhäupter der Unasur zu erlangen . Quellen in der Staats- und Präsidentenkanzlei teilten anfangs mit , dass sie es nach der Klausur übergeben würden , erklärten danach jedoch , dass es zu gewisser Zeit auf der Webseite der peruanischen Regierung veröffentlicht würde .
 REF	Agentura Efe se opakovaně pokoušela získat přístup k dokumentu podepsaném na šesté schůzi hlav států a vlád organizace Unasur , ale zástupci ministerstva zahraničí i prezidentské kanceláře , kteří na začátku stanovili , že dokument zveřejní po skončení summitu , uvedli , že bude později zveřejněn na webových stránkách peruánské vlády .
 ZEM	Efe se snažil opakovaně , přístup k podpisu dokumentu při VI. řádného zasedání hlav států a vlád UNASUR. zdrojů do hlav států a Präsidentenkanzlei rozdělili na začátku s tím , že po test předat , poté však prohlásili , že určitý čas na webových stránkách peruánská vláda zveřejnila .
 MT	Efe se opakovaně snažil získat přístup k podepsání tohoto dokumentu ve VI.Ordenském zasedání hlav států a vlád , přičemž zdroje ve státní a prezidentské kanceláři se zpočátku shodují s tím , že by to bylo na internetových stránkách zveřejněno .
-NOTE:	
+NOTE:	wrongAgreement:unterzeichneten Dokument!=k podepsání tohoto dokumentu, wrongWord:Ordenském, misingClause
 
 SRC	Ein weiterer Kanal des Schwarzmarkts ist der Schmuggel .
 REF	Dalším zdrojem " černého " trhu je pašování .
 ZEM	Další kanál , který Schwarzmarkts je pašování .
 MT	Další kanál černého trhu je pašování .
-NOTE:	
+NOTE:	notNice, almostFlawless
 
 SRC	Toleriert , manchmal von den lokalen Aufständischen unterstützt , werden Letztere nicht mehr da sein , wenn die westlichen Länder diskreter werden .
 REF	Nyní zažívají toleranci a častou pomoc místních povstalců , ale pokud se západní síly stáhnou , jejich podpora poklesne .
 ZEM	Tolerují , někdy od místních povstalců , vzniká více , kdyby západní země diskreter .
 MT	Netolerance , někdy od místních povstalců již nebudou přítomny , pokud západní země budou diskrétnější .
-NOTE:	
+NOTE:	wrongWord:wrongWord, missingClause
 
 SRC	Etwas für die Gesundheit tun
 REF	Zlepšit svoje zdraví
 ZEM	Udělat něco pro zdraví
 MT	Něco pro zdraví .
-NOTE:	
+NOTE:	??? flawless
 
 SRC	Was ist privat für jemanden unter 16 Jahren ?
 REF	Co je to soukromí pro člověka mladšího 16 let ?
 ZEM	Co je pro někoho v soukromí za 16 let ?
 MT	Co je soukromé pro někoho pod 16 let ?
-NOTE:	
+NOTE:	flawless
 
 SRC	Singapur ist ein Stadtstaat .
 REF	Singapur je městský stát .
 ZEM	Singapur je Stadtstaat .
 MT	Singapur je městský stát .
-NOTE:	
+NOTE:	flawless
 
 SRC	Wenn es aus einem anderen EU-Land kommt , wandert lediglich die Armut von einem Land ins andere ; oder das Kapital bleibt gleich ganz aus , denn in China , Indien , Brasilien , in der Türkei , in Marokko oder Ägypten bzw. in Afrika überhaupt arbeiten die Beschäftigten für einen Bruchteil der europäischen Löhne .
 REF	Jestliže to bude z jiných zemí EU , pak se přestěhuje chudoba z jedné země do druhé , nebo nepřijde vůbec , neboť Číňan , Ind , Brazilec , či Turek , Marokánec , či Egypťan , nebo Afričan stále ještě pracují za zlomek evropské mzdy .
 ZEM	Pokud je z jiné země EU , neemigruje pouze chudoby , z jedné země do druhé , nebo kapitál je vůbec , protože v číně , Indii , Brazílii , v turecku , v Maroku nebo egypt , resp. v Africe vůbec pracují zaměstnanci za zlomek evropské mzdy .
 MT	Pokud pochází z jiné země EU , jde jen o chudobu z jedné země , nebo kapitál zůstává zcela výhradně , protože v Číně , Indii , Brazílii , v Turecku , v Maroku nebo v Maďarsku , v Maroku nebo v Egyptě , v Maroku nebo v Africe , pracují lidé v Evropě .
-NOTE:	
+NOTE:	wrongWord:v Maďarsku, wrongClause, missingPhrase:Bruchteil der europäischen Löhne
 
 SRC	In den ungewissen Wochen nach dem Beschluss des Staates , kleine Mengen Marihuana zum Eigengebrauch zu legalisieren , hängt die Antwort bei hunderten kleinerer Drogendelikte weniger vom Gesetz , als vom Standort ab .
 REF	V nejistých týdnech po coloradském hlasování o legalizaci malého množství marihuany pro rekreační využití závisí odpověď stovek menších drogových případů spíše na místě než na právu .
