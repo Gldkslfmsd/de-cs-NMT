@@ -147,37 +147,37 @@ SRC	" Sie sollen auch wählerisch sein , wenn es ihnen am Wichtigsten ist , beli
 REF	Také , aby byli - co se týká okolí - rozvážní , v době , kdy to , po čem nejvíce touží , je být oblíbení , mít tisíce přátel a nemyslet na důsledky , " dodává .
 ZEM	" Mají také nevybírají , koho popraví ; být , pokud se jim to nejdůležitější , je populární , tisíce přátel , bez následků přemýšlet , " doplňuje ho .
 MT	" Ať jsou také vybíraví , když je nejdůležitější být populární , mít tisíce přátel , aniž by o tom přemýšleli . "
-NOTE:	
+NOTE:	missingClause: dodává, wrongWord: beliebt!=populární
 
 SRC	Auslegungssache , wie so vieles in dem Entwurf , der Mursi zur Unterschrift vorliegt und nach seinen Worten " sehr bald " den Ägyptern zur Volksabstimmung präsentiert werden wird .
 REF	Věc výkladu , jako mnoho dalšího v tomto návrhu , který Mursí předloží k podpisu a podle svých slov bude " velmi brzy " prezentovat Egypťanům za účelem lidového hlasování .
 ZEM	Auslegungssache , jako mnoho v návrhu , který Mursi k podpisu a podle svých slov " velmi brzy " Egypťany k referendu bude předložen .
 MT	To , jak mnoho věcí v návrhu , který je k podpisu Murdosi , a podle slov " velmi brzy " předloží Egypťanům k referendu .
-NOTE:	
+NOTE:	ungrammatical: "jak mnoho věcí"->"jako", namedEntity:Mursi!=Murdosi, missingClause
 
 SRC	Aber ich würde dem auch nicht zu viel Gewicht beimessen wollen , das ist keine völlig einseitige Beziehung .
 REF	Nechtěl bych tomu ale ani připisovat příliš velký význam , to není úplně jednostranný vztah .
 ZEM	Ale chtěl bych také příliš velkou váhu , to není zcela jednostranný vztah .
 MT	Chtěl bych však také příliš zdůraznit , že to není zcela jednostranný vztah .
-NOTE:	
+NOTE:	notNice: příliš zdůraznit
 
 SRC	" Ich denke , dank unserer Einladung hat nun jeder Bewohner eine gewisse Beziehung zu diesem neuen Haus .
 REF	" Myslím , že díky našemu pozvání má teď k novému domu každý obyvatel určitý vztah .
 ZEM	" Myslím , že díky naší pozvání má nyní každý obyvatel určitý vztah k této nové sněmovně .
 MT	" Myslím , že díky našemu pozvání , každý občan má vztah s tímto novým domem .
-NOTE:	
+NOTE:	missingWord:gewisse
 
 SRC	Selbst eingefleischte Architekten und Bauingenieure schütteln ob des unbekannten Baustoffs den Kopf .
 REF	Nad neznámým stavebním materiálem kroutí hlavami dokonce i zapřisáhlí architekti a stavební inženýři .
 ZEM	I zarytí architekti a Bauingenieure potřást zda z neznámých Baustoffs hlavu .
 MT	Dokonce i architekti a stavební inženýři se třese , jestli neidentifikovatelné staveniště .
-NOTE:	
+NOTE:	missingWord:eingefleischte, wrongWord:"se třese"
 
 SRC	Die Waffen gelangen über mehrere Kanäle auf den Schwarzmarkt .
 REF	" Černý " trh se zbraněmi je zásobován několika kanály .
 ZEM	Ty zbraně , o několik kanálů na černém trhu .
 MT	Zbraně se dostanou přes několik kanálů na černém trhu .
-NOTE:	
+NOTE:	wrongCase:*na černém trhu!=na černý trh, wrongPreposition:über!=přes
 
 SRC	Vorbeugen der Krankheit
 REF	Prevence onemocnění
@@ -351,151 +351,151 @@ SRC	Im Jahr 2000 gab es in der Presse eine Umfrage , bei der es um die Auszeichn
 REF	V roce 2000 byl uspořádán průzkum byl v tisku , zvláštní cena byla " Lidé v našem městě . "
 ZEM	V roce 2000 byla v tisku průzkum veřejného mínění , v němž jde o ocenění " osobností našeho města . "
 MT	V roce 2000 bylo v tisku zveřejněno průzkum " osobnosti našeho města . "
-NOTE:	
+NOTE:	wrongAgreement:*průzkum zveřejněno, notNice
 
 SRC	Mit ihren 97 Jahren ist sie für diese Breiten noch vergleichsweise jung .
 REF	V 97 letech je na tuto zeměpisnou šířku ještě relativně mladá .
 ZEM	Se svými 97 let je pro tuto oblast ještě relativně mladá .
 MT	S jejími 97 lety je pro ty jezdy ještě mladá .
-NOTE:	
+NOTE:	wrongWord:Breiten!=jezdy, missingWord:vergleichsweise
 
 SRC	Die Formulare , so Fein , enthielten keine Beschwerden über Misshandlung , obwohl die Beamten Manning direkt zu seiner Behandlung befragt hatten .
 REF	Formuláře neukazují žádné stížnosti na špatné zacházení , i když se důstojníci Manninga přímo zeptali na to , jakým způsobem je s ním zacházeno , tvrdil Fein .
 ZEM	Formuláře , tak jemná , obsahovaly žádné stížnosti na špatné zacházení , přestože úředníci Manning přímo k jeho léčbě konzultuje .
 MT	Dokumenty , tak dobře , nebyly žádné stížnosti ohledně týrání , i když se úředníci Manning ptali přímo na jeho léčbu .
-NOTE:	
+NOTE:	namedEntity:Fein, wrongWord:Behandlung!=léčbu
 
 SRC	Und zuallererst sollten wir diese bescheuerten Virtual-Reality-Helme los werden !
 REF	A v první řadě - k čertu s těmi hloupými helmami virtuální reality !
 ZEM	A především bychom měli tyto bescheuerten Virtual - Reality - barvou děje !
 MT	A nejdřív se musíme zbavit těch hloupých virtuálních přilby !
-NOTE:	
+NOTE:	ungrammatical:přilby
 
 SRC	Wir haben eine gute Position in der Qualifikationsgruppe für die WM .
 REF	V kvalifikaci na MS jsme na dobrém místě .
 ZEM	Máme dobrou pozici v Qualifikationsgruppe pro mistrovství světa ve fotbale .
 MT	Máme dobrou pozici ve skupině kvalifikací pro WM .
-NOTE:	
+NOTE:	notNice:kvalifikací, wrongPreposition, wrongWord WM
 
 SRC	Kombination der Genres
 REF	Kombinace žánrů
 ZEM	Kombinace Genres
 MT	Kombinace genomu
-NOTE:	
+NOTE:	wrongWord
 
 SRC	Ende der 90er Jahre kam es dann schließlich dazu .
 REF	Nakonec se dočkala koncem 90. let .
 ZEM	Koncem 90. let 20. století se pak konečně .
 MT	Konec devadesátých let nakonec nastal .
-NOTE:	
+NOTE:	wrongClause, missingWord
 
 SRC	Ehemalige Mudschaheddin , die afghanische Regierung und aktuelle Taliban haben den gemeinsamen Wunsch , die Frauen in einer untergeordneten Position zu halten .
 REF	Někdejší mudžáhedíni , afghánská vláda a současní talibánci se shodují ve snaze zachovat ženy v podřízeném postavení .
 ZEM	Bývalý mudžahedínů , afghánská vláda a Taliban mají společnou touhu ženy v podřízeném postavení .
 MT	Bývalí Mužahehedíni , afghánská vláda a současný Taliban mají společné přání udržet ženy v nižším postavení .
-NOTE:	
+NOTE:	wrongWord:Mužahehedíni, notNice:v nižším postavení
 
 SRC	Auch das Hobby-Eberly-Teleskop in Texas ist im Höhenwinkel fixiert .
 REF	Ve výškovém úhlu je fixován i teleskop Hobby-Eberly v Texasu .
 ZEM	I koníček - Eberly - Teleskop v Texasu je v Höhenwinkel fixovaná .
 MT	Dokonce i teleskop Ebery-Eberlyho v Texasu je fixovaný na výšku .
-NOTE:	
+NOTE:	namedEntity:Hobby-Eberly
 
 SRC	Bezirksstaatsanwalt Pete Hautzinger unterstützte diese Entscheidung , entschloss sich aber auch dazu , nicht alle ausstehenden Besitzverfahren fallen zu lassen .
 REF	Okresní prokurátor , Pete Hautzinger , toto rozhodnutí podporuje , ale rovněž se rozhodl nezamítnout všechny probíhající případy držení .
 ZEM	Bezirksstaatsanwalt Pete Hautzinger podpořila toto rozhodnutí , rozhodla se ale také k tomu , že ne všechny zbývající Besitzverfahren padnout .
 MT	Okresní prokurátor Pete Hautzinger podpořil toto rozhodnutí , ale také se rozhodl , že nebude muset zrušit všechny existující postupy .
-NOTE:	
+NOTE:	missingWord:Besitz=držení
 
 SRC	" Wenn er das Referendum ausruft , werden wir zu seinem Palast gehen und ihn stürzen " , sagte der Oppositionelle Jasser Said .
 REF	" Pokud vyhlásí referendum , půjdeme k jeho paláci a svrhneme ho , " řekl příslušník opozice Jásir Said .
 ZEM	" Pokud se referendum vyhlásit , budeme k jeho paláci a ho svrhnout , " řekl opoziční Jasser Said .
 MT	" Pokud zavolá referendum , půjdeme do jeho paláce , " řekl opoziční Jasser Said .
-NOTE:	
+NOTE:	wrongWord:ausruft!=zavolá, missingClause:ihn stürzen
 
 SRC	Leider hat mich meine Verletzung daran gehindert , etwas Spielzeit herauszuschlagen .
 REF	Bohužel kvůli zranění jsem nemohl hrát tak , jak bych si představoval .
 ZEM	Bohužel mě porušování bráněno , něco Spielzeit zajistili obrovské výhody a úlevy .
 MT	Bohužel mě moje zranění zastavilo , když jsem se dostal do hry .
-NOTE:	
+NOTE:	???
 
 SRC	Der Föderale Sicherheitsdienst schaltete vor Kurzem unzählige Scheinwebseiten , und Käufer , die Waffen erwerben wollen , gehen dem Dienst zuhauf ins Netz .
 REF	Federální bezpečnostní služba nedávno rozhodila ohromnou síť nastrčených webových stránek a osoby , které si přejí koupit vojenskou zbraň , může shrabovat lopatou .
 ZEM	Federální bezpečnostní služba přešel nedávno bezpočet Scheinwebseiten , a kupující , kteří chtějí získat zbraně , se tato služba více než dost do sítě .
 MT	Federální bezpečnostní služba nedávno zachytila nespočet falešných stránek , a kupující , kteří chtějí zbraně , jdou do sítě .
-NOTE:	
+NOTE:	wrongVerb:schaltete!=zachytila, missingWord dem Diensts
 
 SRC	Via Kurznachrichtendienst Twitter bezichtigte er die Anhänger Mursis , einen " Putsch gegen die Demokratie " führen zu wollen .
 REF	Prostřednictvím služby krátkých zpráv Twitter obvinil přívržence Mursího , že chtějí provést " puč proti demokracii . "
 ZEM	Přes Kurznachrichtendienst Twitter obvinil ze jeho příznivci Mursis , " puč proti demokracii . "
 MT	Visa zkrácená služba Twitteru obvinila stoupence Muriel , aby vedl převrat proti demokracii .
-NOTE:	
+NOTE:	wrongWord:Via!=Visa, namedEntity:Mursis, missingWord:wollen=chtějí
 
 SRC	In Swasiland leben 245000 Aidswaisen .
 REF	Ve Svazijsku je 245 000 sirotků po rodičích , kteří zemřeli na AIDS .
 ZEM	Ve Svazijsku žijí 245000 Aidswaisen .
 MT	V Swasilandu žije 24 000 lidí .
-NOTE:	
+NOTE:	wrongNumber, missingWord Aids
 
 SRC	Man habe ihm nur eine Matratze , eine Decke , Flip-Flops , Kleidung und seine Brille erlaubt .
 REF	Manning řekl , že mu byla povolena pouze jedna matrace , přikrývka , nazouváky , nějaké oblečení a brýle .
 ZEM	Je mu jen postelí , strop , Flip - Flops , oblečení a jeho brýle .
 MT	Je to jen matrace , přikrývka , flaška , oblečení a brýle .
-NOTE:	
+NOTE: wrong: man habe ... erlaubt=někdo tvrdí, že mu bylo povoleno..., wrongWord:Flip-Flops!=flaška
 
 SRC	Die Krankheit macht ihre Arbeit : eine unermessliche Schwäche hindert ihn daran , allein auf die Toilette zu gehen und sogar selbst zu essen .
 REF	Nemoc vykonala své dílo : nesmírná slabost mu znemožňuje odebrat se sám na toaletu nebo se jen sám najíst .
 ZEM	Nemoc dělá svou práci : strastiplnou slabost , brání mu to sám , používat toaletu , a dokonce i jíst .
 MT	Ta nemoc dělá svou práci , která mu brání v tom , aby šla na záchod sama a dokonce i sama snědla .
-NOTE:	
+NOTE:	missingWord:unermessliche, wordlKnowlede:gender
 
 SRC	Es sind in der Tat nicht alle Teilchen und nicht alle Materialien , die mit dem elektromagnetischen Feld interagieren .
 REF	S elektromagnetickým polem nereagují totiž ani všechny částice ani všechny materiály .
 ZEM	To jsou vlastně všechny částice a ne všechny materiály , které s elektromagnetickými poli působí .
 MT	Ve skutečnosti nejsou všechny částice a všechny materiály spojené s elektromagnetickým polem .
-NOTE:	
+NOTE:	flawless??
 
 SRC	Seit vielen Jahren verwendet man in den Niederlanden in Gewächshäusern und auf Feldern ein millimeterdünnes Kunststoffvlies als Wurzelunterlage .
 REF	Již mnoho let se ve sklenících a na polích v Nizozemí používá jako podklad pod kořeny milimetrové rouno ze syntetické hmoty .
 ZEM	Po mnoha letech je v Nizozemsku skleníků a na polích je millimeterdünnes Kunststoffvlies jako Wurzelunterlage .
 MT	Již mnoho let se v Nizozemsku používalo v Nizozemsku a na polích miliardový kalaval , jako podklad .
-NOTE:	
+NOTE:	wrongWord:Gewächshäusern wrongWord:millimeterdünnes missingWord:Wurzel-(unterlage)
 
 SRC	Wie haben Sie die EM 2012 mit der französischen Nationalmannschaft erlebt ?
 REF	Jak jste prožíval Euro 2012 s francouzskou reprezentací ?
 ZEM	Jak jste EM 2012 s francouzským národním týmem zažil ?
 MT	Jak jste se setkal s francouzským národním týmem ?
-NOTE:	
+NOTE:	wrongVerb:erlebt!=setkal, missingWord:EM 2012
 
 SRC	Seit 2011 haben ein Dutzend Staaten Gesetze verabschiedet , die von den Wählern fordern , dass sie ihre US-Staatsbürgerschaft nachweisen .
 REF	Od roku 2011 přijalo asi dvanáct států zákony , které stanoví povinnost voličů prokazovat , že jsou americkými občany .
 ZEM	Od roku 2011 se tucet státy přijaly zákony , které voliči požadují , aby své americké občanství prokázat .
 MT	Od roku 2011 již tucet států přijalo právní předpisy , které voliči požadují , aby prokázala své občanství .
-NOTE:	
+NOTE:	missingPreposition:po, wrongAgreement:prokázala
 
 SRC	Es ist nicht möglich , gegen diese Regel zu verstoßen - und versuchen Sie es nicht zu stark , da Sie sich wehtun werden .
 REF	Toto pravidlo nelze obejít - a nepokoušejte se o to příliš usilovně , jinak si ublížíte .
 ZEM	Je možné , že proti tomuto pravidlu porušovat a pokuste se je příliš silná , protože jste se poškodí .
 MT	Není možné porušit toto pravidlo - a nepokoušejte se to příliš přehánět , protože se cítíte ublíženě .
-NOTE:	
+NOTE:	wrongClauses
 
 SRC	Zu viele verletzte Gefühle .
 REF	Příliš mnoho nepřátelských pocitů .
 ZEM	Příliš mnoho zraněných pocity .
 MT	Příliš mnoho zraněných .
-NOTE:	
+NOTE:	misingWord:Gefühle
 
 SRC	Noch ist nicht abzusehen , ob der Funke dieser Proteste ganze Massen mobilisieren wird .
 REF	Zda se tato událost stane jiskrou , která zažehne plamen masového hnutí , je zatím nejasné .
 ZEM	Zatím není jasné , zda požár těchto protestů celé masy mobilizovat .
 MT	Ještě není vidět , zda bude jiskra těchto protestů mobilizovat celé masy .
-NOTE:	
+NOTE:	notNice:Ještě není vidět
 
 SRC	Dabei muss man nicht nur Sprachtests , sondern auch Tests in die russische Geschichte und die Grundlagen der Gesetzgebung ablegen .
 REF	Zkoušky se však budou skládat nejen z jazykových znalostí , ale také z ruské historie a ze základů práva .
 ZEM	Přitom je třeba nejen Sprachtests , ale také testy v ruské historii a základy právní předpisy .
 MT	V této souvislosti se musí vyvarovat nejen jazyků , ale i testů v ruských dějinách a základy právních předpisů .
-NOTE:	
+NOTE:	wrongVerb:vyvarovat, missingWord:(Sprach)tests wrongPreposition
 
 SRC	Der Vater des Kindes , Andrijan Nikolajew , war ebenfalls Kosmonaut .
 REF	Otcem dítěte byl také kosmonaut Andrijan Nikolajev .

@@ -354,22 +354,22 @@ GoogleTranslate            |     ???         |   ?    |  ?      |  ?       |  ? 
 label                       | rychlost_epochy        |  epochs     |  best_test_BLEU
 ====================================================================================
 europarl-1gpu30000-1       |  82min_(save_every50)   |  1-15       |  11.50
-europarl-1gpu30000-3       |  41h_(save_every2000)   |  15-21-30?  |  4.95
+europarl-1gpu30000-3       |  41h_(save_every2000)   |  15-21-30*  |  5.12
 europarl-1gpu30000-4       |  37m_(save_every2000)   |  15-30      |  11.55
 europarl-1gpu30000-5       |  43m_(save_every2000)   |  30-90      |  11.69
 europarl-1gpu30000-6       |  100m_(save_every2000)  |  30-90      |  11.66
 europarl-1gpu50000-1       |  87min_(save_every50)   |  1-15       |  11.27
 europarl-1gpu7500-1        |  54min_(save_every50)   |  1-15       |  10.28
 europarl-1gpu80000-1       |  190min_(save_every50)  |  1-15       |  10.89
-osub-europarl-1gpu30000-1  |  20h20m_(save_every50)  |  1-14-15?   |  14.03
-osub-europarl-1gpu50000-1  |  26h24m_(save_every50)  |  1-11-15?   |  13.76
-osub-europarl-1gpu80000-1  |  21h47m_(save_every50)  |  1-14-15?   |  14.00
+osub-europarl-1gpu30000-1  |  20h20m_(save_every50)  |  1-15       |  14.15
+osub-europarl-1gpu50000-1  |  26h24m_(save_every50)  |  1-12-15*   |  14.02
+osub-europarl-1gpu80000-1  |  21h47m_(save_every50)  |  1-14-15*   |  14.00
 osub-europarl50000-2       |  8h13m_(save_every500)  |  1-20       |  14.91
 baseline-ZEMAN             |          -              |   -         |  13.99
 GoogleTranslate            |          -              |   -         | ?16.59?
 \end{verbatim}
 \caption{Doba trénování jedné epochy, epochy, pro které jsme spouštěli
-trénování a BLEU skóre na testovací množině různých konfigurací.}
+trénování (*:trénování jsme ukončili předčasně) a BLEU skóre na testovací množině různých konfigurací.}
 \label{tab:results}
 \end{table}
 
@@ -417,8 +417,13 @@ velkou roli. Důležitější než BPE je správně zvolit počet vrstev.
 \item Pro urychlení trénování s~OpenNMT-Lua je vhodné také správně zvolit parametry
 \texttt{-save\_every}, což je ukládání checkpointu po pevně zvoleném počtu
 iterací. Ukázalo se, že 50 je příliš nízké číslo. Každý checkpoint je totiž
-binární soubor o velikosti od 173 do 947 MB, to se liší podle BPE a počtu
-vrstev. Ukládání na disk zabírá čas a zdržuje trénink.
+binární soubor o velikosti od 173 do 947 MB (to se liší podle BPE a počtu
+vrstev) a jeho ukládání na disk zabírá čas a zdržuje trénink.
+% TODO: vyzkoušet s debug výpisy, jestli je to tak, třeba se to ukládá asynchronně...
+
+\item Kdybchom nechali některé konfigurace trénovat déle, pravděpodobně
+bychom dosáhli ještě lepších výsledků. Také bychom mohli vyzkoušet
+průměrování modelů, OpenNMT to umožňuje. 
   
 
 
