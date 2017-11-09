@@ -1,0 +1,35 @@
+2017-10-03_12:34:04 /mnt/model16-obomab1dd00000I_checkpoint.t72017-10-03T12:34:03Z BLEU = 0.00, 28.8/0.1/0.0/0.0 (BP=0.006, ration=0.163)
+2017-10-03_11:34:03 /mnt/model16-obomab1dd00000I_checkpoint.t72017-10-03T11:34:03Z BLEU = 0.00, 15.1/0.1/0.0/0.0 (BP=0.007, ration=0.169)
+2017-10-03_10:34:03 /mnt/model16-obomab1dd00000I_checkpoint.t72017-10-03T10:34:02Z BLEU = 0.00, 20.4/0.0/0.0/0.0 (BP=0.087, ration=0.291)
+2017-10-03_01:34:00 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T01:33:59Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-03_00:33:59 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T00:33:59Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-03_02:34:00 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T02:34:00Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-03_03:34:00 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T03:34:00Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-03_04:34:01 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T04:34:00Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-03_06:34:01 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T06:34:01Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-03_07:34:02 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T07:34:01Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-03_05:34:01 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T05:34:01Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-03_08:34:02 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T08:34:02Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-03_09:34:02 /mnt/model4-5-obomab1dd00000I_checkpoint.t72017-10-03T09:34:02Z BLEU = 0.00, 23.4/0.6/0.0/0.0 (BP=0.064, ration=0.267)
+2017-10-09_09:29:19 /mnt/model16-obomab1dd00000I_checkpoint.t7 
+2017-10-06_14:35:07 /mnt/model16-obomab1dd00000I_epoch10_nan.t7 
+2017-10-06_22:15:22 /mnt/model16-obomab1dd00000I_epoch11_nan.t7 
+2017-10-07_05:54:55 /mnt/model16-obomab1dd00000I_epoch12_nan.t7 
+2017-10-07_13:33:37 /mnt/model16-obomab1dd00000I_epoch13_nan.t7 
+2017-10-07_21:12:31 /mnt/model16-obomab1dd00000I_epoch14_nan.t7 
+2017-10-08_04:50:59 /mnt/model16-obomab1dd00000I_epoch15_nan.t7 
+2017-10-08_12:29:21 /mnt/model16-obomab1dd00000I_epoch16_nan.t7 
+2017-10-08_20:10:34 /mnt/model16-obomab1dd00000I_epoch17_nan.t7 
+2017-10-09_03:49:07 /mnt/model16-obomab1dd00000I_epoch18_nan.t7 
+2017-10-03_17:34:48 /mnt/model16-obomab1dd00000I_epoch1_nan.t7 
+2017-10-04_01:14:55 /mnt/model16-obomab1dd00000I_epoch2_nan.t7 
+2017-10-04_08:54:48 /mnt/model16-obomab1dd00000I_epoch3_nan.t7 
+2017-10-04_16:34:36 /mnt/model16-obomab1dd00000I_epoch4_nan.t7 
+2017-10-05_00:14:27 /mnt/model16-obomab1dd00000I_epoch5_nan.t7 
+2017-10-05_07:54:32 /mnt/model16-obomab1dd00000I_epoch6_nan.t7 
+2017-10-05_15:34:51 /mnt/model16-obomab1dd00000I_epoch7_nan.t7 
+2017-10-05_23:14:59 /mnt/model16-obomab1dd00000I_epoch8_nan.t7 
+2017-10-06_06:55:00 /mnt/model16-obomab1dd00000I_epoch9_nan.t7 
+2017-09-20_12:31:02 /mnt/model2-37-obomab1dd00000I_checkpoint.t7 BLEU = 0.00, 0.4/0.0/0.0/0.0 (BP=1.000, ration=12.059)
+2017-09-20_12:33:32 /mnt/model2-37-obomab1dd00000I_epoch1_110138174058759.09.t7 
+2017-09-18_23:24:39 /mnt/model2-39-obomab1dd00000I_epoch1_1367202.35.t7 
