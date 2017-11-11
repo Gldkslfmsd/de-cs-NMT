@@ -23,8 +23,9 @@ def plot_from_file(filename):
 #
 		for line in lines:
 			t, _, _, _,  b, *_ = line
-			times.append((to_date(t)-time).total_seconds() // 3600 )
-			bleus.append(float(b))
+			if (to_date(t)-time).total_seconds() // 3600  < 200 and float(b) > 16:
+				times.append((to_date(t)-time).total_seconds() // 3600 )
+				bleus.append(float(b))
 
 	return times, bleus
 #
