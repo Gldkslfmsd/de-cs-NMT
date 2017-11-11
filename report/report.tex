@@ -546,6 +546,7 @@ SRC	zdrojová věta v němčině
 REF referenční překlad
 ZEM	baselinový frázový překlad Dana Zemana
 GT	překlad Google Translate  
+CUD překlad en-cs cu-depfix
 MT	překlad našeho nejlepšího modelu
 NOTE: anotace MT -- druh chyby
 
@@ -553,40 +554,46 @@ SRC In Swasiland leben 245000 Aidswaisen .
 REF Ve Svazijsku je 245 000 sirotků po rodičích , kteří zemřeli na AIDS .
 ZEM Ve Svazijsku žijí 245000 Aidswaisen .
 GT  Ve Svazijsku , 245.000 AIDS sirotci žijí .
+CUD Ve Svazijsku je 245 000 AIDS sirotků .
 MT  V Swasilandu žije 24 000 lidí .
 NOTE:   wrongNumber, missingWord Aids
 
-SRC In den ungewissen Wochen nach dem Beschluss des Staates , kleine Mengen
+SRC	In den ungewissen Wochen nach dem Beschluss des Staates , kleine Mengen
 Marihuana zum Eigengebrauch zu legalisieren , hängt die Antwort bei hunderten
 kleinerer Drogendelikte weniger vom Gesetz , als vom Standort ab .
-REF V nejistých týdnech po coloradském hlasování o legalizaci malého množství
+REF	V nejistých týdnech po coloradském hlasování o legalizaci malého množství
 marihuany pro rekreační využití závisí odpověď stovek menších drogových případů
 spíše na místě než na právu .
-ZEM V nejisté týdnů po rozhodnutí státu , malé množství marihuany
+ZEM	V nejisté týdnů po rozhodnutí státu , malé množství marihuany
 k Eigengebrauch legalizovat , závisí na odpověď ve stovkách menších drogové
 delikty méně zákon , než o umístění .
-GT  V nejistých týdnů po rozhodnutí státu legalizovat malé množství marihuany
+GT	V nejistých týdnů po rozhodnutí státu legalizovat malé množství marihuany
 pro osobní potřebu , odpověď závisí na stovkách malých činů souvisejících
 s drogami méně o právu než přímo na místě .
-MT  V neinformovaných týdnech po rozhodnutí státu legalizovat malé množství
-marihuany je odpověď na stovky menších trestných činů méně od zákona než
-z místa .
-NOTE:   wrongWord:ungewissen!=neinformovaných missingWord:zum Eigengebrauch,
+CUD	V nejistých týdnech po hlasování Colorada pro legalizaci malých množství
+marihuany pro rekreační využití , odpovědi na stovky malých drogových případů
+méně závislá na zákoně , než o umístění .
+MT	V neinformovaných týdnech po rozhodnutí státu legalizovat malé množství
+marihuany je odpověď na stovky menších trestných činů méně od zákona než z místa
+.
+NOTE:	wrongWord:ungewissen!=neinformovaných missingWord:zum Eigengebrauch,
 ungrammatical
 
-SRC Ich bin sicher , man neckt dich nur .
-REF Jsem si jistý , že je to jen žert .
-ZEM Jsem si jist , že neckt tě jen .
-GT  Jsem si jistý , že ti právě škádlení .
-MT  Jsem si jistá , že tě jen škádlí .
-NOTE:   flawless, worldKnowledgeNeeded (author's gender)
+SRC	Ich bin sicher , man neckt dich nur .
+REF	Jsem si jistý , že je to jen žert .
+ZEM	Jsem si jist , že neckt tě jen .
+GT	Jsem si jistý , že ti právě škádlení .
+CUD	Jsem jistý , že to je jen legrace .
+MT	Jsem si jistá , že tě jen škádlí .
+NOTE:	flawless, worldKnowledgeNeeded (author's gender)
 
-SRC Die Waffen gelangen über mehrere Kanäle auf den Schwarzmarkt .
-REF " Černý " trh se zbraněmi je zásobován několika kanály .
-ZEM Ty zbraně , o několik kanálů na černém trhu .
-GT  zbraně dorazí prostřednictvím různých kanálů na černém trhu .
-MT  Zbraně se dostanou přes několik kanálů na černém trhu .
-NOTE:   wrongCase:*na černém trhu!=na černý trh, wrongPreposition:über!=přes
+SRC	Die Waffen gelangen über mehrere Kanäle auf den Schwarzmarkt .
+REF	" Černý " trh se zbraněmi je zásobován několika kanály .
+ZEM	Ty zbraně , o několik kanálů na černém trhu .
+GT	zbraně dorazí prostřednictvím různých kanálů na černém trhu .
+CUD	" Černý trh " zbraní je doplněn několika kanály .
+MT	Zbraně se dostanou přes několik kanálů na černém trhu .
+NOTE:	wrongCase:*na černém trhu!=na černý trh, wrongPreposition:über!=přes
 \end{verbatim}
 \caption{Ukázka překladů vybraných testovacích vět různými systémy a anotace našeho nejlepšího překladu.}
 \label{fig:preklad}
@@ -596,17 +603,19 @@ NOTE:   wrongCase:*na černém trhu!=na černý trh, wrongPreposition:über!=př
 \begin{figure}[t]
 \centering
 \begin{verbatim}
-SRC Via Kurznachrichtendienst Twitter bezichtigte er die Anhänger Mursis
-, einen " Putsch gegen die Demokratie " führen zu wollen .
-REF Prostřednictvím služby krátkých zpráv Twitter obvinil přívržence Mursího
+SRC	Via Kurznachrichtendienst Twitter bezichtigte er die Anhänger Mursis , einen
+" Putsch gegen die Demokratie " führen zu wollen .
+REF	Prostřednictvím služby krátkých zpráv Twitter obvinil přívržence Mursího
 , že chtějí provést " puč proti demokracii . "
-ZEM Přes Kurznachrichtendienst Twitter obvinil ze jeho příznivci Mursis , " puč
+ZEM	Přes Kurznachrichtendienst Twitter obvinil ze jeho příznivci Mursis , " puč
 proti demokracii . "
-GT  Prostřednictvím krátkých textových zpráv Twitter obvinil , že chce provést
+GT	Prostřednictvím krátkých textových zpráv Twitter obvinil , že chce provést
 " útok na demokracii " příznivců Mursi .
-MT  Visa zkrácená služba Twitteru obvinila stoupence Muriel , aby vedl převrat
+CUD	Via SMS služba Twitter obvinil stoupence Mursi , že chtějí vést " puč proti
+demokracii . "
+MT	Visa zkrácená služba Twitteru obvinila stoupence Muriel , aby vedl převrat
 proti demokracii .
-NOTE:   wrongWord:Via!=Visa, namedEntity:Mursis, missingWord:wollen=chtějí
+NOTE:	wrongWord:Via!=Visa, namedEntity:Mursis, missingWord:wollen=chtějí
 \end{verbatim}
 \caption{Ukázka překladů vybraných testovacích vět různými systémy a anotace našeho nejlepšího překladu.}
 \label{fig:preklad2}
@@ -615,22 +624,25 @@ NOTE:   wrongWord:Via!=Visa, namedEntity:Mursis, missingWord:wollen=chtějí
 \begin{figure}[t]
 \centering
 \begin{verbatim}
-SRC Wenn nämlich ein Teilchen mit einer elektrischen Ladung beschleunigt oder
+SRC	Wenn nämlich ein Teilchen mit einer elektrischen Ladung beschleunigt oder
 die Richtung ändert , wird das elektromagnetische Feld genau an diesem Ort
 " gestört " , in etwa wie ein Kieselstein , der in einen Teich geworfen wurde .
-REF Když totiž částice s elektrickým nábojem zrychlí nebo změní svůj směr
+REF	Když totiž částice s elektrickým nábojem zrychlí nebo změní svůj směr
 , " vyruší " tím elektromagnetické pole v tomto konkrétním místě , podobně jako
 oblázek hozený do rybníka .
-ZEM Pokud totiž částic s elektrickým zásilku urychluje nebo směrem změní , bude
+ZEM	Pokud totiž částic s elektrickým zásilku urychluje nebo směrem změní , bude
 to elektromagnetické pole právě na tomto místě " obtěžován , " asi jako
 Kieselstein , do rybníka vyhodí .
-GT  Konkrétně , když částice zrychluje nebo změní směr elektrickým nábojem
+GT	Konkrétně , když částice zrychluje nebo změní směr elektrickým nábojem
 , elektromagnetické pole je " narušeno " v tomto přesném místě , podobně jako
 oblázka , která je v rybníku hodena .
-MT  Pokud se s elektrickým nákladem zrychluje nebo změní směr
+CUD	Když ve skutečnosti částice s elektrickým nábojem o urychlení či změny směru
+, toto " narušené " elektromagnetickým polem v tomto konkrétním místě , spíše
+jako oblázek , hodil do rybníka .
+MT	Pokud se s elektrickým nákladem zrychluje nebo změní směr
 , elektromagnetický pole bude na tomto místě " rušen " jako kámen , který byl
 uvržen do rybníku .
-NOTE:   missingWord: Teilchen, wrongWord: Ladung!=náklad Kieselstein
+NOTE:	missingWord: Teilchen, wrongWord: Ladung!=náklad Kieselstein
 geworfen!=kámen uvržen, agreement: elektromagnetický pole
 \end{verbatim}
 \caption{Ukázka překladů vybraných testovacích vět různými systémy a anotace našeho nejlepšího překladu.}
