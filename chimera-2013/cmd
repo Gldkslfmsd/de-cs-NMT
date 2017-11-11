@@ -1,0 +1,1 @@
+cat google.cs | ../data/preprocess.sh ../data | perl ../data/moses/scripts/tokenizer/tokenizer.perl -no-escape -threads `nproc` -l cs > google.cs.tok
